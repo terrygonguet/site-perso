@@ -1,0 +1,69 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+:root {
+  --bg-dark: #555;
+  --bg-light: white;
+  --accent: #3dcccc;
+}
+
+.max-w-1k {
+  max-width: 1000px;
+}
+
+.bg-dark {
+  background-color: var(--bg-dark);
+}
+
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.translate-center {
+  transform: translate(-50%, -50%);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.max-h-0 {
+  max-height: 0;
+}
+
+.scroll-snap-ym {
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-snap-center {
+  scroll-snap-align: center;
+}
+
+.section {
+  @apply bg-white rounded text-black shadow;
+}
+
+@media (min-width: 1000px) {
+  .section {
+    @apply mx-auto max-w-1k;
+  }
+}
