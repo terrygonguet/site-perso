@@ -18,6 +18,6 @@
 </svelte:head>
 
 <main class="overflow-hidden flex-center">
-  <RadialNavigation _style="width:70vh;height:70vh;" />
+  <RadialNavigation />
   <!-- Icons made by <a href="https://www.flaticon.com/authors/chanut" title="Chanut">Chanut</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
 </main>

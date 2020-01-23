@@ -4,6 +4,12 @@
 
 @tailwind utilities;
 
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
 :root {
   --bg-dark: #111111;
   --bg-light: #eeeeee;
@@ -74,5 +80,17 @@
 @media (min-width: 1000px) {
   .section {
     @apply mx-auto max-w-1k;
+  }
+}
+
+.radial-menu {
+  width: 90vmin;
+  height: 90vmin;
+}
+
+@media (min-width: 768px) {
+  .radial-menu {
+    width: 70vmin;
+    height: 70vmin;
   }
 }
