@@ -10,6 +10,6 @@
   }
 </style>
 
-<div class="h-full bg-dark">
+<div class="h-full bg-dark text-white">
   <slot />
 </div>

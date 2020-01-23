@@ -1,4 +1,4 @@
-import { createMachine, interpret, assign } from "@xstate/fsm"
+import { createMachine, assign } from "@xstate/fsm"
 import radialNavData from "./data/radialNav"
 
 export const formatter = new Intl.NumberFormat("FR-fr", {
@@ -61,8 +61,6 @@ export const radialNavMachine = createMachine({
     },
   },
 })
-
-export const radialNavService = interpret(radialNavMachine)
 
 /**
  * Returns an iterator going from `from` to `to` or over the length

@@ -1,11 +1,12 @@
 <script>
   import { onMount, tick } from "svelte";
-  import { getUISprite, radialNavService, range } from "../tools";
+  import { getUISprite, radialNavMachine, range } from "../tools";
   import { goto } from "@sapper/app";
   import { tweened } from "svelte/motion";
   import { cubicInOut } from "svelte/easing";
-  import radialNavData from "../data/radialNav";
+  import radialNavData, { icons } from "../data/radialNav";
   import NavMenuItem from "./NavMenuItem";
+  import { interpret } from "@xstate/fsm";
 
   export let _style = "";
 
@@ -18,7 +19,8 @@
     ctx,
     assets,
     state,
-    canActivate = true;
+    canActivate = true,
+    radialNavService;
   const menuSize = tweened(0, {
     duration: 300,
     easing: cubicInOut
@@ -76,10 +78,14 @@
 
   onMount(async () => {
     ctx = canvas.getContext("2d");
-    assets = await Promise.all(
-      ["img/cursor.svg", "img/close.svg", "img/touch.svg"].map(getUISprite)
+    assets = new Map();
+    await Promise.all(
+      ["touch", "close", "cursor", ...icons].map(i =>
+        getUISprite(`img/${i}.svg`).then(img => assets.set(i, img))
+      )
     );
-    radialNavService.start("closed");
+
+    radialNavService = interpret(radialNavMachine).start();
     radialNavService.subscribe(async newState => {
       let newMenu = newState.context.history[0];
       if (newMenu.children) {
@@ -113,7 +119,6 @@
       value,
       context: { history }
     } = state || { value: "closed", context: { history: [] } };
-    const [cursor, close, touch] = assets;
     const curMenu = history[0];
 
     ctx.save();
@@ -125,12 +130,12 @@
     switch (value) {
       case "closed":
         ctx.fillStyle = "black";
-        ctx.strokeStyle = "white";
+        ctx.strokeStyle = "#777777";
         ctx.ellipse(0, 0, centerR, centerR, 0, 0, TAU);
         ctx.fill();
         ctx.stroke();
         ctx.drawImage(
-          innerWidth <= 768 ? touch : cursor,
+          innerWidth <= 768 ? assets.get("touch") : assets.get("cursor"),
           -0.7 * centerR,
           -0.7 * centerR,
           1.4 * centerR,
@@ -141,7 +146,7 @@
         // menu
         ctx.scale($menuSize, $menuSize);
         ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
+        ctx.textBaseline = "bottom";
         let step = TAU / curMenu.children.length,
           sigma = -Math.PI / 2,
           mouseOverIndex = getMouseOverIndex();
@@ -152,17 +157,23 @@
           ctx.moveTo(0, 0);
           ctx.arc(0, 0, w / 2 - 4, sigma, sigma + step);
           ctx.fillStyle = isHighlight ? "#555555" : "#333333";
-          ctx.strokeStyle = "white";
+          ctx.strokeStyle = "#777777";
           ctx.closePath();
           ctx.fill();
           ctx.stroke();
           ctx.fillStyle = "white";
           let fontSize = (isHighlight ? 0.6 : 0.5) * centerR;
           ctx.font = `${Math.ceil(fontSize)}px sans-serif`;
-          ctx.fillText(
-            submenu.label,
-            (Math.cos(sigma + step / 2) * w) / 4,
-            (Math.sin(sigma + step / 2) * w) / 4
+          let x = (Math.cos(sigma + step / 2) * w) / 4,
+            y = (Math.sin(sigma + step / 2) * w) / 4,
+            iconSize = isHighlight ? 1.1 * centerR : centerR;
+          ctx.fillText(submenu.label, x, y);
+          ctx.drawImage(
+            assets.get(submenu.icon),
+            x - iconSize / 2,
+            y,
+            iconSize,
+            iconSize
           );
           sigma += step;
         }
@@ -170,7 +181,7 @@
         ctx.setTransform(1, 0, 0, 1, w / 2, h / 2); // reset scale transorm
         ctx.beginPath();
         ctx.fillStyle = "black";
-        ctx.strokeStyle = "white";
+        ctx.strokeStyle = "#777777";
         ctx.ellipse(0, 0, centerR, centerR, 0, 0, TAU);
         ctx.fill();
         ctx.stroke();
@@ -182,7 +193,7 @@
         let quarterCenter = 0.25 * centerR;
         ctx.fillText(history.length > 1 ? "Back" : "Close", 0, 0);
         ctx.drawImage(
-          close,
+          assets.get("close"),
           -quarterCenter / 2,
           quarterCenter,
           quarterCenter,
@@ -213,7 +224,7 @@
   on:mousemove={onHover}
   on:click={onClick}
   class:cursor-pointer={cursorPointer}
-  class="radial-menu text-white">
+  class="radial-menu">
   <canvas bind:this={canvas} width={w} height={h}>
     <NavMenuItem data={radialNavData} />
   </canvas>

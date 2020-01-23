@@ -35,3 +35,5 @@ export default {
     },
   ],
 }
+
+export const icons = ["user", "checkmark", "cobweb", "science", "link", "code"]
