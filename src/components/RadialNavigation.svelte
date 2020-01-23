@@ -1,6 +1,6 @@
 <script>
   import { onMount, tick } from "svelte";
-  import { getUISprite, radialNavService } from "../tools";
+  import { getUISprite, radialNavService, range } from "../tools";
   import { goto } from "@sapper/app";
   import { tweened } from "svelte/motion";
   import { cubicInOut } from "svelte/easing";
@@ -30,6 +30,19 @@
   $: isStart = !state || state.value == "closed";
   $: cursorPointer = isStart ? isMouseOverCenter : isMouseOverMenu;
 
+  function getMouseOverIndex() {
+    if (isStart) return -1;
+    const {
+      value,
+      context: { history }
+    } = state;
+    const curMenu = history[0];
+    let sigma = Math.PI - Math.atan2(px, py),
+      TAU = 2 * Math.PI,
+      step = TAU / curMenu.children.length;
+    return Math.floor(sigma / step);
+  }
+
   function onHover(e) {
     px = e.layerX - w / 2;
     py = e.layerY - h / 2;
@@ -53,16 +66,7 @@
         canActivate = false;
       } else radialNavService.send("BACK");
     } else if (isMouseOverMenu) {
-      const {
-        value,
-        context: { history }
-      } = state;
-      const curMenu = history[0];
-      let sigma = Math.PI - Math.atan2(px, py),
-        TAU = 2 * Math.PI,
-        step = TAU / curMenu.children.length;
-      let i = Math.floor(sigma / step);
-      radialNavService.send({ type: "NAVIGATE", value: i });
+      radialNavService.send({ type: "NAVIGATE", value: getMouseOverIndex() });
     } else radialNavService.send("CLOSE");
   }
 
@@ -136,30 +140,32 @@
       default:
         // menu
         ctx.scale($menuSize, $menuSize);
-        ctx.fillStyle = "#333333";
-        ctx.strokeStyle = "white";
-        ctx.ellipse(0, 0, w / 2 - 4, w / 2 - 4, 0, 0, TAU); // almost to the edge
-        ctx.fill();
-        ctx.fillStyle = "white";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-        ctx.font = `${Math.ceil(0.5 * centerR)}px sans-serif`;
         let step = TAU / curMenu.children.length,
-          sigma = -Math.PI / 2;
-        for (const child of curMenu.children) {
+          sigma = -Math.PI / 2,
+          mouseOverIndex = getMouseOverIndex();
+        for (const [submenu, i] of range(curMenu.children)) {
+          let isHighlight =
+            !isMouseOverCenter && isMouseOverMenu && i == mouseOverIndex;
+          ctx.beginPath();
           ctx.moveTo(0, 0);
-          ctx.lineTo(
-            Math.cos(sigma) * (w / 2 - 4), // almost to the edge
-            Math.sin(sigma) * (w / 2 - 4)
-          );
+          ctx.arc(0, 0, w / 2 - 4, sigma, sigma + step);
+          ctx.fillStyle = isHighlight ? "#555555" : "#333333";
+          ctx.strokeStyle = "white";
+          ctx.closePath();
+          ctx.fill();
+          ctx.stroke();
+          ctx.fillStyle = "white";
+          let fontSize = (isHighlight ? 0.6 : 0.5) * centerR;
+          ctx.font = `${Math.ceil(fontSize)}px sans-serif`;
           ctx.fillText(
-            child.label,
+            submenu.label,
             (Math.cos(sigma + step / 2) * w) / 4,
             (Math.sin(sigma + step / 2) * w) / 4
           );
           sigma += step;
         }
-        ctx.stroke();
         // center dot
         ctx.setTransform(1, 0, 0, 1, w / 2, h / 2); // reset scale transorm
         ctx.beginPath();
