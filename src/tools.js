@@ -75,3 +75,21 @@ export function* range(from, to, step = 1) {
     t = isarray ? from.length - 1 : to
   for (let i = f; i <= t; i += step) yield isarray ? [from[i], i] : i
 }
+
+/**
+ * Computes your current age. Warning: month is 0 based
+ * @param {number[]} dateOfBirth A [day,month,year] array. Warning: month is 0 based
+ */
+export function computeAge(dateOfBirth) {
+  const now = new Date()
+  let age = now.getFullYear() - dateOfBirth[2]
+
+  // if we're before our birthday we're 1 year younger
+  if (
+    now.getMonth() < dateOfBirth[1] ||
+    (now.getMonth() == dateOfBirth[1] && now.getDate() < dateOfBirth[0])
+  )
+    age--
+
+  return age
+}
