@@ -12,7 +12,7 @@ self.addEventListener("install", event => {
   event.waitUntil(
     caches
       .open(ASSETS)
-      .then(cache => cache.addAll(to_cache))
+      // .then(cache => cache.addAll(to_cache))
       .then(() => {
         self.skipWaiting()
       }),
@@ -32,51 +32,51 @@ self.addEventListener("activate", event => {
   )
 })
 
-self.addEventListener("fetch", event => {
-  if (event.request.method !== "GET" || event.request.headers.has("range"))
-    return
+// self.addEventListener("fetch", event => {
+//   if (event.request.method !== "GET" || event.request.headers.has("range"))
+//     return
 
-  const url = new URL(event.request.url)
+//   const url = new URL(event.request.url)
 
-  // don't try to handle e.g. data: URIs
-  if (!url.protocol.startsWith("http")) return
+//   // don't try to handle e.g. data: URIs
+//   if (!url.protocol.startsWith("http")) return
 
-  // ignore dev server requests
-  if (
-    dev ||
-    (url.hostname === self.location.hostname && url.port !== self.location.port)
-  )
-    return
+//   // ignore dev server requests
+//   if (
+//     dev ||
+//     (url.hostname === self.location.hostname && url.port !== self.location.port)
+//   )
+//     return
 
-  // always serve static files and bundler-generated assets from cache
-  if (url.host === self.location.host && cached.has(url.pathname)) {
-    event.respondWith(caches.match(event.request))
-    return
-  }
+//   // always serve static files and bundler-generated assets from cache
+//   if (url.host === self.location.host && cached.has(url.pathname)) {
+//     event.respondWith(caches.match(event.request))
+//     return
+//   }
 
-  // for pages, you might want to serve a shell `service-worker-index.html` file,
-  // which Sapper has generated for you. It's not right for every
-  // app, but if it's right for yours then uncomment this section
-  /*
-	if (url.origin === self.origin && routes.find(route => route.pattern.test(url.pathname))) {
-		event.respondWith(caches.match('/service-worker-index.html'));
-		return;
-	}
-	*/
+//   // for pages, you might want to serve a shell `service-worker-index.html` file,
+//   // which Sapper has generated for you. It's not right for every
+//   // app, but if it's right for yours then uncomment this section
+//   /*
+// 	if (url.origin === self.origin && routes.find(route => route.pattern.test(url.pathname))) {
+// 		event.respondWith(caches.match('/service-worker-index.html'));
+// 		return;
+// 	}
+// 	*/
 
-  if (event.request.cache === "only-if-cached") return
+//   if (event.request.cache === "only-if-cached") return
 
-  // for everything else, try the cache first, falling back to
-  // network if the file isn't cached.
-  event.respondWith(
-    caches.open(ASSETS).then(async cache => {
-      const response = await cache.match(event.request)
-      if (response) return response
-      else {
-        const response = await fetch(event.request)
-        cache.put(event.request, response.clone())
-        return response
-      }
-    }),
-  )
-})
+//   // for everything else, try the cache first, falling back to
+//   // network if the file isn't cached.
+//   event.respondWith(
+//     caches.open(ASSETS).then(async cache => {
+//       const response = await cache.match(event.request)
+//       if (response) return response
+//       else {
+//         const response = await fetch(event.request)
+//         cache.put(event.request, response.clone())
+//         return response
+//       }
+//     }),
+//   )
+// })
