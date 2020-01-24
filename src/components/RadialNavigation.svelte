@@ -207,11 +207,11 @@
 </script>
 
 <style>
-  canvas {
-    -webkit-tap-highlight-color: transparent;
-    -ms-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
+  canvas,
+  canvas:focus,
+  canvas:active {
+    /* trying to remove that fucking Chrome blue glow */
+    outline: none;
   }
 </style>
 
