@@ -6,7 +6,6 @@ const PurgeCSS = require("@fullhuman/postcss-purgecss")
 const CompressionPlugin = require("compression-webpack-plugin")
 const fs = require("fs")
 const postcss = require("postcss")
-const purgeFromSvelte = require("purgecss-from-svelte")
 
 const mode = process.env.NODE_ENV
 const dev = mode === "development"
@@ -21,7 +20,7 @@ const purgeCSSPlugin = PurgeCSS({
   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
   extractors: [
     {
-      extractor: purgeFromSvelte,
+      extractor: require("purgecss-from-svelte"),
       extensions: ["svelte"],
     },
   ],
@@ -38,8 +37,9 @@ const shimTailwind = async ({ content, filename }) => {
     let plugins = [
       require("tailwindcss"),
       require("autoprefixer"),
+      require("postcss-discard-comments")({ removeAll: true }),
       !dev && purgeCSSPlugin,
-      require("cssnano")(),
+      !dev && require("cssnano")(),
     ].filter(Boolean)
 
     // compile css
@@ -48,11 +48,16 @@ const shimTailwind = async ({ content, filename }) => {
       to: "global.css",
     })
     // "globalize" the selectors
-    css = css.replace(/(}|\){|\*\/)([!-z]*?){/g, `$1:global($2){`)
+    css = css
+      .replace(/\s/g, "")
+      .replace(/([a-zA-Z\[\]:\d,="\-.\\/*]+?)(?={)/g, `:global($1)`)
 
     let code = content.replace("/* shimport css */", css)
 
-    return { code }
+    return {
+      code,
+      dependencies: [path.join(__dirname, "src/global.css")],
+    }
   }
 }
 
