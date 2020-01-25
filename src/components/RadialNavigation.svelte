@@ -10,6 +10,12 @@
 
   export let _style = "";
 
+  let bgLight = "#555555",
+    bgDark = "#333333",
+    colorOutline = "#777777",
+    colorAccent = "#e55b3c",
+    colorCenter = "black";
+
   const TAU = 2 * Math.PI;
   let canvas,
     w,
@@ -89,6 +95,7 @@
         case "navigating":
           await menuSize.set(0);
           state = newState;
+          px = py = 0;
           await menuSize.set(1);
           radialNavService.send("ANIMATION_DONE");
           break;
@@ -134,6 +141,12 @@
       context: { history }
     } = state || { value: "closed", context: { history: [] } };
     const curMenu = history[0];
+    let compstyles = getComputedStyle(document.documentElement);
+    bgLight = compstyles.getPropertyValue("--radial-bg-light");
+    bgDark = compstyles.getPropertyValue("--radial-bg-dark");
+    colorOutline = compstyles.getPropertyValue("--radial-outline");
+    colorAccent = compstyles.getPropertyValue("--radial-accent");
+    colorCenter = compstyles.getPropertyValue("--radial-center");
 
     ctx.save();
     ctx.imageSmoothingEnabled = false;
@@ -143,8 +156,8 @@
 
     switch (value) {
       case "closed":
-        ctx.fillStyle = "black";
-        ctx.strokeStyle = "#e55b3c";
+        ctx.fillStyle = colorCenter;
+        ctx.strokeStyle = colorAccent;
         ctx.ellipse(0, 0, centerR, centerR, 0, 0, TAU);
         ctx.fill();
         ctx.stroke();
@@ -170,12 +183,12 @@
           ctx.beginPath();
           ctx.moveTo(0, 0);
           ctx.arc(0, 0, w / 2 - 4, sigma, sigma + step);
-          ctx.fillStyle = isHighlight ? "#555555" : "#333333";
-          ctx.strokeStyle = "#777777";
+          ctx.fillStyle = isHighlight ? bgLight : bgDark;
+          ctx.strokeStyle = colorOutline;
           ctx.closePath();
           ctx.fill();
           ctx.stroke();
-          ctx.fillStyle = "#e55b3c";
+          ctx.fillStyle = colorAccent;
           let fontSize = (isHighlight ? 0.6 : 0.5) * centerR;
           ctx.font = `${Math.ceil(fontSize)}px sans-serif`;
           let x = (Math.cos(sigma + step / 2) * w) / 4,
@@ -198,7 +211,7 @@
           ctx.moveTo(0, 0);
           ctx.arc(0, 0, w / 2 - 4, sigma, sigma + step);
           ctx.lineWidth = 2;
-          ctx.strokeStyle = "#e55b3c";
+          ctx.strokeStyle = colorAccent;
           ctx.closePath();
           ctx.stroke();
           ctx.lineWidth = 1;
@@ -206,13 +219,13 @@
         // center dot
         ctx.setTransform(1, 0, 0, 1, w / 2, h / 2); // reset scale transorm
         ctx.beginPath();
-        ctx.fillStyle = "black";
-        ctx.strokeStyle = "#777777";
+        ctx.fillStyle = colorCenter;
+        ctx.strokeStyle = colorOutline;
         ctx.ellipse(0, 0, centerR, centerR, 0, 0, TAU);
         ctx.fill();
         ctx.stroke();
         ctx.globalAlpha = $menuSize;
-        ctx.fillStyle = "#e55b3c";
+        ctx.fillStyle = colorAccent;
         ctx.textAlign = "center";
         ctx.textBaseline = "alphabetic";
         ctx.font = `${Math.ceil(0.4 * centerR)}px sans-serif`;

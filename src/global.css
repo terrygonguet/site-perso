@@ -15,6 +15,11 @@ body {
   --bg-light: #eeeeee;
   --accent-light: #e55b3c;
   --accent: #f62217;
+  --radial-bg-light: #555555;
+  --radial-bg-dark: #333333;
+  --radial-outline: #777777;
+  --radial-center: black;
+  --radial-accent: var(--accent-light);
 }
 
 .max-w-1k {
