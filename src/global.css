@@ -93,8 +93,20 @@ body {
     width: 70vmin;
     height: 70vmin;
   }
+
+  .back {
+    @apply m-8;
+  }
 }
 
 .a {
-  @apply underline;
+  @apply text-accent-light;
+}
+
+.a:hover {
+  @apply text-accent;
+}
+
+.back {
+  @apply absolute m-4 bottom-0 text-center a;
 }
