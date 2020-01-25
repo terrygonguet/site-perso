@@ -20,6 +20,7 @@
     assets,
     state,
     canActivate = true,
+    isTicking = true,
     radialNavService;
   const menuSize = tweened(0, {
     duration: 300,
@@ -76,42 +77,55 @@
     radialNavService.send("CLOSE");
   }
 
-  onMount(async () => {
+  async function handleStateChange(newState) {
+    let newMenu = newState.context.history[0];
+    if (newMenu.children) {
+      switch (newState.value) {
+        case "opening":
+          state = newState;
+          await menuSize.set(1);
+          radialNavService.send("ANIMATION_DONE");
+          break;
+        case "navigating":
+          await menuSize.set(0);
+          state = newState;
+          await menuSize.set(1);
+          radialNavService.send("ANIMATION_DONE");
+          break;
+        case "closing":
+          await menuSize.set(0);
+          radialNavService.send("ANIMATION_DONE");
+          break;
+        default:
+          state = newState;
+          break;
+      }
+    } else goto(newMenu.page);
+  }
+
+  function onUnmount() {
+    isTicking = false;
+  }
+
+  onMount(() => {
+    if (ctx) {
+      isTicking = true;
+      return onUnmount;
+    }
+
     ctx = canvas.getContext("2d");
     assets = new Map();
-    await Promise.all(
+    Promise.all(
       ["touch", "close", "cursor", ...icons].map(i =>
         getUISprite(`img/${i}.svg`).then(img => assets.set(i, img))
       )
-    );
-
-    radialNavService = interpret(radialNavMachine).start();
-    radialNavService.subscribe(async newState => {
-      let newMenu = newState.context.history[0];
-      if (newMenu.children) {
-        switch (newState.value) {
-          case "opening":
-            state = newState;
-            await menuSize.set(1);
-            radialNavService.send("ANIMATION_DONE");
-            break;
-          case "navigating":
-            await menuSize.set(0);
-            state = newState;
-            await menuSize.set(1);
-            radialNavService.send("ANIMATION_DONE");
-            break;
-          case "closing":
-            await menuSize.set(0);
-            radialNavService.send("ANIMATION_DONE");
-            break;
-          default:
-            state = newState;
-            break;
-        }
-      } else goto(newMenu.page);
+    ).then(() => {
+      radialNavService = interpret(radialNavMachine).start();
+      radialNavService.subscribe(handleStateChange);
+      requestAnimationFrame(render);
     });
-    requestAnimationFrame(render);
+
+    return onUnmount;
   });
 
   function render() {
@@ -214,7 +228,7 @@
         break;
     }
     ctx.restore();
-    requestAnimationFrame(render);
+    if (isTicking) requestAnimationFrame(render);
   }
 </script>
 
