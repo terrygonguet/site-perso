@@ -262,8 +262,7 @@
   bind:clientHeight={h}
   on:mousemove={onHover}
   on:click={onClick}
-  class:cursor-pointer={cursorPointer}
-  class="radial-menu">
+  class:cursor-pointer={cursorPointer}>
   <canvas bind:this={canvas} width={w} height={h}>
     <NavMenuItem data={radialNavData} />
   </canvas>

@@ -88,17 +88,7 @@ body {
   }
 }
 
-.radial-menu {
-  width: 90vmin;
-  height: 90vmin;
-}
-
 @media (min-width: 768px) {
-  .radial-menu {
-    width: 70vmin;
-    height: 70vmin;
-  }
-
   .back {
     @apply m-8;
   }
