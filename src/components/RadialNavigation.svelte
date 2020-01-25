@@ -206,7 +206,7 @@
         // center dot
         ctx.setTransform(1, 0, 0, 1, w / 2, h / 2); // reset scale transorm
         ctx.beginPath();
-        ctx.fillStyle = isMouseOverCenter ? "#222222" : "black";
+        ctx.fillStyle = "black";
         ctx.strokeStyle = "#777777";
         ctx.ellipse(0, 0, centerR, centerR, 0, 0, TAU);
         ctx.fill();

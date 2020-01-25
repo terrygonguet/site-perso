@@ -28,7 +28,7 @@
   <p class="m-2">
     Sometimes I try to make
     <a href="https://www.mozilla.org/firefox/" class="a">my browser</a>
-    do more things and host these addons on
+    do more things and put these addons on
     <a href="https://addons.mozilla.org/en-US/firefox/user/13343330/" class="a">
       addons.mozilla.org
     </a>
