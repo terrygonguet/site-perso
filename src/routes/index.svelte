@@ -13,5 +13,5 @@
   in:fly={{ easing: cubicInOut, duration: 200, delay: 200, y: -500 }}
   out:fly={{ easing: cubicInOut, duration: 200, y: -500 }}>
   <RadialNavigation />
-  <a href="credits" class="back">Credits</a>
+  <a href="credits" class="absolute m-4 bottom-0 text-center a">Credits</a>
 </main>

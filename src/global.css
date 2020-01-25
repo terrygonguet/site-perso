@@ -110,3 +110,7 @@ body {
 .back {
   @apply absolute m-4 bottom-0 text-center a;
 }
+
+.back:hover {
+  @apply text-accent;
+}
