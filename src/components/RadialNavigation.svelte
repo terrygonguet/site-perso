@@ -130,7 +130,7 @@
     switch (value) {
       case "closed":
         ctx.fillStyle = "black";
-        ctx.strokeStyle = "#777777";
+        ctx.strokeStyle = "#e55b3c";
         ctx.ellipse(0, 0, centerR, centerR, 0, 0, TAU);
         ctx.fill();
         ctx.stroke();
@@ -161,7 +161,7 @@
           ctx.closePath();
           ctx.fill();
           ctx.stroke();
-          ctx.fillStyle = "white";
+          ctx.fillStyle = "#e55b3c";
           let fontSize = (isHighlight ? 0.6 : 0.5) * centerR;
           ctx.font = `${Math.ceil(fontSize)}px sans-serif`;
           let x = (Math.cos(sigma + step / 2) * w) / 4,
@@ -177,16 +177,28 @@
           );
           sigma += step;
         }
+        // highlight selected submenu
+        if (!isMouseOverCenter && isMouseOverMenu) {
+          ctx.beginPath();
+          sigma = -Math.PI / 2 + mouseOverIndex * step;
+          ctx.moveTo(0, 0);
+          ctx.arc(0, 0, w / 2 - 4, sigma, sigma + step);
+          ctx.lineWidth = 2;
+          ctx.strokeStyle = "#e55b3c";
+          ctx.closePath();
+          ctx.stroke();
+          ctx.lineWidth = 1;
+        }
         // center dot
         ctx.setTransform(1, 0, 0, 1, w / 2, h / 2); // reset scale transorm
         ctx.beginPath();
-        ctx.fillStyle = "black";
+        ctx.fillStyle = isMouseOverCenter ? "#222222" : "black";
         ctx.strokeStyle = "#777777";
         ctx.ellipse(0, 0, centerR, centerR, 0, 0, TAU);
         ctx.fill();
         ctx.stroke();
         ctx.globalAlpha = $menuSize;
-        ctx.fillStyle = "white";
+        ctx.fillStyle = "#e55b3c";
         ctx.textAlign = "center";
         ctx.textBaseline = "alphabetic";
         ctx.font = `${Math.ceil(0.4 * centerR)}px sans-serif`;
