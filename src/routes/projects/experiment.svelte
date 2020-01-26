@@ -4,8 +4,8 @@
 </script>
 
 <main
-  class="flex-center flex-col text-lg"
+  class="overflow-hidden flex-center"
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
   out:fade={{ easing: cubicInOut, duration: 200 }}>
-  <a href=".">Back</a>
+  <a href="." class="back">Back</a>
 </main>

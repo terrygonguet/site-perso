@@ -35,6 +35,6 @@
       One day I hope to be able to live from making interesting and fun games but in the meantime I'm excited to
       make the internet slightly more awesome, one website at a time!
     </p>
-    <a href="." class="block text-center a my-4" rel="prefetch">Back</a>
+    <a href="." class="back" rel="prefetch">Back</a>
   </section>
 </main>
