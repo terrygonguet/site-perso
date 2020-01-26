@@ -20,6 +20,7 @@
   let canvas,
     w,
     h,
+    sw,
     px = Infinity,
     py = Infinity,
     ctx,
@@ -28,16 +29,20 @@
     canActivate = true,
     isTicking = true,
     radialNavService;
+
   const menuSize = tweened(0, {
     duration: 300,
     easing: cubicInOut
   });
 
-  $: centerR = 0.07 * w;
+  $: isSmall = sw < 768;
+  $: rw = isSmall ? 2 * w : w;
+  $: rh = isSmall ? 2 * w : w;
+  $: centerR = (isSmall ? 0.12 : 0.07) * rw;
+  $: isMouseOverMenu = px ** 2 + py ** 2 <= rw ** 2 / 4;
   $: isMouseOverCenter = px ** 2 + py ** 2 <= centerR ** 2;
-  $: isMouseOverMenu = px ** 2 + py ** 2 <= w ** 2 / 4;
-  $: isStart = !state || state.value == "closed";
   $: cursorPointer = isStart ? isMouseOverCenter : isMouseOverMenu;
+  $: isStart = !state || state.value == "closed";
 
   function getMouseOverIndex() {
     if (isStart) return -1;
@@ -53,8 +58,8 @@
   }
 
   function onHover(e) {
-    px = e.layerX - w / 2;
-    py = e.layerY - h / 2;
+    px = (isSmall ? 2 : 1) * e.offsetX - rw / 2;
+    py = (isSmall ? 2 : 1) * e.offsetY - rh / 2;
     if (isMouseOverCenter) {
       if (canActivate && isStart) {
         radialNavService.send("ACTIVATE");
@@ -65,8 +70,8 @@
 
   async function onClick(e) {
     e.stopPropagation();
-    px = e.layerX - w / 2;
-    py = e.layerY - h / 2;
+    px = (isSmall ? 2 : 1) * e.offsetX - rw / 2;
+    py = (isSmall ? 2 : 1) * e.offsetY - rh / 2;
     await tick();
     if (isMouseOverCenter) {
       if (isStart) radialNavService.send("ACTIVATE");
@@ -150,9 +155,9 @@
 
     ctx.save();
     ctx.imageSmoothingEnabled = false;
-    ctx.clearRect(0, 0, w, h);
+    ctx.clearRect(0, 0, rw, rh);
     ctx.beginPath();
-    ctx.translate(w / 2, h / 2);
+    ctx.translate(rw / 2, rh / 2);
 
     switch (value) {
       case "closed":
@@ -163,10 +168,10 @@
         ctx.stroke();
         ctx.drawImage(
           innerWidth <= 768 ? assets.get("touch") : assets.get("cursor"),
-          -0.7 * centerR,
-          -0.7 * centerR,
-          1.4 * centerR,
-          1.4 * centerR
+          -0.6 * centerR,
+          -0.6 * centerR,
+          1.2 * centerR,
+          1.2 * centerR
         );
         break;
       default:
@@ -182,7 +187,7 @@
             !isMouseOverCenter && isMouseOverMenu && i == mouseOverIndex;
           ctx.beginPath();
           ctx.moveTo(0, 0);
-          ctx.arc(0, 0, w / 2 - 4, sigma, sigma + step);
+          ctx.arc(0, 0, rw / 2 - 4, sigma, sigma + step);
           ctx.fillStyle = isHighlight ? bgLight : bgDark;
           ctx.strokeStyle = colorOutline;
           ctx.closePath();
@@ -191,10 +196,10 @@
           ctx.fillStyle = colorAccent;
           let fontSize = (isHighlight ? 0.6 : 0.5) * centerR;
           ctx.font = `${Math.ceil(fontSize)}px sans-serif`;
-          let x = (Math.cos(sigma + step / 2) * w) / 4,
-            y = (Math.sin(sigma + step / 2) * w) / 4,
+          let x = (Math.cos(sigma + step / 2) * rw) / 4,
+            y = (Math.sin(sigma + step / 2) * rw) / 4,
             iconSize = isHighlight ? 1.1 * centerR : centerR;
-          ctx.fillText(submenu.label, x, y);
+          ctx.fillText(submenu.label, x, y, rw / 2.5);
           ctx.drawImage(
             assets.get(submenu.icon),
             x - iconSize / 2,
@@ -209,7 +214,7 @@
           ctx.beginPath();
           sigma = -Math.PI / 2 + mouseOverIndex * step;
           ctx.moveTo(0, 0);
-          ctx.arc(0, 0, w / 2 - 4, sigma, sigma + step);
+          ctx.arc(0, 0, rw / 2 - 4, sigma, sigma + step);
           ctx.lineWidth = 2;
           ctx.strokeStyle = colorAccent;
           ctx.closePath();
@@ -217,7 +222,7 @@
           ctx.lineWidth = 1;
         }
         // center dot
-        ctx.setTransform(1, 0, 0, 1, w / 2, h / 2); // reset scale transorm
+        ctx.setTransform(1, 0, 0, 1, rw / 2, rh / 2); // reset scale transorm
         ctx.beginPath();
         ctx.fillStyle = colorCenter;
         ctx.strokeStyle = colorOutline;
@@ -228,6 +233,7 @@
         ctx.fillStyle = colorAccent;
         ctx.textAlign = "center";
         ctx.textBaseline = "alphabetic";
+        ctx.font = "1rem sans-serif";
         ctx.font = `${Math.ceil(0.4 * centerR)}px sans-serif`;
         let quarterCenter = 0.25 * centerR;
         ctx.fillText(history.length > 1 ? "Back" : "Close", 0, 0);
@@ -254,7 +260,7 @@
   }
 </style>
 
-<svelte:window on:click={exteriorClick} />
+<svelte:window on:click={exteriorClick} bind:innerWidth={sw} />
 
 <nav
   style={_style}
@@ -263,7 +269,7 @@
   on:mousemove={onHover}
   on:click={onClick}
   class:cursor-pointer={cursorPointer}>
-  <canvas bind:this={canvas} width={w} height={h}>
+  <canvas bind:this={canvas} width={rw} height={rh} class="w-full h-full">
     <NavMenuItem data={radialNavData} />
   </canvas>
 </nav>
