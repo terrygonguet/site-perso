@@ -17,8 +17,8 @@
 
   $: sortedBlogs =
     blogs
-      .map(b => ({ ...b, date: new Date(b.date) }))
-      .sort((a, b) => a.date > b.date ? -1 : 1)
+      .map(b => ({ ...b, jsdate: new Date(b.date) }))
+      .sort((a, b) => a.jsdate > b.jsdate ? -1 : 1)
   $: first = sortedBlogs[0]
   $: notFirst = sortedBlogs.slice(1)
 </script>

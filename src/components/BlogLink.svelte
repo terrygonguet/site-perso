@@ -2,7 +2,7 @@
   import { dateFormatter } from "../tools"
 
   export let title = "Missing title"
-  export let date = new Date()
+  export let date = "0001-01-01"
   export let slug = "missing-slug"
 
   let w
@@ -28,5 +28,5 @@
 
 <a href="blog/{slug}" class="p-4 m-2 items-center" bind:clientWidth={w} class:big={w > 700}>
   <span class="text-xl" style="grid-area:title">{title}</span>
-  <span class="text-base text-accent-light" style="grid-area:date">{dateFormatter.format(date)}</span>
+  <span class="text-base text-accent-light" style="grid-area:date">{dateFormatter.format(new Date(date))}</span>
 </a>
