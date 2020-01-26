@@ -1,7 +1,7 @@
 <script>
   import { onMount, tick } from "svelte";
   import { getUISprite, radialNavMachine, range } from "../tools";
-  import { goto } from "@sapper/app";
+  import { goto, prefetch } from "@sapper/app";
   import { tweened } from "svelte/motion";
   import { cubicInOut } from "svelte/easing";
   import radialNavData, { icons } from "../data/radialNav";
@@ -220,6 +220,9 @@
           ctx.closePath();
           ctx.stroke();
           ctx.lineWidth = 1;
+          // prefetch the page
+          let selectedMenu = curMenu.children[mouseOverIndex];
+          if (selectedMenu.page) prefetch(selectedMenu.page);
         }
         // center dot
         ctx.setTransform(1, 0, 0, 1, rw / 2, rh / 2); // reset scale transorm
