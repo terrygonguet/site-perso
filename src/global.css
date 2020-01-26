@@ -6,106 +6,117 @@
 
 html,
 body {
-  height: 100%;
-  overflow: hidden;
+	height: 100%;
+	overflow: hidden;
 }
 
 :root {
-  --bg-dark: #111111;
-  --bg-light: #eeeeee;
-  --accent-light: #e55b3c;
-  --accent: #f62217;
-  --radial-bg-light: #555555;
-  --radial-bg-dark: #333333;
-  --radial-outline: #777777;
-  --radial-center: black;
-  --radial-accent: var(--accent-light);
+	--bg-dark: #111111;
+	--bg-light: #eeeeee;
+	--accent-light: #e55b3c;
+	--accent: #f62217;
+	--radial-bg-light: #555555;
+	--radial-bg-dark: #333333;
+	--radial-outline: #777777;
+	--radial-center: black;
+	--radial-accent: var(--accent-light);
 }
 
 .max-w-1k {
-  max-width: 1000px;
+	max-width: 1000px;
 }
 
 .bg-dark {
-  background-color: var(--bg-dark);
+	background-color: var(--bg-dark);
 }
 
 .bg-light {
-  background-color: var(--bg-light);
+	background-color: var(--bg-light);
 }
 
 .bg-accent {
-  background-color: var(--accent);
+	background-color: var(--accent);
 }
 
 .text-accent {
-  color: var(--accent);
+	color: var(--accent);
 }
 
 .bg-accent-light {
-  background-color: var(--accent-light);
+	background-color: var(--accent-light);
 }
 
 .text-accent-light {
-  color: var(--accent-light);
+	color: var(--accent-light);
 }
 
 .translate-center {
-  transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 .flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .absolute-center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
 }
 
 .max-h-0 {
-  max-height: 0;
+	max-height: 0;
 }
 
 .scroll-snap-ym {
-  scroll-snap-type: y mandatory;
+	scroll-snap-type: y mandatory;
 }
 
 .scroll-snap-center {
-  scroll-snap-align: center;
+	scroll-snap-align: center;
 }
 
 .section {
-  @apply bg-white rounded text-black shadow;
+	@apply bg-white rounded text-black shadow;
 }
 
 @media (min-width: 1000px) {
-  .section {
-    @apply mx-auto max-w-1k;
-  }
+	.section {
+		@apply mx-auto max-w-1k;
+	}
 }
 
 @media (min-width: 768px) {
-  .back {
-    @apply m-8;
-  }
+	.back {
+		@apply m-8;
+	}
 }
 
 .a {
-  @apply text-accent-light;
+	@apply text-accent-light;
 }
 
 .a:hover {
-  @apply text-accent;
+	@apply text-accent;
+}
+
+.a[target="_blank"]::after {
+	background-image: url("img/external-link.svg");
+	width: 0.8em;
+	height: 0.8em;
+	display: inline-block;
+	content: " ";
+	background-size: contain;
+	vertical-align: text-top;
+	margin: 1px;
 }
 
 .back {
-  @apply absolute m-4 bottom-0 text-center a;
+	@apply block text-center a my-4;
 }
 
 .back:hover {
-  @apply text-accent;
+	@apply text-accent;
 }
