@@ -275,6 +275,8 @@
   on:click={onClick}
   class:cursor-pointer={cursorPointer}>
   <canvas bind:this={canvas} width={rw} height={rh} class="w-full h-full">
-    <NavMenuItem data={radialNavData} />
+    <div class="h-full flex flex-col justify-center md:pl-24">
+      <NavMenuItem data={radialNavData} />
+    </div>
   </canvas>
 </nav>
