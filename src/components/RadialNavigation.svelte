@@ -200,13 +200,15 @@
             y = (Math.sin(sigma + step / 2) * rw) / 4,
             iconSize = isHighlight ? 1.1 * centerR : centerR;
           ctx.fillText(submenu.label, x, y, rw / 2.5);
-          ctx.drawImage(
-            assets.get(submenu.icon),
-            x - iconSize / 2,
-            y,
-            iconSize,
-            iconSize
-          );
+          try {
+            ctx.drawImage(
+              assets.get(submenu.icon),
+              x - iconSize / 2,
+              y,
+              iconSize,
+              iconSize
+            );
+          } catch (error) {}
           sigma += step;
         }
         // highlight selected submenu
