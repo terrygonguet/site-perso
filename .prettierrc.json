@@ -1,6 +1,7 @@
 {
-  "svelteStrictMode": true,
-  "svelteSortOrder": "script-styles",
-  "useTabs": true,
-  "tabWidth": 4
+	"svelteStrictMode": true,
+	"svelteSortOrder": "script-styles",
+	"useTabs": true,
+	"tabWidth": 2,
+	"semi": false
 }

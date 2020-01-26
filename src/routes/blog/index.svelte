@@ -1,0 +1,42 @@
+<script context="module">
+  export async function preload(page, session) {
+    const res = await this.fetch("blogs")
+    const blogs = await res.json()
+
+    if (res.ok) return { blogs }
+    else this.error(res.status, new Error(blogs.message))
+  }
+</script>
+
+<script>
+  import { fade } from "svelte/transition";
+  import { cubicInOut } from "svelte/easing";
+  import BlogLink from "../../components/BlogLink";
+
+  export let blogs = []
+
+  $: sortedBlogs =
+    blogs
+      .map(b => ({ ...b, date: new Date(b.date) }))
+      .sort((a, b) => a.date > b.date ? -1 : 1)
+  $: first = sortedBlogs[0]
+  $: notFirst = sortedBlogs.slice(1)
+</script>
+
+<main
+  class="overflow-hidden flex justify-center items-stretch md:items-center flex-col"
+  in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
+  out:fade={{ easing: cubicInOut, duration: 200 }}>
+  <div class="m-4 md:w-2/3 max-h-full overflow-auto">
+    <h1 class="text-2xl my-2">Latest</h1>
+    <BlogLink {...first} />
+    {#if notFirst.length}
+      <h1 class="text-2xl mt-4">Older</h1>
+      <hr class="mb-4 mt-2">
+      {#each notFirst as blog}
+        <BlogLink {...blog} />
+      {/each}
+    {/if}
+    <a href="." class="back">Back</a>
+  </div>
+</main>

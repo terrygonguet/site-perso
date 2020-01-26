@@ -1,4 +1,7 @@
 <script>
+  import { fade } from "svelte/transition";
+  import { cubicInOut } from "svelte/easing";
+
   export let status;
   export let error;
 
@@ -6,13 +9,19 @@
 </script>
 
 <svelte:head>
-  <title>EMO Kebab - Error {status}</title>
+  <title>Terry Gonguet - Error {status}</title>
 </svelte:head>
 
-<h1 class="m-10 text-2xl font-bold text-center">{status}</h1>
-
-<p class="m-10 text-xl font-semibold text-center">{error.message}</p>
-
-{#if dev && error.stack}
-  <pre class="m-auto">{error.stack}</pre>
-{/if}
+<main
+  class="overflow-hidden flex-center flex-col"
+  in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
+  out:fade={{ easing: cubicInOut, duration: 200 }}>
+  <div class="m-4 md:w-2/3 max-h-full overflow-auto">
+    <h1 class="m-10 text-4xl font-bold text-center">{status}</h1>
+    <p class="m-10 text-2xl font-semibold text-center">{error.message}</p>
+    {#if dev && error.stack}
+      <pre>{error.stack}</pre>
+    {/if}
+    <a href="." class="back">Home</a>
+  </div>
+</main>
