@@ -26,21 +26,26 @@ const menus = {
 			icon: "code",
 			children: [
 				{
-					label: "Finished",
+					label: "Alive",
 					icon: "checkmark",
-					page: "projects/done"
+					page: "projects/alive"
 				},
 				{
-					label: "Old or Unfinished",
+					label: "Abandonned",
 					icon: "cobweb",
 					page: "projects/abandonned"
 				},
 				{
-					label: "Current Experiment",
+					label: "Experiment",
 					icon: "science",
 					page: "projects/experiment"
 				}
 			]
+		},
+		{
+			label: "CV",
+			icon: "cv",
+			page: "cv"
 		},
 		{
 			label: "Contact",
@@ -48,11 +53,11 @@ const menus = {
 			page: "contact"
 		}
 	]
-};
+}
 
-export default menus;
+export default menus
 
-export const icons = getIconsFromMenu(menus);
+export const icons = getIconsFromMenu(menus)
 
 /**
  * Returns an array containing the icons of the menu item
@@ -61,8 +66,8 @@ export const icons = getIconsFromMenu(menus);
  * @returns {string[]}
  */
 function getIconsFromMenu(menu) {
-	let ret = [];
-	if (menu.icon) ret.push(menu.icon);
-	if (menu.children) ret.push(...menu.children.flatMap(getIconsFromMenu));
-	return ret;
+	let ret = []
+	if (menu.icon) ret.push(menu.icon)
+	if (menu.children) ret.push(...menu.children.flatMap(getIconsFromMenu))
+	return ret
 }
