@@ -28,7 +28,7 @@
   }
 </style>
 
-<a href="blog/{slug}" class="p-4 m-2 items-center text-left" bind:clientWidth={w} class:big={w > 700}>
+<a href="blog/{slug}" class="p-4 m-2 items-center text-left" bind:clientWidth={w} class:big={w > 700} rel="prefetch">
   <span class="text-xl" style="grid-area:title">{title}</span>
   <span class="text-base text-accent-light" style="grid-area:date">{dateText}</span>
 </a>
