@@ -24,6 +24,4 @@
   <a href="credits" class="absolute m-4 bottom-0 text-center a" rel="prefetch">
     Credits
   </a>
-  <!-- HACK: to force Sapper to export some unreachable pages -->
-  <a href="editor" class="hidden">editor</a>
 </main>
