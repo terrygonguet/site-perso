@@ -1,0 +1,1 @@
+<span class="back" on:click={() => history.back()}>Back</span>

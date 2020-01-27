@@ -12,6 +12,7 @@
   import { fade } from "svelte/transition";
   import { cubicInOut } from "svelte/easing";
   import BlogLink from "../../components/BlogLink";
+  import Back from "../../components/Back"
 
   export let blogs = []
 
@@ -37,6 +38,6 @@
         <BlogLink {...blog} />
       {/each}
     {/if}
-    <a href="." class="back">Back</a>
+    <Back />
   </div>
 </main>

@@ -114,7 +114,7 @@ body {
 }
 
 .back {
-	@apply block text-center a my-4;
+	@apply block text-center text-accent-light my-4 cursor-pointer;
 }
 
 .back:hover {

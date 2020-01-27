@@ -14,6 +14,7 @@
   import { fade } from "svelte/transition";
   import { cubicInOut } from "svelte/easing";
   import { dateFormatter } from "../../tools";
+  import Back from "../../components/Back"
 
   export let title = "Missing blog data"
   export let date = "0001-01-01"
@@ -31,6 +32,6 @@
     <article class="mt-8">
       {@html content}
     </article>
-    <a href="." class="back">Home</a>
+    <Back />
   </div>
 </main>
