@@ -10,7 +10,7 @@ export async function get(req, res, next) {
 	const { slug } = req.params
 
 	try {
-		let blog = await fs.readFile(`src/blogdata/${slug}.json`)
+		let blog = await fs.readFile(`blogdata/${slug}.json`)
 		res.setHeader("Content-Type", "application/json")
 		delete blog.visible
 		res.end(blog)

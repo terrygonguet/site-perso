@@ -8,10 +8,10 @@ import { IncomingMessage, ServerResponse } from "http"
  */
 export async function get(req, res, next) {
 	try {
-		let files = await fs.readdir("src/blogdata")
+		let files = await fs.readdir("blogdata")
 		let blogsdata = await Promise.all(
 			files.map(f =>
-				fs.readFile(`src/blogdata/${f}`).then(data => ({
+				fs.readFile(`blogdata/${f}`).then(data => ({
 					slug: f.replace(".json", ""),
 					blog: JSON.parse(data)
 				}))
