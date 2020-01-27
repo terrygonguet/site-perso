@@ -35,7 +35,7 @@
     <BlogLink title="Diplôme Étudiant Entrepreneur - Lyon 3" slug="d2e" date="2019-2020" formatDate={false} />
     <BlogLink title="Bachelor in Computing - IT Tallaght" slug="2-years-in-ireland" date="2016-2018" formatDate={false} />
     <BlogLink title="DUT Informatique - Université Savoie Mt. Blanc" slug="dut-info" date="2014-2016" formatDate={false} />
-    <BlogLink title="BAC S - St Julien en Genevois" slug="bac-s" date="2016" formatDate={false} />
+    <BlogLink title="BAC S - St Julien en Genevois" slug="bac-s" date="2014" formatDate={false} />
     <h2 class="text-2xl mt-4">Skills</h2>
     <p class="mb-4 mt-2">
       As staded multiple time through this website, I am a web developer and even though I know some things about
