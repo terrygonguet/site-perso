@@ -5,7 +5,7 @@
 </script>
 
 <main
-  class="overflow-hidden flex-center"
+  class="overflow-auto flex-center"
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
   out:fade={{ easing: cubicInOut, duration: 200 }}>
   <a href="cv">CV</a>

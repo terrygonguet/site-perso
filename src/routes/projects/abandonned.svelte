@@ -14,10 +14,10 @@
 </script>
 
 <main
-  class="overflow-hidden flex justify-center items-stretch md:items-center flex-col"
+  class="overflow-auto flex justify-center items-stretch md:items-center flex-col"
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
   out:fade={{ easing: cubicInOut, duration: 200 }}>
-  <div class="m-4 md:w-2/3 max-h-full overflow-auto text-justify">
+  <div class="m-4 md:w-2/3 max-h-full text-justify">
     <p class="my-4">
       These are projects I started (and stopped) what feels like an age ago, some are just
       unfinished, some are broken and some only exist in Github and my memories. The fact that

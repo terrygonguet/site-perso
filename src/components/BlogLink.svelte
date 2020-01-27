@@ -4,8 +4,10 @@
   export let title = "Missing title"
   export let date = "0001-01-01"
   export let slug = "missing-slug"
+  export let formatDate = true
 
   let w
+  $: dateText = formatDate ? dateFormatter.format(new Date(date)) : date
 </script>
 
 <style>
@@ -26,7 +28,7 @@
   }
 </style>
 
-<a href="blog/{slug}" class="p-4 m-2 items-center" bind:clientWidth={w} class:big={w > 700}>
+<a href="blog/{slug}" class="p-4 m-2 items-center text-left" bind:clientWidth={w} class:big={w > 700}>
   <span class="text-xl" style="grid-area:title">{title}</span>
-  <span class="text-base text-accent-light" style="grid-area:date">{dateFormatter.format(new Date(date))}</span>
+  <span class="text-base text-accent-light" style="grid-area:date">{dateText}</span>
 </a>
