@@ -1,6 +1,7 @@
 <script>
   import { fade } from "svelte/transition";
   import { cubicInOut } from "svelte/easing";
+  import Back from "../components/Back";
 </script>
 
 <main
@@ -35,6 +36,6 @@
       One day I hope to be able to live from making interesting and fun games but in the meantime I'm excited to
       make the internet slightly more awesome, one website at a time!
     </p>
-    <a href="." class="back" rel="prefetch">Back</a>
+    <Back />
   </section>
 </main>
