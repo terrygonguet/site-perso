@@ -196,8 +196,8 @@
           ctx.fillStyle = colorAccent;
           let fontSize = (isHighlight ? 0.6 : 0.5) * centerR;
           ctx.font = `${Math.ceil(fontSize)}px sans-serif`;
-          let x = (Math.cos(sigma + step / 2) * rw) / 4,
-            y = (Math.sin(sigma + step / 2) * rw) / 4,
+          let x = (Math.cos(sigma + step / 2) * rw) / 3.4,
+            y = (Math.sin(sigma + step / 2) * rw) / 3.4,
             iconSize = isHighlight ? 1.1 * centerR : centerR;
           ctx.fillText(submenu.label, x, y, rw / 2.5);
           try {
