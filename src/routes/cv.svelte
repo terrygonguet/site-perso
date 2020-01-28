@@ -15,7 +15,7 @@
       This is the page where all the information only relevant to you hiring me are.
       If what you're looking for isn't here it might be somewhere else on this site,
       you can look for it using my <a href="." class="a">amazing main menu</a>! If you can't do that
-      you can always <a href="contact" class="a">ask me directly</a>, I respond pretty fast.
+      you can always <a href="contact" class="a">ask me directly</a>, I respond pretty quickly.
     </p>
     <p class="my-4">
       I currently live in <a href="https://goo.gl/maps/2zJpbBUmVaWYa5xT9" class="a" target="_blank">Lyon</a>
@@ -28,7 +28,7 @@
     </p>
     <h2 class="text-2xl mt-4">Skills</h2>
     <p class="mb-4 mt-2">
-      As staded multiple time through this website, I am a web developer and even though I know some things about
+      I am a web developer and even though I know some things about
       "traditional" languages and technologies like Haskell (💜), PHP (🤢), .NET, Java etc, I am much more proficient
       with the web technologies (HTML/CSS/JS). I can (and do) develop both the front and back end of NodeJS applications.
     </p>
@@ -41,7 +41,7 @@
       <a href="https://www.typescriptlang.org/" target="_blank" class="a">Typescript</a>,
       <a href="https://vuejs.org/" target="_blank" class="a">VueJS</a>
       and <a href="https://www.pixijs.com/" target="_blank" class="a">PIXI.js</a>
-      for all of my applications and games. Over ther years I played with too many interesting tools
+      for all of my applications and games. I played with too many interesting tools
       and technologies to all list here but these are the main ones.
     </p>
     <p class="my-4">

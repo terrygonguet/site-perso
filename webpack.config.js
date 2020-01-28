@@ -1,21 +1,21 @@
-const webpack = require("webpack");
-const path = require("path");
-const config = require("sapper/config/webpack.js");
-const pkg = require("./package.json");
-const PurgeCSS = require("@fullhuman/postcss-purgecss");
-const CompressionPlugin = require("compression-webpack-plugin");
-const fs = require("fs");
-const postcss = require("postcss");
+const webpack = require("webpack")
+const path = require("path")
+const config = require("sapper/config/webpack.js")
+const pkg = require("./package.json")
+const PurgeCSS = require("@fullhuman/postcss-purgecss")
+const CompressionPlugin = require("compression-webpack-plugin")
+const fs = require("fs")
+const postcss = require("postcss")
 
-const mode = process.env.NODE_ENV;
-const dev = mode === "development";
+const mode = process.env.NODE_ENV
+const dev = mode === "development"
 
-const alias = { svelte: path.resolve("node_modules", "svelte") };
-const extensions = [".mjs", ".js", ".json", ".svelte", ".html"];
-const mainFields = ["svelte", "module", "browser", "main"];
+const alias = { svelte: path.resolve("node_modules", "svelte") }
+const extensions = [".mjs", ".js", ".json", ".svelte", ".html"]
+const mainFields = ["svelte", "module", "browser", "main"]
 
 const purgeCSSPlugin = PurgeCSS({
-	content: ["./src/**/*.svelte", "./src/template.html"],
+	content: ["./src/**/*.svelte", "./src/template.html", "./blogdata/*.json"],
 	fontFace: true,
 	defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
 	extractors: [
@@ -24,42 +24,42 @@ const purgeCSSPlugin = PurgeCSS({
 			extensions: ["svelte"]
 		}
 	]
-});
+})
 
 const shimTailwind = async ({ content, filename }) => {
 	if (filename.endsWith("_layout.svelte")) {
 		let source = await new Promise((resolve, reject) => {
 			fs.readFile("src/global.css", (err, data) => {
-				if (err) reject(err);
-				else resolve(data.toString());
-			});
-		});
+				if (err) reject(err)
+				else resolve(data.toString())
+			})
+		})
 		let plugins = [
 			require("tailwindcss"),
 			require("autoprefixer"),
 			require("postcss-discard-comments")({ removeAll: true }),
 			!dev && purgeCSSPlugin,
 			!dev && require("cssnano")()
-		].filter(Boolean);
+		].filter(Boolean)
 
 		// compile css
 		let { css } = await postcss(plugins).process(source, {
 			from: "src/global.css",
 			to: "global.css"
-		});
+		})
 		// "globalize" the selectors
 		css = css
 			.replace(/\s/g, "")
-			.replace(/([a-zA-Z\[\]:\d,="\-.\\/*_]+?)(?={)/g, `:global($1)`);
+			.replace(/([a-zA-Z\[\]:\d,="\-.\\/*_]+?)(?={)/g, `:global($1)`)
 
-		let code = content.replace("/* shimport css */", css);
+		let code = content.replace("/* shimport css */", css)
 
 		return {
 			code,
 			dependencies: [path.join(__dirname, "src/global.css")]
-		};
+		}
 	}
-};
+}
 
 module.exports = {
 	client: {
@@ -139,4 +139,4 @@ module.exports = {
 		output: config.serviceworker.output(),
 		mode: process.env.NODE_ENV
 	}
-};
+}
