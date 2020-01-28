@@ -26,16 +26,6 @@
       All the items in the following lists link to blog posts that detail what I did and thought about during these events.
       Most of my personal experience can be found <a href="projects" class="a">here</a>.
     </p>
-    <h2 class="text-2xl mt-4">Professional experience</h2>
-    <BlogLink title="Let's be an entrepreneur" slug="lets-be-entrepreneur" date="September 2019" formatDate={false} />
-    <BlogLink title="I like teaching kids" slug="i-like-teaching-kids" date="September 2019 to August 2020" formatDate={false} />
-    <BlogLink title="Telligo and summer camps" slug="colos-telligo" date="April and July 2019" formatDate={false} />
-    <BlogLink title="Internship at Alpes Contrôles" slug="stage-alpes-controles" date="April 2016" formatDate={false} />
-    <h2 class="text-2xl mt-4">Studies</h2>
-    <BlogLink title="Diplôme Étudiant Entrepreneur - Lyon 3" slug="d2e" date="2019-Now" formatDate={false} />
-    <BlogLink title="DUETI + Bachelor in Computing - IT Tallaght" slug="dueti-bachelor" date="2016-2018" formatDate={false} />
-    <BlogLink title="DUT Informatique - Université Savoie Mt. Blanc" slug="dut-info" date="2014-2016" formatDate={false} />
-    <BlogLink title="BAC S - St Julien en Genevois" slug="bac-s" date="2014" formatDate={false} />
     <h2 class="text-2xl mt-4">Skills</h2>
     <p class="mb-4 mt-2">
       As staded multiple time through this website, I am a web developer and even though I know some things about
@@ -45,14 +35,31 @@
     <p class="my-4">
       On the server, I have experience using <a href="https://expressjs.com/" target="_blank" class="a">Express</a>,
       <a href="https://www.mongodb.com/" target="_blank" class="a">MongoDB</a>,
-      <a href="https://www.keystonejs.com/" target="_blank" class="a">Keystone</a> and
+      <a href="https://www.keystonejs.com/" target="_blank" class="a">Keystone</a> (v4) and
       <a href="https://graphql.github.io/" target="_blank" class="a">GraphQL</a>. On the client I have experimented with many tools and love
       <a href="https://sapper.svelte.dev/" target="_blank" class="a">Sapper</a>,
+      <a href="https://www.typescriptlang.org/" target="_blank" class="a">Typescript</a>,
       <a href="https://vuejs.org/" target="_blank" class="a">VueJS</a>
       and <a href="https://www.pixijs.com/" target="_blank" class="a">PIXI.js</a>
       for all of my applications and games. Over ther years I played with too many interesting tools
       and technologies to all list here but these are the main ones.
     </p>
+    <p class="my-4">
+      I take good pride in my technical skills and spend a good amount of time keeping them sharp but I think my
+      best skill is learning. I <strong class="underline">love</strong> to learn new things all the time, especially if they can help
+      me to do my job better or more efficiently.
+    </p>
+    <h2 class="text-2xl mt-4">Professional experience</h2>
+    <BlogLink title="I made an e-commerce website from scratch" slug="e-commerce-from-scratch" date="Middle of 2019" formatDate={false} />
+    <BlogLink title="Let's be an entrepreneur" slug="lets-be-entrepreneur" date="September 2019" formatDate={false} />
+    <BlogLink title="I like teaching" slug="i-like-teaching" date="2016 till now" formatDate={false} />
+    <BlogLink title="Telligo and summer camps" slug="colos-telligo" date="April and July 2019" formatDate={false} />
+    <BlogLink title="Internship at Alpes Contrôles" slug="stage-alpes-controles" date="April 2016" formatDate={false} />
+    <h2 class="text-2xl mt-4">Studies</h2>
+    <BlogLink title="Diplôme Étudiant Entrepreneur - Lyon 3" slug="d2e" date="2019-Now" formatDate={false} />
+    <BlogLink title="DUETI + Bachelor in Computing - IT Tallaght" slug="dueti-bachelor" date="2016-2018" formatDate={false} />
+    <BlogLink title="DUT Informatique - Université Savoie Mt. Blanc" slug="dut-info" date="2014-2016" formatDate={false} />
+    <BlogLink title="BAC S - St Julien en Genevois" slug="bac-s" date="2014" formatDate={false} />
     <Back />
   </div>
 </main>
