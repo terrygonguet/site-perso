@@ -1,7 +1,8 @@
 {
-	"title": "title",
-	"date": "2020-01-27",
+	"title": "D2E",
+	"date": "2019 to now",
 	"visible": false,
-	"tags": ["preoject", "3D", "retro", "abandonned", "tech"],
-	"content": "<article>Gotta make it better</article>"
+	"formatDate": false,
+	"tags": ["studies", "school", "cv", "entrepreneur", "development"],
+	"content": ""
 }

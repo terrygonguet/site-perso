@@ -32,8 +32,8 @@
     <BlogLink title="Telligo and summer camps" slug="colos-telligo" date="April and July 2019" formatDate={false} />
     <BlogLink title="Internship at Alpes Contrôles" slug="stage-alpes-controles" date="April 2016" formatDate={false} />
     <h2 class="text-2xl mt-4">Studies</h2>
-    <BlogLink title="Diplôme Étudiant Entrepreneur - Lyon 3" slug="d2e" date="2019-2020" formatDate={false} />
-    <BlogLink title="Bachelor in Computing - IT Tallaght" slug="2-years-in-ireland" date="2016-2018" formatDate={false} />
+    <BlogLink title="Diplôme Étudiant Entrepreneur - Lyon 3" slug="d2e" date="2019-Now" formatDate={false} />
+    <BlogLink title="DUETI + Bachelor in Computing - IT Tallaght" slug="dueti-bachelor" date="2016-2018" formatDate={false} />
     <BlogLink title="DUT Informatique - Université Savoie Mt. Blanc" slug="dut-info" date="2014-2016" formatDate={false} />
     <BlogLink title="BAC S - St Julien en Genevois" slug="bac-s" date="2014" formatDate={false} />
     <h2 class="text-2xl mt-4">Skills</h2>

@@ -20,6 +20,9 @@
   export let date = "0001-01-01"
   export let content = "<p>Missing blog data</p>"
   export let tags = []
+  export let formatDate = true
+
+  $: dateText = formatDate ? dateFormatter.format(new Date(date)) : date
 </script>
 
 <main
@@ -28,7 +31,7 @@
   out:fade={{ easing: cubicInOut, duration: 200 }}>
   <div class="m-4 md:w-2/3 max-h-full">
     <h1 class="text-4xl">{title}</h1>
-    <h3 class="text-accent-light text-base">{dateFormatter.format(new Date(date))}</h3>
+    <h3 class="text-accent-light text-base">{dateText}</h3>
     <article class="mt-8">
       {@html content}
     </article>

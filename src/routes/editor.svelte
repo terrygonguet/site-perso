@@ -7,30 +7,40 @@
   let content, textarea
 
   onMount(() => {
-    content = localStorage.getItem("blog") || "<article>\n\t\n</article>"
+    content = localStorage.getItem("blog") ||
+`<article class="text-justify">
+  <p class="my-4"></p>
+  <p class="my-4"></p>
+</article>`
   })
 
   async function onkeydown(e) {
-    let arr = Array.from(content)
+    let arr = content.split("")
     let { selectionStart: ss, selectionEnd: se } = textarea
-    let nextPlace = ss, toInsert = e.key
+    let nextPlace = ss, toInsert = ""
 
-    if (e.key == "Tab") {
+    if (e.key == "Tab") { // Tab
       e.preventDefault()
-      toInsert = "\t"
-      nextPlace = ss + 1
-    } else if (e.key == "\"") {
+      toInsert = "  "
+      nextPlace = ss + 2
+    } else if (e.key == "\"") { // "
       e.preventDefault()
       toInsert = "\"\""
       nextPlace = ss + 1
-    } else if (e.key == "<" && e.ctrlKey) {
+    } else if (e.key == "<" && e.ctrlKey) { // Ctrl-<
       e.preventDefault()
-      toInsert = "<>"
+      toInsert = "<></>"
       nextPlace = ss + 1
-    } else if (e.key == ">" && e.ctrlKey) {
+    } else if (e.key == "a" && e.altKey) { // Alt-A
       e.preventDefault()
-      toInsert = "</>"
-      nextPlace = ss + 2
+      toInsert = "<a href=\"\" class=\"a\"></a>"
+      nextPlace = ss + 9
+    } else if (e.key == "s" && e.ctrlKey) { // Ctrl-S
+      e.preventDefault()
+    } else if (e.key == "e" && e.ctrlKey) { // Ctrl-E
+      e.preventDefault()
+      let sanitized = content.replace(/\t|\n/g, "").replace(/"/g, "\\\"")
+      navigator.clipboard.writeText(sanitized).then(() => alert("Copied !")).catch(alert)
     }
 
 
@@ -47,13 +57,22 @@
 <style>
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr auto;
+  grid-template-areas: "editor" "preview" "back";
   grid-gap: 1rem;
 }
 
 textarea {
   resize: none;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      "editor preview"
+      "back   back";
+  }
 }
 </style>
 
@@ -61,9 +80,14 @@ textarea {
   class="overflow-auto p-4"
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
   out:fade={{ easing: cubicInOut, duration: 200 }}>
-  <textarea bind:value={content} class="bg-dark border border-gray-500 p-2" on:keydown={onkeydown} bind:this={textarea} />
-  <div class="overflow-auto border border-gray-500">
+  <textarea
+    bind:value={content}
+    class="bg-dark border border-gray-900 p-2 font-mono"
+    on:keydown={onkeydown}
+    bind:this={textarea}
+    style="grid-area:editor;min-height:15rem;" />
+  <div class="overflow-auto border border-gray-900" style="grid-area:preview">
     {@html content}
   </div>
-  <Back _style="grid-column: span 2" />
+  <Back _style="grid-area:back;margin:0" />
 </main>
