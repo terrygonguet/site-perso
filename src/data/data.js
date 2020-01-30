@@ -65,6 +65,58 @@ export const abandonned = [
 	}
 ]
 
+export const cv = {
+	experiences: [
+		{
+			title: "I made an e-commerce website from scratch",
+			slug: "e-commerce-from-scratch",
+			displayDate: "Middle of 2019",
+		},
+		{
+			title: "Let's be an entrepreneur",
+			slug: "lets-be-an-entrepreneur",
+			displayDate: "September 2019",
+		},
+		{
+			title: "I like teaching",
+			slug: "i-like-teaching",
+			displayDate: "2016 till now",
+		},
+		{
+			title: "Telligo and summer camps",
+			slug: "colos-telligo",
+			displayDate: "April and July 2019",
+		},
+		{
+			title: "Internship at Alpes Contrôles",
+			slug: "stage-alpes-controles",
+			displayDate: "April 2016",
+		},
+	],
+	studies: [
+		{
+			title: "Diplôme Étudiant Entrepreneur - Lyon 3",
+			slug: "d2e",
+			displayDate: "2019 till now",
+		},
+		{
+			title: "DUETI + Bachelor in Computing - IT Tallaght",
+			slug: "dueti-bachelor",
+			displayDate: "2016-2018",
+		},
+		{
+			title: "DUT Informatique - Université Savoie Mt. Blanc",
+			slug: "dut-info",
+			displayDate: "2014-2016",
+		},
+		{
+			title: "BAC S - St Julien en Genevois",
+			slug: "bac-s",
+			displayDate: "2014",
+		},
+	]
+}
+
 export const experimentURL = "https://next.interestingby.design/"
 
 /**

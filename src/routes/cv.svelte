@@ -1,8 +1,11 @@
 <script>
   import { fade } from "svelte/transition";
   import { cubicInOut } from "svelte/easing";
-  import Back from "../components/Back"
-  import BlogLink from "../components/BlogLink"
+  import Back from "../components/Back";
+  import BlogLink from "../components/BlogLink";
+  import { cv } from "../data/data";
+
+  const { experiences, studies } = cv
 </script>
 
 <main
@@ -50,16 +53,13 @@
       me to do my job better or more efficiently.
     </p>
     <h2 class="text-2xl mt-4">Professional experience</h2>
-    <BlogLink title="I made an e-commerce website from scratch" slug="e-commerce-from-scratch" displayDate="Middle of 2019" />
-    <BlogLink title="Let's be an entrepreneur" slug="lets-be-entrepreneur" displayDate="September 2019" />
-    <BlogLink title="I like teaching" slug="i-like-teaching" displayDate="2016 till now" />
-    <BlogLink title="Telligo and summer camps" slug="colos-telligo" displayDate="April and July 2019" />
-    <BlogLink title="Internship at Alpes Contrôles" slug="stage-alpes-controles" displayDate="April 2016" />
+    {#each experiences as blog}
+      <BlogLink {...blog} />
+    {/each}
     <h2 class="text-2xl mt-4">Studies</h2>
-    <BlogLink title="Diplôme Étudiant Entrepreneur - Lyon 3" slug="d2e" displayDate="2019-Now" />
-    <BlogLink title="DUETI + Bachelor in Computing - IT Tallaght" slug="dueti-bachelor" displayDate="2016-2018" />
-    <BlogLink title="DUT Informatique - Université Savoie Mt. Blanc" slug="dut-info" displayDate="2014-2016" />
-    <BlogLink title="BAC S - St Julien en Genevois" slug="bac-s" displayDate="2014" />
+    {#each studies as blog}
+      <BlogLink {...blog} />
+    {/each}
     <Back />
   </div>
 </main>
