@@ -29,7 +29,7 @@ main {
       out:fade={{ easing: cubicInOut, duration: 200 }}></iframe>
   {:else}
     <div 
-      class="flex-center flex-col md:w-2/3 m-auto"
+      class="flex-center flex-col md:w-2/3 m-auto text-center"
       in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
       out:fade={{ easing: cubicInOut, duration: 200 }}
     >

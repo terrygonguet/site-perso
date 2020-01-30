@@ -132,7 +132,9 @@ export const cv = {
 
 export const experiment = {
 	url: "https://next.interestingby.design/",
-	description: `The next website for <a href="https://interestingby.design/" target="_blank" class="a">Interesting By Design</a>`
+	description: `This is the development version of the next website for
+	<a href="https://interestingby.design/" target="_blank" class="a">Interesting By Design</a>.
+	See <a href="blog/lets-be-entrepreneur" class="a">this blog post</a> to know more about it.`
 }
 
 /**
