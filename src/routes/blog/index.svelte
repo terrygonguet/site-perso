@@ -24,6 +24,10 @@
   $: notFirst = sortedBlogs.slice(1)
 </script>
 
+<svelte:head>
+  <title>Terry Gonguet - Blog</title>
+</svelte:head>
+
 <main
   class="overflow-auto flex justify-center items-stretch md:items-center flex-col"
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}

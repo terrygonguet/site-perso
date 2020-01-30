@@ -25,6 +25,10 @@
   $: dateText = displayDate || dateFormatter.format(new Date(date))
 </script>
 
+<svelte:head>
+  <title>Terry Gonguet - Blog - {title}</title>
+</svelte:head>
+
 <main
   class="overflow-auto flex-center flex-col"
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
