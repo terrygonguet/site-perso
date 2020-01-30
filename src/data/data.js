@@ -73,7 +73,7 @@ export const alive = [
 	},
 	{
 		title: "Let's be an entrepreneur",
-		slug: "lets-be-an-entrepreneur",
+		slug: "lets-be-entrepreneur",
 		displayDate: "September 2019",
 	},
 ]
@@ -87,7 +87,7 @@ export const cv = {
 		},
 		{
 			title: "Let's be an entrepreneur",
-			slug: "lets-be-an-entrepreneur",
+			slug: "lets-be-entrepreneur",
 			displayDate: "September 2019",
 		},
 		{
