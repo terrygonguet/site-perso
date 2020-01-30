@@ -20,7 +20,7 @@
   <div class="m-4 md:w-2/3 max-h-full text-justify">
     <p class="my-4">
       These are projects I started (and stopped) what feels like an age ago, some are just
-      unfinished, some are broken and some only exist in Github and my memories. The fact that
+      unfinished, some are broken and some only exist in Github or in my memories. The fact that
       I feel like I was a different person when I made these probably tells me that I've done
       some growing up in between.
     </p>
