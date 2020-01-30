@@ -7,7 +7,7 @@
  */
 
 /** @type {MenuItem} */
-const menus = {
+export const menus = {
 	label: "Base",
 	icon: "",
 	children: [
@@ -55,9 +55,17 @@ const menus = {
 	]
 }
 
-export default menus
-
 export const icons = getIconsFromMenu(menus)
+
+export const abandonned = [
+	{
+		title: "Super 3D Retro",
+		slug: "super-3d-retro",
+		date: "2017-05-12",
+	}
+]
+
+export const experimentURL = "https://next.interestingby.design/"
 
 /**
  * Returns an array containing the icons of the menu item

@@ -3,14 +3,7 @@
   import { cubicInOut } from "svelte/easing";
   import BlogLink from "../../components/BlogLink";
   import Back from "../../components/Back"
-
-  let blogs = [
-    {
-      title: "Super 3D Retro",
-      slug: "super-3d-retro",
-      date: "2017-05-12",
-    }
-  ]
+  import { abandonned as blogs } from "../../data/data"
 </script>
 
 <main

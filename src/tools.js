@@ -1,5 +1,5 @@
 import { createMachine, assign } from "@xstate/fsm"
-import radialNavData from "./data/radialNav"
+import { menus as radialNavData } from "./data/data"
 
 export const currencyFormatter = new Intl.NumberFormat(undefined, {
 	style: "currency",

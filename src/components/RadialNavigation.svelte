@@ -4,7 +4,7 @@
   import { goto, prefetch } from "@sapper/app";
   import { tweened } from "svelte/motion";
   import { cubicInOut } from "svelte/easing";
-  import radialNavData, { icons } from "../data/radialNav";
+  import { menus as radialNavData, icons } from "../data/data";
   import NavMenuItem from "./NavMenuItem";
   import { interpret } from "@xstate/fsm";
 

@@ -50,16 +50,16 @@
       me to do my job better or more efficiently.
     </p>
     <h2 class="text-2xl mt-4">Professional experience</h2>
-    <BlogLink title="I made an e-commerce website from scratch" slug="e-commerce-from-scratch" date="Middle of 2019" formatDate={false} />
-    <BlogLink title="Let's be an entrepreneur" slug="lets-be-entrepreneur" date="September 2019" formatDate={false} />
-    <BlogLink title="I like teaching" slug="i-like-teaching" date="2016 till now" formatDate={false} />
-    <BlogLink title="Telligo and summer camps" slug="colos-telligo" date="April and July 2019" formatDate={false} />
-    <BlogLink title="Internship at Alpes Contrôles" slug="stage-alpes-controles" date="April 2016" formatDate={false} />
+    <BlogLink title="I made an e-commerce website from scratch" slug="e-commerce-from-scratch" displayDate="Middle of 2019" />
+    <BlogLink title="Let's be an entrepreneur" slug="lets-be-entrepreneur" displayDate="September 2019" />
+    <BlogLink title="I like teaching" slug="i-like-teaching" displayDate="2016 till now" />
+    <BlogLink title="Telligo and summer camps" slug="colos-telligo" displayDate="April and July 2019" />
+    <BlogLink title="Internship at Alpes Contrôles" slug="stage-alpes-controles" displayDate="April 2016" />
     <h2 class="text-2xl mt-4">Studies</h2>
-    <BlogLink title="Diplôme Étudiant Entrepreneur - Lyon 3" slug="d2e" date="2019-Now" formatDate={false} />
-    <BlogLink title="DUETI + Bachelor in Computing - IT Tallaght" slug="dueti-bachelor" date="2016-2018" formatDate={false} />
-    <BlogLink title="DUT Informatique - Université Savoie Mt. Blanc" slug="dut-info" date="2014-2016" formatDate={false} />
-    <BlogLink title="BAC S - St Julien en Genevois" slug="bac-s" date="2014" formatDate={false} />
+    <BlogLink title="Diplôme Étudiant Entrepreneur - Lyon 3" slug="d2e" displayDate="2019-Now" />
+    <BlogLink title="DUETI + Bachelor in Computing - IT Tallaght" slug="dueti-bachelor" displayDate="2016-2018" />
+    <BlogLink title="DUT Informatique - Université Savoie Mt. Blanc" slug="dut-info" displayDate="2014-2016" />
+    <BlogLink title="BAC S - St Julien en Genevois" slug="bac-s" displayDate="2014" />
     <Back />
   </div>
 </main>
