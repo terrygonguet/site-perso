@@ -65,6 +65,19 @@ export const abandonned = [
 	}
 ]
 
+export const alive = [
+	{
+		title: "I made an e-commerce website from scratch",
+		slug: "e-commerce-from-scratch",
+		displayDate: "Middle of 2019",
+	},
+	{
+		title: "Let's be an entrepreneur",
+		slug: "lets-be-an-entrepreneur",
+		displayDate: "September 2019",
+	},
+]
+
 export const cv = {
 	experiences: [
 		{
