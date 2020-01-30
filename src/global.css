@@ -120,3 +120,13 @@ body {
 .back:hover {
 	@apply text-accent;
 }
+
+.btn {
+	@apply px-4 py-2 font-semibold text-white;
+	background-color: var(--accent-light);
+	transition: background-color  .4s;
+}
+
+.btn:hover {
+	background-color: var(--accent);
+}

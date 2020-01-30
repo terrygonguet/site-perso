@@ -117,7 +117,10 @@ export const cv = {
 	]
 }
 
-export const experimentURL = "https://next.interestingby.design/"
+export const experiment = {
+	url: "https://next.interestingby.design/",
+	description: `The next website for <a href="https://interestingby.design/" target="_blank" class="a">Interesting By Design</a>`
+}
 
 /**
  * Returns an array containing the icons of the menu item
