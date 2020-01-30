@@ -20,9 +20,9 @@
   export let date = "0001-01-01"
   export let content = "<p>Missing blog data</p>"
   export let tags = []
-  export let formatDate = true
+  export let displayDate = false
 
-  $: dateText = formatDate ? dateFormatter.format(new Date(date)) : date
+  $: dateText = displayDate || dateFormatter.format(new Date(date))
 </script>
 
 <main

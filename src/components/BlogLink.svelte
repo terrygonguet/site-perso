@@ -4,10 +4,10 @@
   export let title = "Missing title"
   export let date = "0001-01-01"
   export let slug = "missing-slug"
-  export let formatDate = true
+  export let displayDate = false
 
   let w
-  $: dateText = formatDate ? dateFormatter.format(new Date(date)) : date
+  $: dateText = displayDate || dateFormatter.format(new Date(date)) 
 </script>
 
 <style>

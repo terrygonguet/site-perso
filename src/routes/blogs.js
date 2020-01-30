@@ -19,12 +19,12 @@ export async function get(req, res, next) {
 		)
 		let blogs = blogsdata
 			.filter(data => data.blog.visible)
-			.map(({ blog: { title, date, tags, formatDate }, slug }) => ({
+			.map(({ blog: { title, date, tags, displayDate }, slug }) => ({
 				title,
 				date,
 				slug,
 				tags,
-				formatDate: formatDate == undefined ? undefined : formatDate
+				displayDate
 			}))
 		res.setHeader("Content-Type", "application/json")
 		res.end(JSON.stringify(blogs))

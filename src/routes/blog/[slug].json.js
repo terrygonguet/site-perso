@@ -12,7 +12,6 @@ export async function get(req, res, next) {
 	try {
 		let blog = await fs.readFile(`blogdata/${slug}.json`)
 		res.setHeader("Content-Type", "application/json")
-		delete blog.visible
 		res.end(blog)
 	} catch (err) {
 		console.error(err)

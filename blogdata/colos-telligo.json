@@ -1,7 +1,13 @@
 {
 	"title": "Telligo and summer camps",
-	"date": "2019-07-20",
+	"date": "2019-06",
 	"visible": true,
-	"tags": ["summer camp", "kids", "work", "cv"],
+	"displayDate": "April and August 2019",
+	"tags": [
+		"summer camp",
+		"kids",
+		"work",
+		"cv"
+	],
 	"content": "<article class=\"text-justify\">  <p class=\"my-4\">This post is a work in progress...</p></article>"
 }
