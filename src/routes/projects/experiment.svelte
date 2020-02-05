@@ -21,12 +21,14 @@ main {
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
   out:fade={{ easing: cubicInOut, duration: 200 }}>
   {#if showIframe}
-    <iframe
-      src={url}
-      title="Current experiment"
-      class="bg-white border border-gray-500"
-      in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
-      out:fade={{ easing: cubicInOut, duration: 200 }}></iframe>
+    <div>
+      <iframe
+        src={url}
+        title="Current experiment"
+        class="bg-white border border-gray-500 w-full h-full"
+        in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
+        out:fade={{ easing: cubicInOut, duration: 200 }}></iframe>
+    </div>
   {:else}
     <div 
       class="flex-center flex-col md:w-2/3 m-auto text-center"
