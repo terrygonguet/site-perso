@@ -47,10 +47,10 @@ const shimTailwind = async ({ content, filename }) => {
 			from: "src/global.css",
 			to: "global.css"
 		})
+		// if dev we remove all white space
+		if (dev) css = css.replace(/\s/g, "")
 		// "globalize" the selectors
-		css = css
-			.replace(/\s/g, "")
-			.replace(/([a-zA-Z\[\]:\d,="\-.\\/*_]+?)(?={)/g, `:global($1)`)
+		css = css.replace(/([a-zA-Z\[\]:\d,="\-.\\/*_]+?)(?={)/g, `:global($1)`)
 
 		let code = content.replace("/* shimport css */", css)
 
