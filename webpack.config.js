@@ -4,7 +4,7 @@ const config = require("sapper/config/webpack.js")
 const pkg = require("./package.json")
 const PurgeCSS = require("@fullhuman/postcss-purgecss")
 const CompressionPlugin = require("compression-webpack-plugin")
-const fs = require("fs")
+const fs = require("fs").promises
 const postcss = require("postcss")
 
 const mode = process.env.NODE_ENV
@@ -27,13 +27,8 @@ const purgeCSSPlugin = PurgeCSS({
 })
 
 const shimTailwind = async ({ content, filename }) => {
-	if (filename.endsWith("_layout.svelte")) {
-		let source = await new Promise((resolve, reject) => {
-			fs.readFile("src/global.css", (err, data) => {
-				if (err) reject(err)
-				else resolve(data.toString())
-			})
-		})
+	if (content.includes("/* shimport css */")) {
+		let source = await fs.readFile("src/global.css")
 		let plugins = [
 			require("tailwindcss"),
 			require("autoprefixer"),
@@ -47,10 +42,11 @@ const shimTailwind = async ({ content, filename }) => {
 			from: "src/global.css",
 			to: "global.css"
 		})
-		// if dev we remove all white space
-		if (dev) css = css.replace(/\s/g, "")
+
+		// if dev mode we remove whitespace between selectors
+		if (dev) css = css.replace(/,\s+/gm, ",")
 		// "globalize" the selectors
-		css = css.replace(/([a-zA-Z\[\]:\d,="\-.\\/*_]+?)(?={)/g, `:global($1)`)
+		css = css.replace(/([a-zA-Z\[\]:\d,="\-.\\/*_]+?)\s?(?={)/g, `:global($1)`)
 
 		let code = content.replace("/* shimport css */", css)
 
