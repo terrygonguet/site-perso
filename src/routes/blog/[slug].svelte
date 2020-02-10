@@ -35,15 +35,13 @@
   class="overflow-auto flex-center flex-col"
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
   out:fade={{ easing: cubicInOut, duration: 200 }}>
-  <div class="m-4 max-w-1k max-h-full">
+  <article class="m-4 max-w-1k max-h-full text-justify">
     <h1 class="text-4xl">{title}</h1>
-    <h3 class="text-accent-light text-base">{dateText}</h3>
-    <article class="mt-8">
-      {@html content}
-    </article>
+    <h3 class="text-accent-light text-base mb-8">{dateText}</h3>
+    {@html content}
     <Back />
     {#if dev}
       <a href="editor" class="btn absolute mx-8 my-4 top-0 right-0">Editor</a>
     {/if}
-  </div>
+  </article>
 </main>
