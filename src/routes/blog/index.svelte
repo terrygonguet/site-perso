@@ -32,7 +32,7 @@
   class="overflow-auto flex justify-center items-stretch md:items-center flex-col"
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
   out:fade={{ easing: cubicInOut, duration: 200 }}>
-  <div class="m-4 md:w-2/3 max-h-full">
+  <div class="m-4 max-w-1k md:w-full max-h-full">
     <h1 class="text-2xl my-2">Latest</h1>
     <BlogLink {...first} />
     {#if notFirst.length}

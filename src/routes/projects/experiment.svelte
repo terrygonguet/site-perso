@@ -31,7 +31,7 @@ main {
     </div>
   {:else}
     <div 
-      class="flex-center flex-col md:w-2/3 m-auto text-center"
+      class="flex-center flex-col max-w-1k m-auto text-center"
       in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
       out:fade={{ easing: cubicInOut, duration: 200 }}
     >

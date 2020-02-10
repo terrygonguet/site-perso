@@ -33,7 +33,7 @@
   class="overflow-auto flex-center flex-col"
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
   out:fade={{ easing: cubicInOut, duration: 200 }}>
-  <div class="m-4 md:w-2/3 max-h-full">
+  <div class="m-4 max-w-1k max-h-full">
     <h1 class="text-4xl">{title}</h1>
     <h3 class="text-accent-light text-base">{dateText}</h3>
     <article class="mt-8">

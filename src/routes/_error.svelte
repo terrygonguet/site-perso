@@ -16,7 +16,7 @@
   class="overflow-hidden flex-center flex-col"
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
   out:fade={{ easing: cubicInOut, duration: 200 }}>
-  <div class="m-4 md:w-2/3 max-h-full overflow-auto">
+  <div class="m-4 max-w-1k max-h-full overflow-auto">
     <h1 class="m-10 text-4xl font-bold text-center">{status}</h1>
     <p class="m-10 text-2xl font-semibold text-center">{error.message}</p>
     {#if dev && error.stack}

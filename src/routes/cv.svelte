@@ -12,7 +12,7 @@
   class="overflow-auto flex-center"
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
   out:fade={{ easing: cubicInOut, duration: 200 }}>
-  <div class="m-4 md:w-2/3 max-h-full text-justify">
+  <div class="m-4 max-w-1k max-h-full text-justify">
     <h1 class="text-3xl font-semibold text-center my-4">CV</h1>
     <p class="my-4">
       This is the page where all the information only relevant to you hiring me are.
