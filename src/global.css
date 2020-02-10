@@ -96,6 +96,7 @@ body {
 
 .a {
 	@apply text-accent-light;
+	transition: color 0.4s;
 }
 
 .a:hover {
@@ -115,6 +116,7 @@ body {
 
 .back {
 	@apply block text-center text-accent-light my-4 cursor-pointer;
+	transition: color 0.4s;
 }
 
 .back:hover {
@@ -124,7 +126,7 @@ body {
 .btn {
 	@apply px-4 py-2 font-semibold text-white;
 	background-color: var(--accent-light);
-	transition: background-color  .4s;
+	transition: background-color 0.4s;
 }
 
 .btn:hover {
