@@ -23,6 +23,8 @@
   export let displayDate = false
 
   $: dateText = displayDate || dateFormatter.format(new Date(date))
+
+  let dev = process.env.NODE_ENV == "development"
 </script>
 
 <svelte:head>
@@ -40,5 +42,8 @@
       {@html content}
     </article>
     <Back />
+    {#if dev}
+      <a href="editor" class="btn absolute mx-8 my-4 top-0 right-0">Editor</a>
+    {/if}
   </div>
 </main>
