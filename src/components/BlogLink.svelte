@@ -16,6 +16,7 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-areas: "title" "date";
+    transition: background-color 0.4s;
   }
 
   a:hover {
