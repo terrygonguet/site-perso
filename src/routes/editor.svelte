@@ -8,10 +8,10 @@
 
   onMount(() => {
     content = localStorage.getItem("blog") ||
-`<article class="text-justify">
-  <p class="my-4"></p>
-  <p class="my-4"></p>
-</article>`
+`<p class="my-4"></p>
+<p class="my-4"></p>
+<p class="my-4"></p>
+<p class="my-4"></p>`
   })
 
   async function onkeydown(e) {
@@ -86,7 +86,7 @@ textarea {
     on:keydown={onkeydown}
     bind:this={textarea}
     style="grid-area:editor;min-height:15rem;" />
-  <div class="overflow-auto border border-gray-900" style="grid-area:preview">
+  <div class="overflow-auto border border-gray-900 text-justify" style="grid-area:preview">
     {@html content}
   </div>
   <Back _style="grid-area:back;margin:0" />
