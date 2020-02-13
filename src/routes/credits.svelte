@@ -3,6 +3,10 @@
   import { cubicInOut } from "svelte/easing";
 </script>
 
+<svelte:head>
+  <title>Terry Gonguet - Credits</title>
+</svelte:head>
+
 <main
   class="overflow-hidden flex-center relative flex-col text-center"
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}

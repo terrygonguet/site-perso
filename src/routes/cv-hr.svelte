@@ -7,6 +7,10 @@
   let age = computeAge([11,3,1996])
 </script>
 
+<svelte:head>
+  <title>Terry Gonguet - CV Short</title>
+</svelte:head>
+
 <main
   class="overflow-auto flex-center"
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}

@@ -8,6 +8,10 @@
   const { experiences, studies } = cv
 </script>
 
+<svelte:head>
+  <title>Terry Gonguet - CV</title>
+</svelte:head>
+
 <main
   class="overflow-auto flex-center"
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}

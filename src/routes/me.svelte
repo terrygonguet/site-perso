@@ -4,6 +4,10 @@
   import Back from "../components/Back";
 </script>
 
+<svelte:head>
+  <title>Terry Gonguet - Me</title>
+</svelte:head>
+
 <main
   class="overflow-auto flex-center"
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
