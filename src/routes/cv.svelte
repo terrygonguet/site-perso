@@ -23,7 +23,7 @@
     <p class="my-4">
       I currently live in <a href="https://goo.gl/maps/2zJpbBUmVaWYa5xT9" class="a" target="_blank">Lyon</a>
       have a driving license but no car at hand. French<span class="md:hidden">🇫🇷</span> is my native tongue but I
-      also am fluent in English<span class="md:hidden">🇬🇧</span> (as you can see).
+      also am fluent in English<span class="md:hidden">🇬🇧</span>.
     </p>
     <p class="my-4">
       All the items in the following lists link to blog posts that detail what I did and thought about during these events.
