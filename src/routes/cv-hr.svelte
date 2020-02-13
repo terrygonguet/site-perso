@@ -7,12 +7,28 @@
   let age = computeAge([11,3,1996])
 </script>
 
+<style>
+/* HACK: to make it easy to export as a PDF */
+:target {
+  background-color: white;
+  color: black;
+}
+
+:target a[target="_blank"]::after {
+  background-image: url("img/external-link-black.svg");
+}
+
+:global(:target .back) {
+  display: none;
+}
+</style>
+
 <svelte:head>
   <title>Terry Gonguet - CV Short</title>
 </svelte:head>
 
 <main
-  class="overflow-auto flex-center"
+  class="overflow-auto flex-center" id="pdf"
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
   out:fade={{ easing: cubicInOut, duration: 200 }}>
   <div class="m-4 max-w-1k max-h-full text-justify">
