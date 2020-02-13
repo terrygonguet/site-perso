@@ -18,7 +18,7 @@
       more details you can follow <a href="cv" rel="prefetch" class="a">this link</a>.
     </p>
     <p class="my-4">
-      My name is <a href="/" rel="prefetch" class="a">Terry Gonguet</a>, I am {age} and I currently live in
+      My name is <a href="/me" rel="prefetch" class="a">Terry Gonguet</a>, I am {age} and I currently live in
       <a href="https://goo.gl/maps/2zJpbBUmVaWYa5xT9" class="a" target="_blank">Lyon</a>. I have a driving license but no car at hand.
       French<span class="md:hidden">🇫🇷</span> is my native tongue but I also am fluent in English<span class="md:hidden">🇬🇧</span>.
     </p>

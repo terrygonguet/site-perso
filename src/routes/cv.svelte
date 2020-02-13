@@ -27,11 +27,12 @@
     </p>
     <p class="my-4">
       All the items in the following lists link to blog posts that detail what I did and thought about during these events.
-      Most of my personal experience can be found <a href="projects" class="a">here</a>.
+      Most of my personal experience can be found here, sorted into <a href="projects/alive" rel="prefetch" class="a">"alive"</a>
+      and <a href="projects/abandonned" rel="prefetch" class="a">abandonned</a> projects.
     </p>
     <h2 class="text-2xl mt-4">Skills</h2>
     <p class="mb-4 mt-2">
-      I am a web developer and even though I know some things about
+      I am a full stack web developer and even though I know some things about
       "traditional" languages and technologies like Haskell (💜), PHP (🤢), .NET, Java etc, I am much more proficient
       with the web technologies (HTML/CSS/JS). I can (and do) develop both the front and back end of NodeJS applications.
     </p>
