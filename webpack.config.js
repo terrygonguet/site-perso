@@ -70,6 +70,7 @@ module.exports = {
 						loader: "svelte-loader",
 						options: {
 							dev,
+							css: false,
 							hydratable: true,
 							preprocess: {
 								style: shimTailwind
