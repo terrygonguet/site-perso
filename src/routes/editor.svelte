@@ -35,8 +35,14 @@
       e.preventDefault()
       toInsert = "<a href=\"\" class=\"a\"></a>"
       nextPlace = ss + 9
+    } else if (e.key == "i" && e.ctrlKey) { // Ctrl-I
+      e.preventDefault()
+      toInsert = "<em></em>"
+      nextPlace = ss + 4
     } else if (e.key == "s" && e.ctrlKey) { // Ctrl-S
       e.preventDefault()
+      toInsert = "<strong></strong>"
+      nextPlace = ss + 8
     } else if (e.key == "e" && e.ctrlKey) { // Ctrl-E
       e.preventDefault()
       let sanitized = content.replace(/\t|\n/g, "").replace(/"/g, "\\\"")
