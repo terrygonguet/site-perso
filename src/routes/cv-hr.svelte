@@ -60,14 +60,14 @@
       <h2 class="text-xl md:text-2xl font-semibold my-2">Studies</h2>
       <ul class="list-disc pl-4">
         <li>
-          <a href="img/bachelor-honours.jpg" class="a">Bachelor of Science (honours)</a>
+          <a href="img/xl/bachelor-honours.jpg" class="a">Bachelor of Science (honours)</a>
           computing in <a href="https://www.it-tallaght.ie/" target="_blank" class="a">IT Tallaght</a></li>
         <li>
-          <a href="img/license.jpg" class="a">License computing</a>
+          <a href="img/xl/license.jpg" class="a">License computing</a>
           in <a href="https://www.univ-smb.fr/" target="_blank" class="a">Université Savoie Mt Blanc</a>
         </li>
         <li>
-          <a href="img/dut.jpg" class="a">DUT INFO</a>
+          <a href="img/xl/dut.jpg" class="a">DUT INFO</a>
           in <a href="https://www.univ-smb.fr/" target="_blank" class="a">Université Savoie Mt Blanc</a>
         </li>
       </ul>

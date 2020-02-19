@@ -129,7 +129,7 @@
     assets = new Map();
     Promise.all(
       ["touch", "close", "cursor", ...icons].map(i =>
-        getUISprite(`img/${i}.svg`).then(img => assets.set(i, img))
+        getUISprite(`svg/${i}.svg`).then(img => assets.set(i, img))
       )
     ).then(() => {
       radialNavService = interpret(radialNavMachine).start();

@@ -104,7 +104,7 @@ body {
 }
 
 .a[target="_blank"]::after {
-	background-image: url("img/external-link.svg");
+	background-image: url("svg/external-link.svg");
 	width: 0.8em;
 	height: 0.8em;
 	display: inline-block;
