@@ -3,7 +3,7 @@
   import { cubicInOut } from "svelte/easing";
   import BlogLink from "../../components/BlogLink";
   import Back from "../../components/Back"
-  import { alive as blogs } from "../../data/data"
+  import { alive, completed } from "../../data/data"
 </script>
 
 <main
@@ -16,7 +16,12 @@
       or sofware-related but they are what I do and I'm pretty proud of most of them. I made them into
       blog posts for linkability and organisation.
     </p>
-    {#each blogs as blog}
+    <h2 class="text-2xl font-semibold border-b border-white">Alive</h2>
+    {#each alive as blog}
+      <BlogLink {...blog} />
+    {/each}
+    <h2 class="text-2xl font-semibold border-b border-white">Completed</h2>
+    {#each completed as blog}
       <BlogLink {...blog} />
     {/each}
     <Back />

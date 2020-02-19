@@ -33,11 +33,10 @@
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
   out:fade={{ easing: cubicInOut, duration: 200 }}>
   <div class="m-4 max-w-1k md:w-full max-h-full">
-    <h1 class="text-2xl my-2">Latest</h1>
+    <h2 class="text-2xl font-semibold my-2 border-b border-white">Latest</h2>
     <BlogLink {...first} />
     {#if notFirst.length}
-      <h1 class="text-2xl mt-4">Older</h1>
-      <hr class="mb-4 mt-2">
+      <h2 class="text-2xl font-semibold mt-4 border-b border-white">Older</h2>
       {#each notFirst as blog}
         <BlogLink {...blog} />
       {/each}

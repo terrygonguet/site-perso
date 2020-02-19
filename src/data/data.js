@@ -78,6 +78,14 @@ export const alive = [
 	}
 ]
 
+export const completed = [
+	{
+		title: "Solitaire",
+		slug: "solitaire",
+		date: "2018-10-28"
+	}
+]
+
 export const cv = {
 	experiences: [
 		{
