@@ -75,6 +75,11 @@ export const alive = [
 		title: "Let's be an entrepreneur",
 		slug: "lets-be-entrepreneur",
 		displayDate: "September 2019"
+	},
+	{
+		title: "Project Hestia web extension",
+		slug: "hestia",
+		displayDate: "Started June 2018"
 	}
 ]
 
