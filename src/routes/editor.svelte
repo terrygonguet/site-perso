@@ -23,9 +23,10 @@
       e.preventDefault()
       toInsert = "  "
       nextPlace = ss + 2
-    } else if (e.key == "\"") { // "
+    } else if (e.key == `"`) { // "
       e.preventDefault()
-      toInsert = "\"\""
+      if (arr[ss] != `"`)
+        toInsert = `""`
       nextPlace = ss + 1
     } else if (e.key == "<" && e.ctrlKey) { // Ctrl-<
       e.preventDefault()
@@ -43,6 +44,10 @@
       e.preventDefault()
       toInsert = "<strong></strong>"
       nextPlace = ss + 8
+    } else if (e.key == "p" && e.ctrlKey) { // Alt-P
+      e.preventDefault()
+      toInsert = `<picture>\n  <source srcset="" type="" />\n  <img src="" alt="" />\n</picture>`
+      nextPlace = ss + 53
     } else if (e.key == "e" && e.ctrlKey) { // Ctrl-E
       e.preventDefault()
       let sanitized = content.replace(/\t|\n/g, "").replace(/"/g, "\\\"")
