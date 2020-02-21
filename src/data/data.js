@@ -59,10 +59,15 @@ export const icons = getIconsFromMenu(menus)
 
 export const abandonned = [
 	{
+		title: "Project Naga",
+		slug: "naga",
+		displayDate: "December 2018"
+	},
+	{
 		title: "Super 3D Retro",
 		slug: "super-3d-retro",
 		date: "2017-05-12"
-	}
+	},
 ]
 
 export const alive = [
