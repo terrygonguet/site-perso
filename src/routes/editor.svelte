@@ -7,11 +7,7 @@
   let content, textarea
 
   onMount(() => {
-    content = localStorage.getItem("blog") ||
-`<p class="my-4"></p>
-<p class="my-4"></p>
-<p class="my-4"></p>
-<p class="my-4"></p>`
+    content = localStorage.getItem("blog") || `<p class="my-4"></p>`
   })
 
   async function onkeydown(e) {
@@ -32,9 +28,9 @@
       e.preventDefault()
       toInsert = "<></>"
       nextPlace = ss + 1
-    } else if (e.key == "a" && e.altKey) { // Alt-A
+    } else if (e.key.toLowerCase() == "a" && e.altKey) { // Alt-A
       e.preventDefault()
-      toInsert = "<a href=\"\" class=\"a\"></a>"
+      toInsert = `<a href=\"\" ${e.shiftKey ? 'target="_blank" ' : ""}class=\"a\"></a>`
       nextPlace = ss + 9
     } else if (e.key == "i" && e.ctrlKey) { // Ctrl-I
       e.preventDefault()
@@ -44,10 +40,14 @@
       e.preventDefault()
       toInsert = "<strong></strong>"
       nextPlace = ss + 8
-    } else if (e.key == "p" && e.ctrlKey) { // Alt-P
+    } else if (e.key == "p" && e.ctrlKey) { // Ctrl-P
       e.preventDefault()
       toInsert = `<picture>\n  <source srcset="" type="" />\n  <img src="" alt="" />\n</picture>`
       nextPlace = ss + 53
+    } else if (e.key == "Enter" && e.ctrlKey) { // Ctrl-Enter
+      e.preventDefault()
+      toInsert = `\n<p class="my-4"></p>`
+      nextPlace = ss + 17
     } else if (e.key == "e" && e.ctrlKey) { // Ctrl-E
       e.preventDefault()
       let sanitized = content.replace(/\t|\n/g, "").replace(/"/g, "\\\"")
