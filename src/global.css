@@ -73,12 +73,7 @@ body {
 }
 
 .back {
-	@apply block text-center text-accent-light my-4 cursor-pointer;
-	transition: color 0.4s;
-}
-
-.back:hover {
-	@apply text-accent;
+	@apply block text-center my-4;
 }
 
 .btn {

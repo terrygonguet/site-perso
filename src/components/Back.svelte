@@ -3,4 +3,8 @@ export let _style = ""
 </script>
 
 <!-- TODO: Prefetch ? -->
-<span class="back" style={_style} on:click={() => history.back()}>Back</span>
+<span style={_style} class="back">
+  <span class="a" on:click={() => history.back()}>Back</span>
+  -
+  <a href="." class="a">Home</a>
+</span>
