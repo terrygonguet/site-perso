@@ -3,13 +3,18 @@
 	"description": "A personal website for Terry Gonguet",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "sapper dev --no-hot",
-		"build": "sapper build",
-		"export": "sapper export",
+		"dev": "run-p shim-dev s:dev",
+		"build": "run-s shim-prod s:build",
+		"export": "run-s shim-prod s:export",
+		"s:dev": "sapper dev --no-hot",
+		"s:build": "sapper build",
+		"s:export": "sapper export",
 		"start": "node __sapper__/build",
 		"cy:run": "cypress run",
 		"cy:open": "cypress open",
-		"test": "run-p --race dev cy:run"
+		"test": "run-p --race dev cy:run",
+		"shim-prod": "node shimpack.js production",
+		"shim-dev": "nodemon -q -w src/global.css -w src/template-master.html shimpack.js -- development"
 	},
 	"dependencies": {
 		"@xstate/fsm": "^1.2.0",
@@ -26,6 +31,7 @@
 		"compression-webpack-plugin": "^3.1.0",
 		"cssnano": "^4.1.10",
 		"file-loader": "^4.2.0",
+		"nodemon": "^2.0.2",
 		"npm-run-all": "^4.1.5",
 		"postcss": "^7.0.21",
 		"postcss-loader": "^3.0.0",
