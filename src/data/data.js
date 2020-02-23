@@ -59,9 +59,14 @@ export const icons = getIconsFromMenu(menus)
 
 export const abandonned = [
 	{
+		title: "Flashcards",
+		slug: "flashcards",
+		displayDate: "June 2019"
+	},
+	{
 		title: "Auto subs",
 		slug: "auto-subs",
-		date: "2019-01-26"
+		displayDate: "January 2019"
 	},
 	{
 		title: "Project Naga",
@@ -71,7 +76,7 @@ export const abandonned = [
 	{
 		title: "Super 3D Retro",
 		slug: "super-3d-retro",
-		date: "2017-05-12"
+		displayDate: "May 2017"
 	}
 ]
 
