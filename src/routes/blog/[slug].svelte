@@ -5,7 +5,7 @@
     const blog = await res.json();
 
     if (res.ok) {
-      return blog;
+      return { ...blog, slug };
     } else this.error(res.status, new Error(blog.message))
   }
 </script>
@@ -16,6 +16,7 @@
   import { dateFormatter } from "../../tools";
   import Back from "../../components/Back"
 
+  export let slug = "missing"
   export let title = "Missing blog data"
   export let date = "0001-01-01"
   export let content = "<p>Missing blog data</p>"
@@ -41,7 +42,7 @@
     {@html content}
     <Back />
     {#if dev}
-      <a href="editor" class="btn absolute mx-8 my-4 top-0 right-0">Editor</a>
+      <a href="editor?blog={slug}" class="btn absolute mx-8 my-4 top-0 right-0">Editor</a>
     {/if}
   </article>
 </main>

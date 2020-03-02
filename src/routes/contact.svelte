@@ -1,6 +1,7 @@
 <script>
   import { fade } from "svelte/transition";
   import { cubicInOut } from "svelte/easing";
+  import Back from "../components/Back";
 </script>
 
 <svelte:head>
@@ -29,6 +30,6 @@
       do more things and put these addons on
       <a href="https://addons.mozilla.org/en-US/firefox/user/13343330/" target="_blank" class="a">addons.mozilla.org</a>
     </p>
-    <a href="." class="back" rel="prefetch">Back</a>
+    <Back/>
   </section>
 </main>

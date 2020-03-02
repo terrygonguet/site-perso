@@ -6,8 +6,22 @@
 
   let content, textarea
 
-  onMount(() => {
-    content = localStorage.getItem("blog") || `<p class="my-4"></p>`
+  onMount(async () => {
+    let url = new URL(location)
+    let toLoad = url.searchParams.get("blog")
+    if (toLoad && confirm("Overwrite current contents ?")) {
+      try {
+        let blog = await fetch(`blog/${toLoad}.json`).then(r => r.json())
+        let sanitized = blog.content
+          .replace(/\\"/g, '"')
+          .replace(/  /g, "\n  ")
+          .replace(/(\S)(<p)/g, "$1\n<p")
+        content = sanitized
+      } catch (err) {
+        content = localStorage.getItem("blog") || `<p class="my-4"></p>`
+      }
+    } else
+      content = localStorage.getItem("blog") || `<p class="my-4"></p>`
   })
 
   async function onkeydown(e) {

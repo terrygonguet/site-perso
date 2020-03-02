@@ -1,15 +1,18 @@
 <script>
   export let segment;
+
+  let inpt = "", konami
+  function handleKeyDown(e) {
+    inpt = (inpt + e.key).slice(-100)
+    if (inpt.endsWith("ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightba")) {
+      import("../components/KonamiCanvas").then(k => (konami = k.default))
+    }
+  }
 </script>
 
-<style>
-  /* shimport css */
-  div {
-    display: grid;
-    grid-template-rows: 100%;
-  }
-</style>
+<svelte:window on:keydown={handleKeyDown}/>
 
-<div class="h-full bg-dark text-white text-lg">
-  <slot />
-</div>
+<slot />
+{#if konami}
+  <svelte:component this={konami} />
+{/if}

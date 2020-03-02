@@ -1,7 +1,0 @@
-{
-	"svelteStrictMode": true,
-	"svelteSortOrder": "script-styles",
-	"useTabs": true,
-	"tabWidth": 2,
-	"semi": false
-}
