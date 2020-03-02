@@ -15,13 +15,13 @@
   <section class="text-justify m-4 max-w-1k max-h-full">
     <p class="my-4">Hey!</p>
     <p class="my-4">
-      I'm Terry, a web focused developper born in
+      I'm Terry, a web focused developer born in
       <a href="https://goo.gl/maps/fcsMFHbRMq1cSYta9" target="_blank" class="a">the French Alps</a>
       trying to make my way into the world. At around 12 years old I discovered
       <a href="https://www.youtube.com/watch?v=SbO0tqH8f5I" target="_blank" class="a">Minecraft's Redstone</a> and the
       <a href="https://rkvalley.files.wordpress.com/2010/04/kernighan_ritchie_language_c.pdf" target="_blank" class="a">C programming language</a>
       (pretty harsh introduction, I know) and got hooked instantly. Ever since
-      then I spend an <s>un</s>reasonnable amount of time every day trying to
+      then I spend an <s>un</s>reasonable amount of time every day trying to
       make magic thinking rocks do my bidding or learn more about the discipline.
     </p>
     <p class="my-4">
