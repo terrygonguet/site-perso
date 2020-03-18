@@ -46,6 +46,10 @@
       e.preventDefault()
       toInsert = `<a href=\"\" ${e.shiftKey ? 'target="_blank" ' : ""}class=\"a\"></a>`
       nextPlace = ss + 9
+    } else if (e.key.toLowerCase() == "c" && e.altKey) { // Alt-C
+      e.preventDefault()
+      toInsert = `<code class="inline-code"></code>`
+      nextPlace = ss + 26
     } else if (e.key == "i" && e.ctrlKey) { // Ctrl-I
       e.preventDefault()
       toInsert = "<em></em>"
