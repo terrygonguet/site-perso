@@ -9,6 +9,11 @@ body {
 	height: 100%;
 }
 
+* {
+	scrollbar-color: var(--radial-bg-light) var(--bg-dark);
+	scrollbar-width: thin;
+}
+
 :root {
 	--bg-dark: #111111;
 	--bg-light: #eeeeee;
