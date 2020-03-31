@@ -19,6 +19,9 @@
         content = sanitized
       } catch (err) {
         content = localStorage.getItem("blog") || `<p class="my-4"></p>`
+      } finally {
+        url.searchParams.delete("blog")
+        history.replaceState(null, "", url)
       }
     } else
       content = localStorage.getItem("blog") || `<p class="my-4"></p>`
