@@ -100,6 +100,11 @@ export const alive = [
 
 export const completed = [
 	{
+		title: "Two small games",
+		slug: "vitruvius",
+		date: "2020-03-31"
+	},
+	{
 		title: "IBD's website v2",
 		slug: "move-it-move-it",
 		date: "2020-03-18"
