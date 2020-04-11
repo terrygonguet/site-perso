@@ -25,5 +25,8 @@
     <a target="_blank" href="https://icons8.com/icons/set/external-link" class="a">External Link</a>
     icon by <a target="_blank" href="https://icons8.com" class="a">Icons8</a>
   </p>
+  <p>
+    Most French translations are done by <a href="https://www.deviantart.com/little-marylis" target="_blank" class="a">Marylis</a>.
+  </p>
   <a href="." class="back" rel="prefetch">Back</a>
 </main>
