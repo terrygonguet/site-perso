@@ -169,10 +169,8 @@ export const cv = {
 }
 
 export const experiment = {
-	url: "https://vitruvius.gonguet.com/",
-	description: `A weird idea I had for a 2 player game.
-		Please <a href="mailto:terry@gonguet.com" class="a">tell me</a>
-		if you've tried it with someone.`
+	url: "https://games-bar.herokuapp.com/",
+	description: `A collection of multiplayer enabled small tabletop-style games.`
 }
 
 /**
