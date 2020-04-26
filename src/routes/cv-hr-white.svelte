@@ -7,12 +7,26 @@
   let age = computeAge([11,3,1996])
 </script>
 
+<style>
+a::after {
+  display: none !important;
+}
+
+:global(.back) {
+  display: none;
+}
+
+:global(:root) {
+  --bg-dark: #FFFFFF;
+}
+</style>
+
 <svelte:head>
   <title>Terry Gonguet - CV Short</title>
 </svelte:head>
 
 <main
-  class="overflow-auto flex-center" id="cv"
+  class="overflow-auto flex-center text-black text-base bg-white" id="cv"
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
   out:fade={{ easing: cubicInOut, duration: 200 }}>
   <div class="m-4 max-w-1k max-h-full text-justify">
@@ -84,6 +98,5 @@
       Once again, this CV is left intentionally brief, if you want to learn more about me you can do so <a href="cv" rel="prefetch" class="a">here</a>.
     </p>
     <Back />
-    <a href="cv-hr-white" class="hidden">hack lol</a>
   </div>
 </main>
