@@ -18,16 +18,21 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: NPM Install
-      run: npm i
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
 
-    - name: export
-      run: npm run export
+    - name: Export
+      run: |
+        npm install
+        npm run export
 
-    - name: FTP
+    - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
       with:
         ftp-server: sftp://home320321753.1and1-data.host:22/terry
         ftp-username: u57888140-terry
-        ftp-password: bWluemllcg==
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
         local-dir: __sapper__/export
+        git-ftp-args: --insecure --dry-run
