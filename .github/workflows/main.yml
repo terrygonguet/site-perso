@@ -17,13 +17,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    
+    - name: NPM Install
+      run: npm i
 
     - name: export
       run: npm run export
 
     - name: FTP
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
-      env:
+      with:
         ftp-server: sftp://home320321753.1and1-data.host:22/terry
         ftp-username: u57888140-terry
         ftp-password: bWluemllcg==
