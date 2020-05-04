@@ -24,7 +24,7 @@ jobs:
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
       with:
-        ftp-server: ftps://home320321753.1and1-data.host:22/terry/
+        ftp-server: sftp://home320321753.1and1-data.host/terry/
         ftp-username: u57888140-terry
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         local-dir: __sapper__/export
