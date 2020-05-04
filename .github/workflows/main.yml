@@ -28,4 +28,4 @@ jobs:
         ftp-username: u57888140-terry
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         local-dir: __sapper__/export
-        git-ftp-args: --insecure --dry-run
+        git-ftp-args: --insecure
