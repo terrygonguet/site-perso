@@ -1,17 +1,24 @@
 <script>
   import { dateFormatter } from "../tools"
-  import { slide } from "svelte/transition";
-  import { onMount } from "svelte";
+  import { slide } from "svelte/transition"
+  import { onMount } from "svelte"
 
   export let title = "Missing title"
   export let date = "0001-01-01"
   export let slug = "missing-slug"
   export let displayDate = false
 
-  let w, showDate = false
+  let w = 0, showDate = false, a
   $: dateText = displayDate || dateFormatter.format(new Date(date))
 
-  onMount(() => setTimeout(() => (showDate = true), 50))
+  onMount(() => {
+    measure()
+    setTimeout(() => (showDate = true), 50)
+  })
+
+  function measure() {
+    w = a.clientWidth
+  }
 </script>
 
 <style>
@@ -33,7 +40,9 @@
   }
 </style>
 
-<a href="blog/{slug}" class="p-4 m-2 items-center text-left" bind:clientWidth={w} class:small={w < 700} rel="prefetch">
+<svelte:window on:resize={measure} />
+
+<a href="blog/{slug}" class="p-4 m-2 items-center text-left" bind:this={a} class:small={w < 700} rel="prefetch">
   <span class="text-xl" style="grid-area:title">{title}</span>
   {#if showDate}
     <span class="text-base text-accent-light" style="grid-area:date" transition:slide>{dateText}</span>
