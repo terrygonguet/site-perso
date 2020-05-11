@@ -12,12 +12,12 @@
     if (toLoad && confirm("Overwrite current contents ?")) {
       try {
         let blog = await fetch(`blog/${toLoad}.json`).then(r => r.json())
-        let sanitized = blog.content
-          .replace(/\\"/g, '"')
-          .replace(/  /g, "\n  ")
-          .replace(/(\S)(<p)/g, "$1\n<p")
-        content = sanitized
+        console.log(blog);
+        
+        let str = Array.isArray(blog.content) ? blog.content.join("\n") : blog.content
+        content = str
       } catch (err) {
+        console.error(err)
         content = localStorage.getItem("blog") || `<p class="my-4"></p>`
       } finally {
         url.searchParams.delete("blog")
@@ -71,8 +71,8 @@
       nextPlace = ss + 17
     } else if (e.key == "e" && e.ctrlKey) { // Ctrl-E
       e.preventDefault()
-      let sanitized = content.replace(/\t|\n/g, "").replace(/"/g, "\\\"")
-      navigator.clipboard.writeText(sanitized).then(() => alert("Copied !")).catch(alert)
+      const text = JSON.stringify(content.split("\n"))
+      navigator.clipboard.writeText(text).then(() => alert("Copied !")).catch(alert)
     }
 
 

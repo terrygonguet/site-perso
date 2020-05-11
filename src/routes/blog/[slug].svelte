@@ -27,6 +27,7 @@
 	export let translations
 
 	$: dateText = displayDate || dateFormatter.format(new Date(date))
+	$: html = Array.isArray(content) ? content.join("\n") : content
 
 	let dev = process.env.NODE_ENV == "development"
 </script>
@@ -50,7 +51,7 @@
 		{/if}
 		<div class="mb-8" />
 
-		{@html content}
+		{@html html}
 		<Back />
 		{#if dev}
 			<a href="editor?blog={slug}" class="btn absolute mx-8 my-4 top-0 right-0">Editor</a>
