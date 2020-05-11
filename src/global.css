@@ -14,6 +14,12 @@ body {
 	scrollbar-width: thin;
 }
 
+#sapper {
+	display: grid;
+	grid-template-rows: 1fr 0;
+	grid-template-columns: 1fr;
+}
+
 :root {
 	--bg-dark: #111111;
 	--bg-light: #eeeeee;
