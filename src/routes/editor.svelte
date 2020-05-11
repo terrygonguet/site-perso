@@ -4,7 +4,7 @@
   import Back from "../components/Back"
   import { tick, onMount } from "svelte"
 
-  let content, textarea
+  let content, textarea, preview = false
 
   onMount(async () => {
     let url = new URL(location)
@@ -12,8 +12,6 @@
     if (toLoad && confirm("Overwrite current contents ?")) {
       try {
         let blog = await fetch(`blog/${toLoad}.json`).then(r => r.json())
-        console.log(blog);
-        
         let str = Array.isArray(blog.content) ? blog.content.join("\n") : blog.content
         content = str
       } catch (err) {
@@ -69,10 +67,6 @@
       e.preventDefault()
       toInsert = `\n<p class="my-4"></p>`
       nextPlace = ss + 17
-    } else if (e.key == "e" && e.ctrlKey) { // Ctrl-E
-      e.preventDefault()
-      const text = JSON.stringify(content.split("\n"))
-      navigator.clipboard.writeText(text).then(() => alert("Copied !")).catch(alert)
     }
 
 
@@ -84,41 +78,40 @@
     }
     localStorage.setItem("blog", content)
   }
+
+  function general(e) {
+    if (e.key == " " && e.ctrlKey) {
+      e.preventDefault()
+      preview = !preview
+    } else if (e.key == "e" && e.ctrlKey) { // Ctrl-E
+      e.preventDefault()
+      const text = JSON.stringify(content.split("\n"))
+      navigator.clipboard.writeText(text).then(() => alert("Copied !")).catch(alert)
+    }
+  }
 </script>
 
 <style>
-main {
-  display: grid;
-  grid-template-areas: "editor" "preview" "back";
-  grid-gap: 1rem;
-}
-
 textarea {
   resize: none;
 }
-
-@media (min-width: 768px) {
-  main {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr auto;
-    grid-template-areas:
-      "editor preview"
-      "back   back";
-  }
-}
 </style>
 
+<svelte:window on:keydown={general} />
+
 <main
-  class="overflow-auto p-4"
+  class="overflow-auto p-4 flex flex-col"
   in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
   out:fade={{ easing: cubicInOut, duration: 200 }}>
   <textarea
     bind:value={content}
-    class="bg-dark border border-gray-900 p-2 font-mono"
+    class="bg-dark border border-gray-900 p-2 font-mono flex-1"
+    class:hidden={preview}
     on:keydown={onkeydown}
-    bind:this={textarea}
-    style="grid-area:editor;min-height:15rem;" />
-  <div class="overflow-auto border border-gray-900 text-justify" style="grid-area:preview">
+    bind:this={textarea} />
+  <div
+    class="overflow-auto border border-gray-900 text-justify flex-1"
+    class:hidden={!preview} >
     {@html content}
   </div>
   <Back _style="grid-area:back;margin:0" />
