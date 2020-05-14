@@ -1,13 +1,13 @@
 <script>
-	import { fade } from "svelte/transition";
-	import { cubicInOut } from "svelte/easing";
-	import Back from "../components/Back"
+	import { fade } from "svelte/transition"
+	import { cubicInOut } from "svelte/easing"
+	import Back from "~components/Back.svelte"
 	import { tick, onMount } from "svelte"
 
 	let content, textarea, preview = false
 
 	onMount(async () => {
-		let url = new URL(location)
+		let url = new URL(location.toString())
 		let toLoad = url.searchParams.get("blog")
 		if (toLoad && confirm("Overwrite current contents ?")) {
 			try {
@@ -19,7 +19,7 @@
 				content = localStorage.getItem("blog") || `<p class="my-4"></p>`
 			} finally {
 				url.searchParams.delete("blog")
-				history.replaceState(null, "", url)
+				history.replaceState(null, "", url.toString())
 			}
 		} else
 			content = localStorage.getItem("blog") || `<p class="my-4"></p>`
@@ -102,7 +102,7 @@ textarea {
 <main
 	class="overflow-auto p-4 flex flex-col"
 	in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
-	out:fade={{ easing: cubicInOut, duration: 200 }}>
+	out:fade={{ easing: cubicInOut, duration: 200, delay: 0 }}>
 	<textarea
 		bind:value={content}
 		class="bg-dark border border-gray-900 p-2 font-mono flex-1"

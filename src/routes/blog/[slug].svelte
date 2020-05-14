@@ -13,9 +13,9 @@
 <script>
 	import { fade } from "svelte/transition";
 	import { cubicInOut } from "svelte/easing";
-	import { dateFormatter } from "../../tools";
-	import Back from "../../components/Back"
-	import TranslationsList from "../../components/TranslationsList"
+	import { dateFormatter } from "~tools";
+	import Back from "~components/Back.svelte"
+	import TranslationsList from "~components/TranslationsList.svelte"
 
 	export let slug = "missing"
 	export let title = "Missing blog data"

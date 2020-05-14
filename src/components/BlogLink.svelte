@@ -1,5 +1,5 @@
 <script>
-	import { dateFormatter } from "../tools"
+	import { dateFormatter } from "~tools"
 	import { slide } from "svelte/transition"
 	import { onMount } from "svelte"
 

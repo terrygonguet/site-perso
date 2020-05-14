@@ -1,6 +1,6 @@
 <script>
-	import { fade } from "svelte/transition";
-	import { cubicInOut } from "svelte/easing";
+	import { fade } from "svelte/transition"
+	import { cubicInOut } from "svelte/easing"
 </script>
 
 <svelte:head>
@@ -10,7 +10,7 @@
 <main
 	class="overflow-hidden flex-center relative flex-col text-center"
 	in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
-	out:fade={{ easing: cubicInOut, duration: 200 }}>
+	out:fade={{ easing: cubicInOut, duration: 200, delay: 0 }}>
 	<p class="m-4">
 		This website has been made with the help of a really cool framework named
 		<a href="https://sapper.svelte.dev/" target="_blank" class="a">Sapper</a> and

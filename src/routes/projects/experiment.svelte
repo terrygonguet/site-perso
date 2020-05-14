@@ -1,8 +1,8 @@
 <script>
-	import { fade } from "svelte/transition";
-	import { cubicInOut } from "svelte/easing";
-	import Back from "../../components/Back"
-	import { experiment } from "../../data/data";
+	import { fade } from "svelte/transition"
+	import { cubicInOut } from "svelte/easing"
+	import Back from "~components/Back.svelte"
+	import { experiment } from "~data"
 
 	const { url, description } = experiment
 	let showIframe = false
@@ -19,7 +19,7 @@ main {
 <main
 	class="overflow-hidden p-4"
 	in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
-	out:fade={{ easing: cubicInOut, duration: 200 }}>
+	out:fade={{ easing: cubicInOut, duration: 200, delay: 0 }}>
 	{#if showIframe}
 		<div>
 			<iframe

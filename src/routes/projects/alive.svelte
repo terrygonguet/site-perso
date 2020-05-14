@@ -1,15 +1,15 @@
 <script>
-	import { fade } from "svelte/transition";
-	import { cubicInOut } from "svelte/easing";
-	import BlogLink from "../../components/BlogLink";
-	import Back from "../../components/Back"
-	import { alive, completed } from "../../data/data"
+	import { fade } from "svelte/transition"
+	import { cubicInOut } from "svelte/easing"
+	import BlogLink from "~components/BlogLink.svelte"
+	import Back from "~components/Back.svelte"
+	import { alive, completed } from "~data"
 </script>
 
 <main
 	class="overflow-auto flex justify-center items-stretch md:items-center flex-col"
 	in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
-	out:fade={{ easing: cubicInOut, duration: 200 }}>
+	out:fade={{ easing: cubicInOut, duration: 200, delay: 0 }}>
 	<div class="m-4 max-w-1k max-h-full text-justify">
 		<p class="my-4">
 			These are projects that are either completed or still in operation. They might not all be software

@@ -1,5 +1,5 @@
 import { createMachine, assign } from "@xstate/fsm"
-import { menus as radialNavData } from "./data/data"
+import { menus as radialNavData } from "~data"
 
 export const currencyFormatter = new Intl.NumberFormat(undefined, {
 	style: "currency",
@@ -54,7 +54,8 @@ export const radialNavMachine = createMachine({
 				BACK: {
 					target: "navigating",
 					actions: assign({
-						history: ({ history }, ev) => history.filter((_, i) => i != 0)
+						history: ({ history }, ev) =>
+							history.filter((_, i) => i != 0)
 					})
 				}
 			}

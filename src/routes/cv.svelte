@@ -1,9 +1,9 @@
 <script>
-	import { fade } from "svelte/transition";
-	import { cubicInOut } from "svelte/easing";
-	import Back from "../components/Back";
-	import BlogLink from "../components/BlogLink";
-	import { cv } from "../data/data";
+	import { fade } from "svelte/transition"
+	import Back from "~components/Back.svelte"
+	import BlogLink from "~components/BlogLink.svelte"
+	import { cubicInOut } from "svelte/easing"
+	import { cv } from "~data"
 
 	const { experiences, studies } = cv
 </script>
@@ -15,7 +15,7 @@
 <main
 	class="overflow-auto flex-center"
 	in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
-	out:fade={{ easing: cubicInOut, duration: 200 }}>
+	out:fade={{ easing: cubicInOut, duration: 200, delay: 0 }}>
 	<div class="m-4 max-w-1k max-h-full text-justify">
 		<h1 class="text-3xl font-semibold text-center my-4">CV</h1>
 		<p class="my-4">

@@ -11,8 +11,8 @@
 <script>
 	import { fade } from "svelte/transition";
 	import { cubicInOut } from "svelte/easing";
-	import BlogLink from "../../components/BlogLink";
-	import Back from "../../components/Back"
+	import BlogLink from "~components/BlogLink.svelte";
+	import Back from "~components/Back.svelte"
 
 	export let blogs = []
 

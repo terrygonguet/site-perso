@@ -1,11 +1,11 @@
 <script>
 	import { onMount, tick } from "svelte";
-	import { getUISprite, radialNavMachine, range } from "../tools";
+	import { getUISprite, radialNavMachine, range } from "~tools";
 	import { goto, prefetch } from "@sapper/app";
 	import { tweened } from "svelte/motion";
 	import { cubicInOut } from "svelte/easing";
-	import { menus as radialNavData, icons } from "../data/data";
-	import NavMenuItem from "./NavMenuItem";
+	import { menus as radialNavData, icons } from "~data";
+	import NavMenuItem from "~components/NavMenuItem.svelte";
 	import { interpret } from "@xstate/fsm";
 
 	export let _style = "";
@@ -41,8 +41,8 @@
 	$: centerR = (isSmall ? 0.12 : 0.07) * rw;
 	$: isMouseOverMenu = px ** 2 + py ** 2 <= rw ** 2 / 4;
 	$: isMouseOverCenter = px ** 2 + py ** 2 <= centerR ** 2;
-	$: cursorPointer = isStart ? isMouseOverCenter : isMouseOverMenu;
 	$: isStart = !state || state.value == "closed";
+	$: cursorPointer = isStart ? isMouseOverCenter : isMouseOverMenu;
 
 	function getMouseOverIndex() {
 		if (isStart) return -1;
@@ -94,18 +94,18 @@
 			switch (newState.value) {
 				case "opening":
 					state = newState;
-					await menuSize.set(1);
+					await menuSize.set(1, {});
 					radialNavService.send("ANIMATION_DONE");
 					break;
 				case "navigating":
-					await menuSize.set(0);
+					await menuSize.set(0, {});
 					state = newState;
 					px = py = 0;
-					await menuSize.set(1);
+					await menuSize.set(1, {});
 					radialNavService.send("ANIMATION_DONE");
 					break;
 				case "closing":
-					await menuSize.set(0);
+					await menuSize.set(0, {});
 					radialNavService.send("ANIMATION_DONE");
 					break;
 				default:

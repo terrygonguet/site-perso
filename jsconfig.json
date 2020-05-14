@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./",
+		"paths": {
+			"~tools": ["src/tools.js"],
+			"~components": ["src/components"],
+			"~data": ["src/data"]
+		}
+	},
+	"exclude": ["node_modules"]
+}

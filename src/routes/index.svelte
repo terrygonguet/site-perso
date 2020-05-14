@@ -1,7 +1,7 @@
 <script>
-	import RadialNavigation from "../components/RadialNavigation";
-	import { fly } from "svelte/transition";
-	import { cubicInOut } from "svelte/easing";
+	import RadialNavigation from "~components/RadialNavigation.svelte"
+	import { fly } from "svelte/transition"
+	import { cubicInOut } from "svelte/easing"
 
 	let w;
 	$: isSmall = w <= 768;

@@ -1,7 +1,7 @@
 <script>
-	import { fade } from "svelte/transition";
-	import { cubicInOut } from "svelte/easing";
-	import Back from "../components/Back";
+	import { fade } from "svelte/transition"
+	import { cubicInOut } from "svelte/easing"
+	import Back from "~components/Back.svelte"
 </script>
 
 <svelte:head>
@@ -11,7 +11,7 @@
 <main
 	class="overflow-auto flex-center"
 	in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
-	out:fade={{ easing: cubicInOut, duration: 200 }}>
+	out:fade={{ easing: cubicInOut, duration: 200, delay: 0 }}>
 	<section class="text-justify m-4 max-w-1k max-h-full">
 		<p class="my-4">Hey!</p>
 		<p class="my-4">

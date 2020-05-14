@@ -1,8 +1,7 @@
 <script>
-	import { fade } from "svelte/transition";
-	import { cubicInOut } from "svelte/easing";
-	import Back from "../components/Back";
-	import { computeAge } from "../tools";
+	import { fade } from "svelte/transition"
+	import { cubicInOut } from "svelte/easing"
+	import { computeAge } from "~tools"
 
 	let age = computeAge([11,3,1996])
 </script>
@@ -10,10 +9,6 @@
 <style>
 a::after {
 	display: none !important;
-}
-
-:global(.back) {
-	display: none;
 }
 
 :global(:root) {
@@ -28,7 +23,7 @@ a::after {
 <main
 	class="overflow-auto flex-center text-black text-base bg-white" id="cv"
 	in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
-	out:fade={{ easing: cubicInOut, duration: 200 }}>
+	out:fade={{ easing: cubicInOut, duration: 200, delay: 0 }}>
 	<div class="m-4 max-w-1k max-h-full text-justify">
 		<h1 class="text-3xl font-semibold text-center my-4">CV</h1>
 		<p class="my-4 text-xl font-semibold text-center">
@@ -97,6 +92,5 @@ a::after {
 		<p class="my">
 			Once again, this CV is left intentionally brief, if you want to learn more about me you can do so <a href="cv" rel="prefetch" class="a">here</a>.
 		</p>
-		<Back />
 	</div>
 </main>
