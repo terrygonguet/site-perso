@@ -9,27 +9,27 @@ const cached = new Set(to_cache)
 const dev = self.location.hostname == "localhost"
 
 self.addEventListener("install", event => {
-  event.waitUntil(
-    caches
-      .open(ASSETS)
-      // .then(cache => cache.addAll(to_cache))
-      .then(() => {
-        self.skipWaiting()
-      }),
-  )
+	event.waitUntil(
+		caches
+			.open(ASSETS)
+			// .then(cache => cache.addAll(to_cache))
+			.then(() => {
+				self.skipWaiting()
+			})
+	)
 })
 
 self.addEventListener("activate", event => {
-  event.waitUntil(
-    caches.keys().then(async keys => {
-      // delete old caches
-      for (const key of keys) {
-        if (key !== ASSETS) await caches.delete(key)
-      }
+	event.waitUntil(
+		caches.keys().then(async keys => {
+			// delete old caches
+			for (const key of keys) {
+				if (key !== ASSETS) await caches.delete(key)
+			}
 
-      self.clients.claim()
-    }),
-  )
+			self.clients.claim()
+		})
+	)
 })
 
 // self.addEventListener("fetch", event => {
