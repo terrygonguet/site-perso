@@ -3,6 +3,7 @@ const path = require("path")
 const config = require("sapper/config/webpack.js")
 const pkg = require("./package.json")
 const CompressionPlugin = require("compression-webpack-plugin")
+const preprocess = require("svelte-preprocess")
 
 const mode = process.env.NODE_ENV
 const dev = mode === "development"
@@ -14,15 +15,6 @@ const alias = {
 	"~tools": path.join(__dirname, "src/tools.js"),
 	"~components": path.join(__dirname, "src/components"),
 	"~data": path.join(__dirname, "src/data")
-}
-
-function templateDependency({ content, filename }) {
-	return {
-		code: content,
-		dependencies: filename.endsWith("_layout.svelte")
-			? [path.join(__dirname, "src/template.html")]
-			: []
-	}
 }
 
 const client = {
@@ -39,9 +31,12 @@ const client = {
 					options: {
 						dev,
 						hydratable: true,
-						preprocess: {
-							style: templateDependency
-						}
+						preprocess: preprocess({
+							postcss: true,
+							globalStyle: {
+								sourceMap: true
+							}
+						})
 					}
 				}
 			}
@@ -87,7 +82,13 @@ const server = {
 					options: {
 						css: false,
 						generate: "ssr",
-						dev
+						dev,
+						preprocess: preprocess({
+							postcss: true,
+							globalStyle: {
+								sourceMap: true
+							}
+						})
 					}
 				}
 			}

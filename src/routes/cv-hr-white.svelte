@@ -12,7 +12,7 @@ a::after {
 }
 
 :global(:root) {
-	--bg-dark: #FFFFFF;
+	--color-bg: #FFFFFF;
 }
 </style>
 

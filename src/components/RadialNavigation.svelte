@@ -147,11 +147,11 @@
 		} = state || { value: "closed", context: { history: [] } };
 		const curMenu = history[0];
 		let compstyles = getComputedStyle(document.documentElement);
-		bgLight = compstyles.getPropertyValue("--radial-bg-light");
-		bgDark = compstyles.getPropertyValue("--radial-bg-dark");
-		colorOutline = compstyles.getPropertyValue("--radial-outline");
-		colorAccent = compstyles.getPropertyValue("--radial-accent");
-		colorCenter = compstyles.getPropertyValue("--radial-center");
+		bgLight = compstyles.getPropertyValue("--color-radial-bg-light");
+		bgDark = compstyles.getPropertyValue("--color-radial-bg-dark");
+		colorOutline = compstyles.getPropertyValue("--color-radial-outline");
+		colorAccent = compstyles.getPropertyValue("--color-radial-accent");
+		colorCenter = compstyles.getPropertyValue("--color-radial-center");
 
 		ctx.save();
 		ctx.imageSmoothingEnabled = false;

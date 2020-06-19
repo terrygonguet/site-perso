@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-full">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -8,9 +8,16 @@
 		<meta name="description" content="" />
 		<link rel="manifest" href="manifest.json" />
 		<link rel="icon" type="image/png" href="favicon.png" />
-		%tailwind.styles% %sapper.styles% %sapper.head%
+		%sapper.styles% %sapper.head%
+		<style>
+			#sapper {
+				display: grid;
+				grid-template-rows: 1fr 0;
+				grid-template-columns: 1fr;
+			}
+		</style>
 	</head>
-	<body id="sapper" class="h-full bg-dark text-white text-lg">
+	<body id="sapper" class="h-full bg-bg text-white text-lg">
 		%sapper.html% %sapper.scripts%
 	</body>
 </html>

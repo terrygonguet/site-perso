@@ -1,6 +1,4 @@
 <script>
-	export let segment;
-
 	let inpt = "", konami
 	function handleKeyDown(e) {
 		inpt = (inpt + e.key).slice(-100)
@@ -9,6 +7,19 @@
 		}
 	}
 </script>
+
+<style global type="text/postcss">
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+* {
+	scrollbar-color: var(--color-radial-bg-light) var(--color-bg);
+	scrollbar-width: thin;
+}
+</style>
 
 <svelte:window on:keydown={handleKeyDown}/>
 

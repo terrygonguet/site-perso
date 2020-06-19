@@ -105,7 +105,7 @@ textarea {
 	out:fade={{ easing: cubicInOut, duration: 200, delay: 0 }}>
 	<textarea
 		bind:value={content}
-		class="bg-dark border border-gray-900 p-2 font-mono flex-1"
+		class="bg-bg border border-gray-900 p-2 font-mono flex-1"
 		class:hidden={preview}
 		on:keydown={onkeydown}
 		bind:this={textarea} />

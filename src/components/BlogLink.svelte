@@ -25,7 +25,7 @@
 
 <style>
 	a {
-		background: var(--radial-bg-dark);
+		background: var(--color-radial-bg-dark);
 		display: grid;
 		transition: all 0.4s;
 		grid-template-columns: 1fr auto;
@@ -33,7 +33,7 @@
 	}
 
 	a:hover {
-		background: var(--radial-bg-light);
+		background: var(--color-radial-bg-light);
 	}
 
 	.small {
