@@ -20,6 +20,8 @@ jobs:
       run: |
         npm install
         npm run export
+      env:
+        NODE_ENV: production
 
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
