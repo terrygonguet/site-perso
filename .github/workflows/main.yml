@@ -16,10 +16,13 @@ jobs:
       with:
         node-version: '12.x'
 
-    - name: Export
-      run: |
-        npm install
-        npm run export
+    - name: NPM Install
+      run: npm install
+
+    - name: NPM Build
+      run: npm run export
+      env:
+        NODE_ENV: production
 
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
