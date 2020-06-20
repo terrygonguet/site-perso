@@ -1,7 +1,7 @@
 const plugin = require("tailwindcss/plugin")
 
 module.exports = {
-	purge: ["./src/**/*.html", "./src/**/*.svelte", "./blogdata/**/*.json"],
+	purge: ["./src/**/*.html", "./src/**/*.svelte", "./blogdata/*.json"],
 	target: "relaxed",
 	prefix: "",
 	important: false,
