@@ -18,3 +18,8 @@ RewriteRule ^(.*)\.js %{REQUEST_URI}\.br [QSA,L,T=application/javascript]
 RewriteCond %{HTTP:Accept-Encoding} gzip
 RewriteCond %{REQUEST_FILENAME}\.gz -s
 RewriteRule ^(.*)\.js %{REQUEST_URI}\.gz [QSA,L,T=application/javascript]
+
+# Cause gzip is a bitch
+<Files "*.gz">
+	ForceType text/javascript
+</Files>
