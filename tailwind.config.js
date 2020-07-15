@@ -23,6 +23,7 @@ module.exports = {
 			accent: "var(--color-accent)",
 			"accent-light": "var(--color-accent-light)",
 			bg: "var(--color-bg)",
+			text: "var(--color-text)",
 
 			gray: {
 				100: "#f7fafc",
@@ -760,6 +761,7 @@ module.exports = {
 			addBase({
 				":root": {
 					"--color-bg": "#111111",
+					"--color-text": "white",
 					"--color-accent-light": "#e55b3c",
 					"--color-accent": "#f62217",
 					"--color-radial-bg-light": "#555555",
