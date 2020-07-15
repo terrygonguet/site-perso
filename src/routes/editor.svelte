@@ -3,8 +3,10 @@
 	import { cubicInOut } from "svelte/easing"
 	import Back from "~components/Back.svelte"
 	import { tick, onMount } from "svelte"
+	import { dateFormatter } from "~tools";
 
-	let content, textarea, preview = false
+	let content = "", title = "", textarea,
+		preview = false, dateText = dateFormatter.format(new Date())
 
 	onMount(async () => {
 		let url = new URL(location.toString())
@@ -14,15 +16,19 @@
 				let blog = await fetch(`blog/${toLoad}.json`).then(r => r.json())
 				let str = Array.isArray(blog.content) ? blog.content.join("\n") : blog.content
 				content = str
+				title = blog.title
 			} catch (err) {
 				console.error(err)
 				content = localStorage.getItem("blog") || `<p class="my-4"></p>`
+				title = localStorage.getItem("title")
 			} finally {
 				url.searchParams.delete("blog")
 				history.replaceState(null, "", url.toString())
 			}
-		} else
+		} else {
 			content = localStorage.getItem("blog") || `<p class="my-4"></p>`
+			title = localStorage.getItem("title")
+		}
 	})
 
 	async function onkeydown(e) {
@@ -103,6 +109,13 @@ textarea {
 	class="overflow-auto p-4 flex flex-col"
 	in:fade={{ easing: cubicInOut, duration: 200, delay: 200 }}
 	out:fade={{ easing: cubicInOut, duration: 200, delay: 0 }}>
+	<input
+		type="text"
+		bind:value={title}
+		placeholder="Title"
+		class:hidden={preview}
+		on:change={() => localStorage.setItem("title", title)}
+		class="text-3xl bg-bg text-text my-4" />
 	<textarea
 		bind:value={content}
 		class="bg-bg border border-gray-900 p-2 font-mono flex-1"
@@ -110,8 +123,10 @@ textarea {
 		on:keydown={onkeydown}
 		bind:this={textarea} />
 	<div
-		class="overflow-auto border border-gray-900 text-justify flex-1"
+		class="text-justify flex-1 max-w-1k m-auto"
 		class:hidden={!preview} >
+		<h1 class="text-4xl">{title || "No title yet"}</h1>
+		<h3 class="text-accent-light text-base">{dateText}</h3>
 		{@html content}
 	</div>
 	<Back _style="grid-area:back;margin:0" />
