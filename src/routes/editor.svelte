@@ -129,5 +129,5 @@ textarea {
 		<h3 class="text-accent-light text-base">{dateText}</h3>
 		{@html content}
 	</div>
-	<Back _style="grid-area:back;margin:0" />
+	<Back _style="margin: 0.5rem" />
 </main>
