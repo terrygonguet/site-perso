@@ -1,23 +1,13 @@
-<script context="module">
-	export async function preload(page, session) {
-		const res = await this.fetch("blogs")
-		const blogs = await res.json()
-
-		if (res.ok) return { blogs }
-		else this.error(res.status, new Error(blogs.message))
-	}
-</script>
-
 <script>
-	import { fade } from "svelte/transition";
-	import { cubicInOut } from "svelte/easing";
-	import BlogLink from "~components/BlogLink.svelte";
+	import { fade } from "svelte/transition"
+	import { cubicInOut } from "svelte/easing"
+	import BlogLink from "~components/BlogLink.svelte"
 	import Back from "~components/Back.svelte"
-
-	export let blogs = []
+	import { blogs } from "~data"
 
 	$: sortedBlogs =
 		blogs
+			.filter(b => b.visible)
 			.map(b => ({ ...b, jsdate: new Date(b.date) }))
 			.sort((a, b) => a.jsdate > b.jsdate ? -1 : 1)
 	$: first = sortedBlogs[0]
