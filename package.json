@@ -15,7 +15,7 @@
 		"@polka/send-type": "^0.5.2",
 		"@xstate/fsm": "^1.4.0",
 		"polka": "^1.0.0-next.11",
-		"serialize-javascript": "^2.1.2",
+		"serialize-javascript": "^3.1.0",
 		"sirv": "^0.4.6",
 		"xstate": "^4.11.0"
 	},
