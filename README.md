@@ -1,24 +1,38 @@
-# A personal website
+# create-svelte
 
-This clearly doesn't need to be publicly available and open source but it is so everybody can see the crimes against engineering I commit. I mean one of the files is literally named `shimpack.js`.
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-Anyway if you want to run it on your own machine (or deploy it) for some reason you can do this:
+## Creating a project
+
+If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
-git clone https://github.com/terrygonguet/site-perso/
-cd site-perso
-npm install
+# create a new project in the current directory
+npm create svelte@latest
+
+# create a new project in my-app
+npm create svelte@latest my-app
+```
+
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```bash
 npm run build
-npm start
 ```
 
-It will start a server on the port from the `PORT` environment variable, defaulting to 3000. You also can export it as a fully static site like so:
+You can preview the production build with `npm run preview`.
 
-```bash
-git clone https://github.com/terrygonguet/site-perso/
-cd site-perso
-npm install
-npm run export
-```
-
-The files will be in `__sapper__/export`.
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
