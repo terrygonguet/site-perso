@@ -18,6 +18,10 @@ const config = {
 
 	kit: {
 		adapter: adapter({ precompress: true }),
+		alias: {
+			$i18n: "src/i18n/index.ts",
+			"$i18n/*": "src/i18n/*",
+		},
 	},
 }
 
