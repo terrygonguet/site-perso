@@ -1,7 +1,20 @@
 import type { BaseTranslation } from "../i18n-types"
 
 const en = {
-	title: "Welcome to SvelteKit",
+	home: {
+		jobTitle: "Web developer",
+		about: "About me",
+		cv: "CV",
+		experiments: "Experiments",
+		blog: "Blog",
+	},
+	locale: {
+		toggleLabel: "Language",
+	},
+	mode: {
+		dark: "Dark",
+		light: "Light",
+	},
 } satisfies BaseTranslation
 
 export default en

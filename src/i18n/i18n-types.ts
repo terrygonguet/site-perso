@@ -14,17 +14,85 @@ export type Translation = RootTranslation
 export type Translations = RootTranslation
 
 type RootTranslation = {
-	/**
-	 * W​e​l​c​o​m​e​ ​t​o​ ​S​v​e​l​t​e​K​i​t
-	 */
-	title: string
+	home: {
+		/**
+		 * W​e​b​ ​d​e​v​e​l​o​p​e​r
+		 */
+		jobTitle: string
+		/**
+		 * A​b​o​u​t​ ​m​e
+		 */
+		about: string
+		/**
+		 * C​V
+		 */
+		cv: string
+		/**
+		 * E​x​p​e​r​i​m​e​n​t​s
+		 */
+		experiments: string
+		/**
+		 * B​l​o​g
+		 */
+		blog: string
+	}
+	locale: {
+		/**
+		 * L​a​n​g​u​a​g​e
+		 */
+		toggleLabel: string
+	}
+	mode: {
+		/**
+		 * D​a​r​k
+		 */
+		dark: string
+		/**
+		 * L​i​g​h​t
+		 */
+		light: string
+	}
 }
 
 export type TranslationFunctions = {
-	/**
-	 * Welcome to SvelteKit
-	 */
-	title: () => LocalizedString
+	home: {
+		/**
+		 * Web developer
+		 */
+		jobTitle: () => LocalizedString
+		/**
+		 * About me
+		 */
+		about: () => LocalizedString
+		/**
+		 * CV
+		 */
+		cv: () => LocalizedString
+		/**
+		 * Experiments
+		 */
+		experiments: () => LocalizedString
+		/**
+		 * Blog
+		 */
+		blog: () => LocalizedString
+	}
+	locale: {
+		/**
+		 * Language
+		 */
+		toggleLabel: () => LocalizedString
+	}
+	mode: {
+		/**
+		 * Dark
+		 */
+		dark: () => LocalizedString
+		/**
+		 * Light
+		 */
+		light: () => LocalizedString
+	}
 }
 
 export type Formatters = {}
