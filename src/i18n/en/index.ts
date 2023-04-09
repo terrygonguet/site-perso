@@ -7,6 +7,7 @@ const en = {
 		cv: "CV",
 		experiments: "Experiments",
 		blog: "Blog",
+		wip: "In progress",
 	},
 	locale: {
 		toggleLabel: "Language",

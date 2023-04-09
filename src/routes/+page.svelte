@@ -29,9 +29,13 @@
 		<a id="experiments" class="bloc" href="/experiments">
 			<span>{$LL.home.experiments()}</span>
 		</a>
-		<a class="bloc" href="/blog">
+		<div
+			id="blog"
+			class="aspect-square bg-stone-200 dark:bg-stone-700 p-4 grid place-items-center text-2xl relative overflow-hidden"
+			style:--label={'"' + $LL.home.wip() + '"'}
+		>
 			<span>{$LL.home.blog()}</span>
-		</a>
+		</div>
 	</nav>
 	<div class="flex flex-col items-center gap-4 p-4">
 		<!-- svelte-ignore a11y-label-has-associated-control -->
@@ -84,10 +88,11 @@
 		}
 	}
 	.bloc span {
-		@apply transition-transform duration-200;
+		@apply transition-transform duration-200 transform;
 	}
 	.bloc:hover span {
-		@apply scale-95;
+		--tw-scale-x: 0.952381;
+		--tw-scale-y: 0.952381;
 	}
 
 	#about:hover {
@@ -106,6 +111,7 @@
 	}
 
 	#cv:hover {
+		color: black;
 		background-color: #fff;
 		background-image: linear-gradient(
 				90deg,
@@ -117,9 +123,6 @@
 			linear-gradient(#eee 0.1em, transparent 0.1em);
 		background-size: 100% 1rem;
 	}
-	:is(.dark #cv:hover) {
-		color: black;
-	}
 
 	#experiments:hover {
 		color: white;
@@ -129,8 +132,25 @@
 			linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px),
 			linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
 		background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
-		/* background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px; */
 		background-position: center;
+	}
+
+	#blog:after {
+		content: var(--label, "WIP");
+		@apply absolute flex items-center justify-center w-full h-12 left-0 top-1/2 text-white font-bold bg-yellow-500;
+		background-image: repeating-linear-gradient(
+			-45deg,
+			transparent,
+			transparent 2rem,
+			black 2rem,
+			black 4rem
+		);
+		transform: translate(-100%, -50%);
+		transition: transform 0.2s ease-in-out;
+		-webkit-text-stroke: 1px black;
+	}
+	#blog:hover:after {
+		transform: translate(0, -50%);
 	}
 
 	#toggle-locale {

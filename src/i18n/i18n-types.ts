@@ -35,6 +35,10 @@ type RootTranslation = {
 		 * B​l​o​g
 		 */
 		blog: string
+		/**
+		 * I​n​ ​p​r​o​g​r​e​s​s
+		 */
+		wip: string
 	}
 	locale: {
 		/**
@@ -76,6 +80,10 @@ export type TranslationFunctions = {
 		 * Blog
 		 */
 		blog: () => LocalizedString
+		/**
+		 * In progress
+		 */
+		wip: () => LocalizedString
 	}
 	locale: {
 		/**
