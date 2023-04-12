@@ -1,16 +1,12 @@
 <script lang="ts">
-	import Toggle from "svelte-toggle"
-	import { LL, locale, setLocale } from "$i18n"
-	import { mode } from "$lib/darkMode"
-
-	function onToggleMode(e: CustomEvent<boolean>) {
-		mode.set(e.detail ? "dark" : "light")
-	}
-
-	function onToggleLocale(e: CustomEvent<boolean>) {
-		setLocale(e.detail ? "fr" : "en")
-	}
+	import ToggleMode from "$lib/comp/ToggleMode.svelte"
+	import ToggleLocale from "$lib/comp/ToggleLocale.svelte"
+	import { LL } from "$i18n"
 </script>
+
+<svelte:head>
+	<title>{$LL.title.base($LL.title.home())}</title>
+</svelte:head>
 
 <main class="flex flex-col justify-evenly items-center p-4">
 	<div class="flex flex-col gap-4 items-center">
@@ -38,33 +34,8 @@
 		</div>
 	</nav>
 	<div class="flex flex-col items-center gap-4 p-4">
-		<!-- svelte-ignore a11y-label-has-associated-control -->
-		<label id="toggle-locale" class="flex gap-2 items-center">
-			English
-			<Toggle
-				toggled={$locale == "fr"}
-				on:toggle={onToggleLocale}
-				hideLabel
-				label={$LL.locale.toggleLabel()}
-				switchColor="var(--color-nub)"
-				toggledColor="var(--color-dark)"
-				untoggledColor="var(--color-light)"
-			/>
-			Français
-		</label>
-		<!-- svelte-ignore a11y-label-has-associated-control -->
-		<label id="toggle-mode" class="flex gap-2 items-center">
-			{$LL.mode.light()}
-			<Toggle
-				toggled={$mode == "dark"}
-				on:toggle={onToggleMode}
-				hideLabel
-				switchColor="var(--color-nub)"
-				toggledColor="var(--color-dark)"
-				untoggledColor="var(--color-light)"
-			/>
-			{$LL.mode.dark()}
-		</label>
+		<ToggleLocale />
+		<ToggleMode />
 	</div>
 </main>
 
@@ -151,24 +122,5 @@
 	}
 	#blog:hover:after {
 		transform: translate(0, -50%);
-	}
-
-	#toggle-locale {
-		@apply cursor-pointer;
-		--color-dark: theme("colors.amber.500");
-		--color-light: theme("colors.amber.500");
-		--color-nub: theme("colors.stone.100");
-	}
-	:is(.dark #toggle-locale) {
-		--color-dark: theme("colors.amber.800");
-		--color-light: theme("colors.amber.800");
-		--color-nub: theme("colors.stone.400");
-	}
-
-	#toggle-mode {
-		@apply cursor-pointer;
-		--color-dark: theme("colors.stone.700");
-		--color-light: theme("colors.stone.200");
-		--color-nub: theme("colors.stone.400");
 	}
 </style>
