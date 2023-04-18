@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { LL } from "$i18n"
+	import Copyright from "$lib/comp/Copyright.svelte"
 	import ToggleLocale from "$lib/comp/ToggleLocale.svelte"
 	import ToggleMode from "$lib/comp/ToggleMode.svelte"
 	import Home from "~icons/ri/home-2-fill"
@@ -11,4 +12,5 @@
 	>
 	<ToggleLocale />
 	<ToggleMode />
+	<Copyright />
 </footer>

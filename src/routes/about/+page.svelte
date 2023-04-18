@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { LL, toArray } from "$i18n"
 	import Footer from "$lib/comp/Footer.svelte"
+	import { fade } from "svelte/transition"
 </script>
 
 <svelte:head>
 	<title>{$LL.title.base($LL.title.about())}</title>
 </svelte:head>
 
-<main class="grid place-items-center gap-6 p-4">
+<main class="grid place-items-center gap-6 p-4" transition:fade={{ duration: 200 }}>
 	<section class="max-w-prose grid gap-4 text-lg">
 		<LocalizedParagraph fragments={toArray($LL.about.p1)} />
 		<LocalizedParagraph

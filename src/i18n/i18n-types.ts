@@ -33,9 +33,9 @@ type RootTranslation = {
 		 */
 		cv: string
 		/**
-		 * M​y​ ​e​x​p​e​r​i​m​e​n​t​s
+		 * P​o​r​t​f​o​l​i​o
 		 */
-		experiments: string
+		portfolio: string
 	}
 	home: {
 		/**
@@ -51,9 +51,9 @@ type RootTranslation = {
 		 */
 		cv: string
 		/**
-		 * E​x​p​e​r​i​m​e​n​t​s
+		 * P​o​r​t​f​o​l​i​o
 		 */
-		experiments: string
+		portfolio: string
 		/**
 		 * B​l​o​g
 		 */
@@ -211,9 +211,9 @@ export type TranslationFunctions = {
 		 */
 		cv: () => LocalizedString
 		/**
-		 * My experiments
+		 * Portfolio
 		 */
-		experiments: () => LocalizedString
+		portfolio: () => LocalizedString
 	}
 	home: {
 		/**
@@ -229,9 +229,9 @@ export type TranslationFunctions = {
 		 */
 		cv: () => LocalizedString
 		/**
-		 * Experiments
+		 * Portfolio
 		 */
-		experiments: () => LocalizedString
+		portfolio: () => LocalizedString
 		/**
 		 * Blog
 		 */

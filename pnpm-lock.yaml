@@ -9,8 +9,9 @@ specifiers:
   autoprefixer: ^10.4.7
   mdsvex: ^0.10.6
   npm-run-all: ^4.1.5
-  postcss: ^8.4.14
+  postcss: ^8.4.21
   postcss-load-config: ^4.0.1
+  postcss-scrollbar: ^0.5.1
   prettier: ^2.8.0
   prettier-plugin-svelte: ^2.8.1
   svelte: ^3.54.0
@@ -36,6 +37,7 @@ devDependencies:
   npm-run-all: 4.1.5
   postcss: 8.4.21
   postcss-load-config: 4.0.1_postcss@8.4.21
+  postcss-scrollbar: 0.5.1_postcss@8.4.21
   prettier: 2.8.7
   prettier-plugin-svelte: 2.10.0_ur5pqdgn24bclu6l6i7qojopk4
   svelte: 3.58.0
@@ -1586,6 +1588,16 @@ packages:
     dependencies:
       postcss: 8.4.21
       postcss-selector-parser: 6.0.11
+    dev: true
+
+  /postcss-scrollbar/0.5.1_postcss@8.4.21:
+    resolution: {integrity: sha512-OPvwloab5juU3z5MOCRrYHRGAnDei8ObDIDBWpRfMt0zHptceOWWJUaaG+rodUJ4ItI+6fdaGs8uw77lCWqdbQ==}
+    peerDependencies:
+      postcss: ^8.0.0
+    dependencies:
+      postcss: 8.4.21
+      postcss-selector-parser: 6.0.11
+      postcss-value-parser: 4.2.0
     dev: true
 
   /postcss-selector-parser/6.0.11:

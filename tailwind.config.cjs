@@ -1,9 +1,14 @@
+/** @type {import("tailwindcss").Config} */
 const config = {
 	content: ["./src/**/*.{html,js,svelte,ts}"],
 	darkMode: "class",
 
 	theme: {
-		extend: {},
+		extend: {
+			maxWidth: {
+				prose: "80ch",
+			},
+		},
 	},
 
 	plugins: [],

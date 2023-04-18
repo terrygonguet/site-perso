@@ -2,13 +2,18 @@
 	import ToggleMode from "$lib/comp/ToggleMode.svelte"
 	import ToggleLocale from "$lib/comp/ToggleLocale.svelte"
 	import { LL } from "$i18n"
+	import Copyright from "$lib/comp/Copyright.svelte"
+	import { fly } from "svelte/transition"
 </script>
 
 <svelte:head>
 	<title>{$LL.title.base($LL.title.home())}</title>
 </svelte:head>
 
-<main class="flex flex-col justify-evenly items-center p-4">
+<main
+	class="grid grid-rows-[1fr_1fr_1fr_auto] justify-evenly items-center p-4"
+	transition:fly={{ duration: 200, y: -innerHeight }}
+>
 	<div class="flex flex-col gap-4 items-center">
 		<h1 class="text-4xl md:text-6xl font-bold">Terry Gonguet</h1>
 		<h2 class="text-xl md:text-2xl text-amber-600 dark:text-amber-700">
@@ -22,8 +27,8 @@
 		<a id="cv" class="bloc" href="/cv">
 			<span>{$LL.home.cv()}</span>
 		</a>
-		<a id="experiments" class="bloc" href="/experiments">
-			<span>{$LL.home.experiments()}</span>
+		<a id="portfolio" class="bloc" href="/portfolio">
+			<span>{$LL.home.portfolio()}</span>
 		</a>
 		<div
 			id="blog"
@@ -33,10 +38,11 @@
 			<span>{$LL.home.blog()}</span>
 		</div>
 	</nav>
-	<div class="flex flex-col items-center gap-4 p-4">
+	<footer class="flex flex-col items-center gap-4 p-4">
 		<ToggleLocale />
 		<ToggleMode />
-	</div>
+	</footer>
+	<Copyright class="text-center" />
 </main>
 
 <style lang="postcss">
@@ -95,7 +101,7 @@
 		background-size: 100% 1rem;
 	}
 
-	#experiments:hover {
+	#portfolio:hover {
 		color: white;
 		background-color: #269;
 		background-image: linear-gradient(white 2px, transparent 2px),

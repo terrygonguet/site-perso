@@ -1,0 +1,169 @@
+<script lang="ts">
+	import { tweened } from "svelte/motion"
+	import Close from "~icons/ri/close-fill"
+	import ArrowRight from "~icons/ri/arrow-right-s-line"
+	import ArrowLeft from "~icons/ri/arrow-left-s-line"
+
+	export let images: { src: string; alt: string }[] = []
+
+	let open = false
+	let index = tweened(0, { duration: 200 })
+	let dialog: HTMLDialogElement
+	let miniature: HTMLImageElement
+	let gallery: HTMLElement
+
+	$: miniatureData = images[0]
+	$: hasMultiple = images.length > 1
+
+	const scale = tweened<{ x: number; y: number }>({ x: 1, y: 1 }, { duration: 200 })
+	const translate = tweened<{ x: number; y: number }>({ x: 0, y: 0 }, { duration: 200 })
+
+	function show() {
+		document.body.style.top = -window.scrollY + "px"
+		document.body.classList.add("noscroll")
+		dialog.showModal()
+		const miniatureRect = miniature.getBoundingClientRect()
+		const imageRect = gallery.querySelector("img")!.getBoundingClientRect()
+		scale.set(
+			{
+				x: miniatureRect.width / imageRect.width,
+				y: miniatureRect.height / imageRect.height,
+			},
+			{ duration: 0 },
+		)
+		translate.set(
+			{
+				x: miniatureRect.x - imageRect.x,
+				y: miniatureRect.y - imageRect.y,
+			},
+			{ duration: 0 },
+		)
+		open = true
+		$scale = { x: 1, y: 1 }
+		$translate = { x: 0, y: 0 }
+	}
+
+	async function close() {
+		const miniatureRect = miniature.getBoundingClientRect()
+		const image = gallery.querySelectorAll("img")[$index]
+		if (!image) return
+		const imageRect = image.getBoundingClientRect()
+		$scale = {
+			x: miniatureRect.width / imageRect.width,
+			y: miniatureRect.height / imageRect.height,
+		}
+		await translate.set({
+			x: miniatureRect.x - imageRect.x,
+			y: miniatureRect.y - imageRect.y,
+		})
+		dialog.close()
+		// reset
+		$scale = { x: 1, y: 1 }
+		$translate = { x: 0, y: 0 }
+	}
+
+	function onClose() {
+		open = false
+		const scrollY = parseInt(document.body.style.top)
+		document.body.classList.remove("noscroll")
+		window.scrollTo({ top: -scrollY || 0, behavior: "instant" as any })
+	}
+
+	function onKeydown(evt: KeyboardEvent) {
+		switch (evt.key) {
+			case "Escape":
+				evt.preventDefault()
+				close()
+				break
+			case "ArrowLeft":
+				prev()
+				break
+			case "ArrowRight":
+				next()
+				break
+		}
+	}
+
+	function next() {
+		if (!hasMultiple) close()
+		else $index = (Math.floor($index) + 1) % images.length
+	}
+	function prev() {
+		if (!hasMultiple) close()
+		else $index = (Math.floor($index) - 1 + images.length) % images.length
+	}
+</script>
+
+<button class="{$$props.class} relative" on:click={show}>
+	<img bind:this={miniature} src={miniatureData.src} alt={miniatureData.alt} />
+</button>
+
+<dialog bind:this={dialog} on:close={onClose} class:!bg-opacity-75={open} on:keydown={onKeydown}>
+	<button class="flex-1" style:grid-area="space " on:click={close}><span /></button>
+	<button id="prev" style:grid-area="prev" on:click={prev}>
+		{#if hasMultiple}<ArrowLeft />{:else}<span />{/if}
+	</button>
+	<div bind:this={gallery} class="relative" style:grid-area="image">
+		{#each images as { src, alt }, i (src)}
+			<img
+				loading={i == 0 ? "eager" : "lazy"}
+				style:--tw-scale-x={$scale.x}
+				style:--tw-scale-y={$scale.y}
+				style:--tw-translate-x="calc({$translate.x + (i - $index) * innerWidth}px - 50%)"
+				style:--tw-translate-y="calc({$translate.y}px - 50%)"
+				{src}
+				{alt}
+			/>
+		{/each}
+	</div>
+	<button id="next" style:grid-area="next" on:click={next}>
+		{#if hasMultiple}<ArrowRight />{:else}<span />{/if}
+	</button>
+	<button class="flex-1 justify-center" style:grid-area="close" on:click={close}>
+		<Close />
+	</button>
+</dialog>
+
+<style lang="postcss">
+	dialog {
+		@apply absolute top-0 left-0 p-0 m-auto w-screen h-full max-w-full max-h-full;
+		@apply text-white bg-black bg-opacity-0 transition-colors duration-200 overflow-hidden;
+	}
+	dialog[open] {
+		@apply grid;
+		grid-template-columns: auto 1fr auto;
+		grid-template-rows: auto 1fr auto;
+		grid-template-areas:
+			"space space space"
+			"prev  image next"
+			"close close close";
+	}
+
+	dialog img {
+		@apply transform-gpu absolute top-1/2 left-1/2;
+		transform-origin: top left;
+	}
+
+	dialog button {
+		@apply p-4 grid items-center;
+	}
+	dialog button > :global(*) {
+		@apply w-12 h-12 transform transition opacity-50;
+	}
+	dialog button:hover > :global(*) {
+		@apply scale-150 opacity-100;
+	}
+
+	#prev {
+		@apply justify-end;
+		padding-inline-start: 2rem;
+	}
+	#next {
+		@apply justify-start;
+		padding-inline-end: 2rem;
+	}
+
+	:global(body.noscroll) {
+		@apply fixed left-0 w-full;
+	}
+</style>
