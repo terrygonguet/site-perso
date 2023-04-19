@@ -7,12 +7,11 @@
 	export let images: { src: string; alt: string }[] = []
 
 	let open = false
-	let index = tweened(0, { duration: 200 })
 	let dialog: HTMLDialogElement
 	let miniature: HTMLImageElement
 	let gallery: HTMLElement
 
-	$: miniatureData = images[0]
+	$: first = images[0]
 	$: hasMultiple = images.length > 1
 
 	const scale = tweened<{ x: number; y: number }>({ x: 1, y: 1 }, { duration: 200 })
@@ -22,6 +21,7 @@
 		document.body.style.top = -window.scrollY + "px"
 		document.body.classList.add("noscroll")
 		dialog.showModal()
+		gallery.scrollTo({ left: 0, behavior: "instant" as any })
 		const miniatureRect = miniature.getBoundingClientRect()
 		const imageRect = gallery.querySelector("img")!.getBoundingClientRect()
 		scale.set(
@@ -45,7 +45,9 @@
 
 	async function close() {
 		const miniatureRect = miniature.getBoundingClientRect()
-		const image = gallery.querySelectorAll("img")[$index]
+		const { width } = gallery.getBoundingClientRect()
+		const index = Math.round(gallery.scrollLeft / width)
+		const image = gallery.querySelectorAll("img")[index]
 		if (!image) return
 		const imageRect = image.getBoundingClientRect()
 		$scale = {
@@ -85,17 +87,24 @@
 	}
 
 	function next() {
-		if (!hasMultiple) close()
-		else $index = (Math.floor($index) + 1) % images.length
+		if (hasMultiple) {
+			const scrollX = gallery.scrollLeft
+			const { width } = gallery.getBoundingClientRect()
+			gallery.scrollTo({ left: scrollX + width })
+		} else close()
 	}
+
 	function prev() {
-		if (!hasMultiple) close()
-		else $index = (Math.floor($index) - 1 + images.length) % images.length
+		if (hasMultiple) {
+			const scrollX = gallery.scrollLeft
+			const { width } = gallery.getBoundingClientRect()
+			gallery.scrollTo({ left: scrollX - width })
+		} else close()
 	}
 </script>
 
 <button class="{$$props.class} relative" on:click={show}>
-	<img bind:this={miniature} src={miniatureData.src} alt={miniatureData.alt} />
+	<img bind:this={miniature} src={first.src} alt={first.alt} />
 </button>
 
 <dialog bind:this={dialog} on:close={onClose} class:!bg-opacity-75={open} on:keydown={onKeydown}>
@@ -103,17 +112,24 @@
 	<button id="prev" style:grid-area="prev" on:click={prev}>
 		{#if hasMultiple}<ArrowLeft />{:else}<span />{/if}
 	</button>
-	<div bind:this={gallery} class="relative" style:grid-area="image">
+	<div
+		class="grid overflow-x-auto snap-x snap-mandatory p-2 lg:p-0 gap-2"
+		style:grid-template-columns="repeat({images.length},100%)"
+		style:grid-area="image"
+		bind:this={gallery}
+	>
 		{#each images as { src, alt }, i (src)}
-			<img
-				loading={i == 0 ? "eager" : "lazy"}
-				style:--tw-scale-x={$scale.x}
-				style:--tw-scale-y={$scale.y}
-				style:--tw-translate-x="calc({$translate.x + (i - $index) * innerWidth}px - 50%)"
-				style:--tw-translate-y="calc({$translate.y}px - 50%)"
-				{src}
-				{alt}
-			/>
+			<div class="relative snap-center">
+				<img
+					loading={i == 0 ? "eager" : "lazy"}
+					style:--tw-scale-x={$scale.x}
+					style:--tw-scale-y={$scale.y}
+					style:--tw-translate-x="calc({$translate.x}px - 50%)"
+					style:--tw-translate-y="calc({$translate.y}px - 50%)"
+					{src}
+					{alt}
+				/>
+			</div>
 		{/each}
 	</div>
 	<button id="next" style:grid-area="next" on:click={next}>
@@ -130,17 +146,18 @@
 		@apply text-white bg-black bg-opacity-0 transition-colors duration-200 overflow-hidden;
 	}
 	dialog[open] {
-		@apply grid;
-		grid-template-columns: auto 1fr auto;
-		grid-template-rows: auto 1fr auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto 1fr auto auto;
 		grid-template-areas:
-			"space space space"
-			"prev  image next"
-			"close close close";
+			"space space"
+			"image image"
+			"prev next"
+			"close close";
 	}
 
 	dialog img {
-		@apply transform-gpu absolute top-1/2 left-1/2;
+		@apply transform-gpu absolute top-1/2 left-1/2 max-w-full max-h-full;
 		transform-origin: top left;
 	}
 
@@ -163,7 +180,18 @@
 		padding-inline-end: 2rem;
 	}
 
+	@screen lg {
+		dialog[open] {
+			grid-template-columns: auto 1fr auto;
+			grid-template-rows: auto 1fr auto;
+			grid-template-areas:
+				"space space space"
+				"prev  image next"
+				"close close close";
+		}
+	}
+
 	:global(body.noscroll) {
-		@apply fixed left-0 w-full;
+		@apply fixed left-0 w-full overflow-hidden;
 	}
 </style>
