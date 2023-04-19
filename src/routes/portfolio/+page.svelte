@@ -15,14 +15,25 @@
 		<section>
 			<LightBox
 				class="w-1/3 float-left mt-2 mr-4"
-				images={[{ src: "/placeholder.png", alt: "Placeholder" }]}
+				images={[
+					{ src: "/gapsmoov-explore.png", alt: "Placeholder" },
+					{ src: "/gapsmoov-compare.png", alt: "Placeholder" },
+					{ src: "/gapsmoov-evaluate.png", alt: "Placeholder" },
+				]}
 			/>
+			<h3>Gapsmoov (2020 - now)</h3>
 			<p>
-				Quis Lorem incididunt non pariatur magna culpa dolore non voluptate amet aliquip
-				eiusmod irure eiusmod. Id magna deserunt magna exercitation anim veniam do excepteur
-				irure dolore cillum. Nostrud commodo ipsum cillum adipisicing. Dolore pariatur
-				incididunt voluptate aliquip ex aute. Minim amet Lorem ea aute. Amet qui quis
-				voluptate sunt deserunt pariatur aliqua.
+				In summer of 2020, with the help of two of my friends, I was contracted by two long
+				time consultants turned entrepreneurs to build an e-learning app from scratch. They
+				came from the world of business-focused cultural training and identified (correctly)
+				that the existing solutions were old and painful to use so together we built
+				Gapsmoov.
+			</p>
+			<p>
+				They contracted the original design from someone else but I build the entire app
+				solo with Sapper and KeystoneJS. I would be lying if I said that the code turned out
+				perfect but we haven't felt the need to increase the team even though we're still
+				adding features regularly!
 			</p>
 		</section>
 
@@ -30,17 +41,19 @@
 			<LightBox
 				class="w-1/3 float-right mt-2 ml-4"
 				images={[
-					{ src: "/placeholder.png", alt: "Placeholder" },
-					{ src: "/placeholder2.png", alt: "Placeholder" },
-					{ src: "/placeholder3.png", alt: "Placeholder" },
+					{ src: "/munch-home.png", alt: "Placeholder" },
+					{ src: "/munch-menu.png", alt: "Placeholder" },
+					{ src: "/munch-checkout.png", alt: "Placeholder" },
 				]}
 				alt="placeholder"
 			/>
+			<h3>Get Munch (2019)</h3>
 			<p>
-				Minim veniam consectetur nisi aute adipisicing anim. Dolor consectetur adipisicing
-				consectetur labore irure commodo laborum aliquip duis. Aliqua veniam proident non
-				ullamco incididunt ullamco id ipsum veniam fugiat in elit laboris. Aliqua elit ex
-				nulla Lorem elit irure Lorem excepteur duis deserunt eu. Ea nostrud duis in ea.
+				Two Irish friends and I started a late night snack delivery business in the suburbs
+				of Dublin before it was cool (I swear we had the idea much before those apps became
+				ubiquitous). I built the entire app out of Vue, Stripe & MongoDB and my friends
+				handled the marketing like champs. Sadly we didn't manage to stay alive on account
+				of us being young, poor and bad at business.
 			</p>
 		</section>
 
@@ -161,5 +174,13 @@
 <style lang="postcss">
 	h2 {
 		@apply text-5xl text-center mt-8 border-b border-current p-3 w-4/5 mx-auto;
+	}
+
+	h3 {
+		@apply text-xl font-bold;
+	}
+
+	p {
+		@apply my-3;
 	}
 </style>
