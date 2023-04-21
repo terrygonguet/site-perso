@@ -182,8 +182,8 @@
 
 	@screen lg {
 		dialog[open] {
-			grid-template-columns: auto 1fr auto;
-			grid-template-rows: auto 1fr auto;
+			grid-template-columns: minmax(auto, 15rem) 1fr minmax(auto, 15rem);
+			grid-template-rows: minmax(auto, 5rem) 1fr minmax(auto, 5rem);
 			grid-template-areas:
 				"space space space"
 				"prev  image next"
