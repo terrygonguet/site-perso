@@ -22,23 +22,26 @@ const en = {
 		p1: ["Hi!"],
 		p2: [
 			html`My name is Terry Gonguet, a "fullstack" web developer born in `,
-			html`the French Alps`, // link https://goo.gl/maps/fcsMFHbRMq1cSYta9
+			{ html: "the French Alps", href: "https://goo.gl/maps/fcsMFHbRMq1cSYta9" },
 			html` trying to make my way into the world. At around 12 years old I discovered `,
-			html`Minecraft's Redstone`, // link https://www.youtube.com/watch?v=SbO0tqH8f5I
+			{ html: "Minecraft's Redstone", href: "https://www.youtube.com/watch?v=SbO0tqH8f5I" },
 			html` and the `,
-			html`C programming language`, // link https://rkvalley.files.wordpress.com/2010/04/kernighan_ritchie_language_c.pdf
+			{
+				html: "C programming language",
+				href: "https://rkvalley.files.wordpress.com/2010/04/kernighan_ritchie_language_c.pdf",
+			},
 			html` (pretty harsh introduction, I know) and got hooked instantly. Ever since I've
 				spent an <s>un</s>reasonable amount of time every day trying to either make magic
 				thinking rocks do my bidding or learn more about the discipline.`,
 		],
 		p3: [
 			html`I've always been a fervent proponent of trying to `,
-			html`decentralize`, // link https://www.datprotocol.com/
+			{ html: "decentralize", href: "https://www.datprotocol.com/" },
 			html`
 				the web but recent efforts seem... misguided. Breaking up huge tech monopolies and
 				letting everyone have a voice are good goals and I hope
 			`,
-			html`the tech`, // link https://ipfs.io/
+			{ html: "the tech", href: "https://ipfs.io/" },
 			html` becomes viable for broad adoption soon.`,
 		],
 		p4: [
@@ -46,9 +49,12 @@ const en = {
 			properties valuable (like linkability, backward compatibility etc). I am especially
 			interested in making games explicitely designed for the web now that almost all browsers
 			can display 2D and 3D graphics and `,
-			html`use gamepads`, // link https://caniuse.com/#feat=gamepad
+			{ html: "use gamepads", href: "https://caniuse.com/#feat=gamepad" },
 			html` (among other `,
-			html`amazing features`, // link https://developer.mozilla.org/docs/WebAssembly/Concepts
+			{
+				html: "amazing features",
+				href: "https://developer.mozilla.org/docs/WebAssembly/Concepts",
+			},
 			html`).`,
 		],
 		p5: [

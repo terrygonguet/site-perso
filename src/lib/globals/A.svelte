@@ -3,7 +3,7 @@
 
 	export let href: string
 
-	$: isExternal = $$props.target == "_blank"
+	$: isExternal = $$props.target == "_blank" || href.startsWith("http")
 </script>
 
 <a {...$$props} {href}

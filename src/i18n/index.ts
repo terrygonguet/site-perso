@@ -19,13 +19,4 @@ export async function setLocale(locale: Locales) {
 	return LL
 }
 
-export function toArray<T>(arrayLike: { [i: string]: T }): T[] {
-	function* toIter<T>(arrayLike: { [i: string]: T }) {
-		for (const i in arrayLike) {
-			yield arrayLike[i]
-		}
-	}
-	return Array.from(toIter(arrayLike))
-}
-
 export { LL, locale }
