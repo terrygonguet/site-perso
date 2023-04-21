@@ -78,7 +78,7 @@ const en = {
 			p1: [
 				html`In summer of 2020, with the help of two of my friends, I was contracted by two
 				long time consultants turned entrepreneurs to build an e-learning app from scratch.
-				They came from the world of business-focused cultural training and identified
+				They come from the world of business-focused cultural training and identified
 				(correctly) that the existing solutions were old and painful to use so together we
 				built `,
 				{ html: "Gapsmoov", href: "https://app.gapsmoov.com" },
@@ -229,7 +229,7 @@ const en = {
 				html` about that puzzle. I like making puzzles so now `,
 				{ html: "it", href: "https://calibron12.gonguet.com/" },
 				html`'s on the internet. The video (and `,
-				{ html: "its author", href: "" },
+				{ html: "its author", href: "https://www.youtube.com/user/Vsauce" },
 				html`) and the document are amazing and I'm not going to even try explain it better.`,
 			],
 		},

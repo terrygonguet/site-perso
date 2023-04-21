@@ -242,7 +242,7 @@ type RootTranslation = {
 				/**
 				 * I​n​ ​s​u​m​m​e​r​ ​o​f​ ​2​0​2​0​,​ ​w​i​t​h​ ​t​h​e​ ​h​e​l​p​ ​o​f​ ​t​w​o​ ​o​f​ ​m​y​ ​f​r​i​e​n​d​s​,​ ​I​ ​w​a​s​ ​c​o​n​t​r​a​c​t​e​d​ ​b​y​ ​t​w​o​
 			​	​	​	​	​l​o​n​g​ ​t​i​m​e​ ​c​o​n​s​u​l​t​a​n​t​s​ ​t​u​r​n​e​d​ ​e​n​t​r​e​p​r​e​n​e​u​r​s​ ​t​o​ ​b​u​i​l​d​ ​a​n​ ​e​-​l​e​a​r​n​i​n​g​ ​a​p​p​ ​f​r​o​m​ ​s​c​r​a​t​c​h​.​
-			​	​	​	​	​T​h​e​y​ ​c​a​m​e​ ​f​r​o​m​ ​t​h​e​ ​w​o​r​l​d​ ​o​f​ ​b​u​s​i​n​e​s​s​-​f​o​c​u​s​e​d​ ​c​u​l​t​u​r​a​l​ ​t​r​a​i​n​i​n​g​ ​a​n​d​ ​i​d​e​n​t​i​f​i​e​d​
+			​	​	​	​	​T​h​e​y​ ​c​o​m​e​ ​f​r​o​m​ ​t​h​e​ ​w​o​r​l​d​ ​o​f​ ​b​u​s​i​n​e​s​s​-​f​o​c​u​s​e​d​ ​c​u​l​t​u​r​a​l​ ​t​r​a​i​n​i​n​g​ ​a​n​d​ ​i​d​e​n​t​i​f​i​e​d​
 			​	​	​	​	​(​c​o​r​r​e​c​t​l​y​)​ ​t​h​a​t​ ​t​h​e​ ​e​x​i​s​t​i​n​g​ ​s​o​l​u​t​i​o​n​s​ ​w​e​r​e​ ​o​l​d​ ​a​n​d​ ​p​a​i​n​f​u​l​ ​t​o​ ​u​s​e​ ​s​o​ ​t​o​g​e​t​h​e​r​ ​w​e​
 			​	​	​	​	​b​u​i​l​t​ 
 				 */
@@ -734,6 +734,9 @@ type RootTranslation = {
 					 * i​t​s​ ​a​u​t​h​o​r
 					 */
 					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​w​w​w​.​y​o​u​t​u​b​e​.​c​o​m​/​u​s​e​r​/​V​s​a​u​c​e
+					 */
 					href: string
 				}
 				/**
@@ -1090,7 +1093,7 @@ export type TranslationFunctions = {
 				/**
 				 * In summer of 2020, with the help of two of my friends, I was contracted by two
 							long time consultants turned entrepreneurs to build an e-learning app from scratch.
-							They came from the world of business-focused cultural training and identified
+							They come from the world of business-focused cultural training and identified
 							(correctly) that the existing solutions were old and painful to use so together we
 							built 
 				 */
@@ -1582,6 +1585,9 @@ export type TranslationFunctions = {
 					 * its author
 					 */
 					html: () => LocalizedString
+					/**
+					 * https://www.youtube.com/user/Vsauce
+					 */
 					href: () => LocalizedString
 				}
 				/**
