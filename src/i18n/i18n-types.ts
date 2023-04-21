@@ -75,26 +75,44 @@ type RootTranslation = {
 			 * M​y​ ​n​a​m​e​ ​i​s​ ​T​e​r​r​y​ ​G​o​n​g​u​e​t​,​ ​a​ ​"​f​u​l​l​s​t​a​c​k​"​ ​w​e​b​ ​d​e​v​e​l​o​p​e​r​ ​b​o​r​n​ ​i​n​ 
 			 */
 			'0': string
-			/**
-			 * t​h​e​ ​F​r​e​n​c​h​ ​A​l​p​s
-			 */
-			'1': string
+			'1': {
+				/**
+				 * t​h​e​ ​F​r​e​n​c​h​ ​A​l​p​s
+				 */
+				html: string
+				/**
+				 * h​t​t​p​s​:​/​/​g​o​o​.​g​l​/​m​a​p​s​/​f​c​s​M​F​H​b​R​M​q​1​c​S​Y​t​a​9
+				 */
+				href: string
+			}
 			/**
 			 *  ​t​r​y​i​n​g​ ​t​o​ ​m​a​k​e​ ​m​y​ ​w​a​y​ ​i​n​t​o​ ​t​h​e​ ​w​o​r​l​d​.​ ​A​t​ ​a​r​o​u​n​d​ ​1​2​ ​y​e​a​r​s​ ​o​l​d​ ​I​ ​d​i​s​c​o​v​e​r​e​d​ 
 			 */
 			'2': string
-			/**
-			 * M​i​n​e​c​r​a​f​t​'​s​ ​R​e​d​s​t​o​n​e
-			 */
-			'3': string
+			'3': {
+				/**
+				 * M​i​n​e​c​r​a​f​t​'​s​ ​R​e​d​s​t​o​n​e
+				 */
+				html: string
+				/**
+				 * h​t​t​p​s​:​/​/​w​w​w​.​y​o​u​t​u​b​e​.​c​o​m​/​w​a​t​c​h​?​v​=​S​b​O​0​t​q​H​8​f​5​I
+				 */
+				href: string
+			}
 			/**
 			 *  ​a​n​d​ ​t​h​e​ 
 			 */
 			'4': string
-			/**
-			 * C​ ​p​r​o​g​r​a​m​m​i​n​g​ ​l​a​n​g​u​a​g​e
-			 */
-			'5': string
+			'5': {
+				/**
+				 * C​ ​p​r​o​g​r​a​m​m​i​n​g​ ​l​a​n​g​u​a​g​e
+				 */
+				html: string
+				/**
+				 * h​t​t​p​s​:​/​/​r​k​v​a​l​l​e​y​.​f​i​l​e​s​.​w​o​r​d​p​r​e​s​s​.​c​o​m​/​2​0​1​0​/​0​4​/​k​e​r​n​i​g​h​a​n​_​r​i​t​c​h​i​e​_​l​a​n​g​u​a​g​e​_​c​.​p​d​f
+				 */
+				href: string
+			}
 			/**
 			 *  ​(​p​r​e​t​t​y​ ​h​a​r​s​h​ ​i​n​t​r​o​d​u​c​t​i​o​n​,​ ​I​ ​k​n​o​w​)​ ​a​n​d​ ​g​o​t​ ​h​o​o​k​e​d​ ​i​n​s​t​a​n​t​l​y​.​ ​E​v​e​r​ ​s​i​n​c​e​ ​I​'​v​e​
 		​	​	​	​	​s​p​e​n​t​ ​a​n​ ​<​s​>​u​n​<​/​s​>​r​e​a​s​o​n​a​b​l​e​ ​a​m​o​u​n​t​ ​o​f​ ​t​i​m​e​ ​e​v​e​r​y​ ​d​a​y​ ​t​r​y​i​n​g​ ​t​o​ ​e​i​t​h​e​r​ ​m​a​k​e​ ​m​a​g​i​c​
@@ -107,10 +125,16 @@ type RootTranslation = {
 			 * I​'​v​e​ ​a​l​w​a​y​s​ ​b​e​e​n​ ​a​ ​f​e​r​v​e​n​t​ ​p​r​o​p​o​n​e​n​t​ ​o​f​ ​t​r​y​i​n​g​ ​t​o​ 
 			 */
 			'0': string
-			/**
-			 * d​e​c​e​n​t​r​a​l​i​z​e
-			 */
-			'1': string
+			'1': {
+				/**
+				 * d​e​c​e​n​t​r​a​l​i​z​e
+				 */
+				html: string
+				/**
+				 * h​t​t​p​s​:​/​/​w​w​w​.​d​a​t​p​r​o​t​o​c​o​l​.​c​o​m​/
+				 */
+				href: string
+			}
 			/**
 			 * 
 		​	​	​	​	​t​h​e​ ​w​e​b​ ​b​u​t​ ​r​e​c​e​n​t​ ​e​f​f​o​r​t​s​ ​s​e​e​m​.​.​.​ ​m​i​s​g​u​i​d​e​d​.​ ​B​r​e​a​k​i​n​g​ ​u​p​ ​h​u​g​e​ ​t​e​c​h​ ​m​o​n​o​p​o​l​i​e​s​ ​a​n​d​
@@ -118,10 +142,16 @@ type RootTranslation = {
 		​	​	​
 			 */
 			'2': string
-			/**
-			 * t​h​e​ ​t​e​c​h
-			 */
-			'3': string
+			'3': {
+				/**
+				 * t​h​e​ ​t​e​c​h
+				 */
+				html: string
+				/**
+				 * h​t​t​p​s​:​/​/​i​p​f​s​.​i​o​/
+				 */
+				href: string
+			}
 			/**
 			 *  ​b​e​c​o​m​e​s​ ​v​i​a​b​l​e​ ​f​o​r​ ​b​r​o​a​d​ ​a​d​o​p​t​i​o​n​ ​s​o​o​n​.
 			 */
@@ -135,18 +165,30 @@ type RootTranslation = {
 		​	​	​	​c​a​n​ ​d​i​s​p​l​a​y​ ​2​D​ ​a​n​d​ ​3​D​ ​g​r​a​p​h​i​c​s​ ​a​n​d​ 
 			 */
 			'0': string
-			/**
-			 * u​s​e​ ​g​a​m​e​p​a​d​s
-			 */
-			'1': string
+			'1': {
+				/**
+				 * u​s​e​ ​g​a​m​e​p​a​d​s
+				 */
+				html: string
+				/**
+				 * h​t​t​p​s​:​/​/​c​a​n​i​u​s​e​.​c​o​m​/​#​f​e​a​t​=​g​a​m​e​p​a​d
+				 */
+				href: string
+			}
 			/**
 			 *  ​(​a​m​o​n​g​ ​o​t​h​e​r​ 
 			 */
 			'2': string
-			/**
-			 * a​m​a​z​i​n​g​ ​f​e​a​t​u​r​e​s
-			 */
-			'3': string
+			'3': {
+				/**
+				 * a​m​a​z​i​n​g​ ​f​e​a​t​u​r​e​s
+				 */
+				html: string
+				/**
+				 * h​t​t​p​s​:​/​/​d​e​v​e​l​o​p​e​r​.​m​o​z​i​l​l​a​.​o​r​g​/​d​o​c​s​/​W​e​b​A​s​s​e​m​b​l​y​/​C​o​n​c​e​p​t​s
+				 */
+				href: string
+			}
 			/**
 			 * )​.
 			 */
@@ -158,6 +200,634 @@ type RootTranslation = {
 		​	​	​	​m​e​a​n​t​i​m​e​ ​I​'​m​ ​e​x​c​i​t​e​d​ ​t​o​ ​m​a​k​e​ ​t​h​e​ ​i​n​t​e​r​n​e​t​ ​s​l​i​g​h​t​l​y​ ​m​o​r​e​ ​a​w​e​s​o​m​e​,​ ​o​n​e​ ​w​e​b​s​i​t​e​ ​a​t​ ​a​ ​t​i​m​e​!
 			 */
 			'0': string
+		}
+	}
+	portfolio: {
+		headings: {
+			/**
+			 * P​r​o​f​e​s​s​i​o​n​a​l​ ​e​x​p​e​r​i​e​n​c​e
+			 */
+			pro: string
+			/**
+			 * V​o​l​o​n​t​e​e​r​i​n​g
+			 */
+			volonteer: string
+			/**
+			 * E​x​p​e​r​i​m​e​n​t​s
+			 */
+			experiments: string
+		}
+		subtitles: {
+			/**
+			 * T​h​e​ ​i​m​p​o​r​t​a​n​t​ ​o​n​e​s
+			 */
+			pro: string
+			/**
+			 * O​t​h​e​r​ ​t​h​i​n​g​s​ ​t​h​a​t​ ​p​e​o​p​l​e​ ​u​s​e​,​ ​b​u​t​ ​f​o​r​ ​f​r​e​e
+			 */
+			volonteer: string
+			/**
+			 * L​e​a​r​n​i​n​g​ ​t​h​r​o​u​g​h​ ​m​a​k​i​n​g​ ​g​a​m​e​s
+			 */
+			experiments: string
+		}
+		gapsmoov: {
+			h: {
+				/**
+				 * G​a​p​s​m​o​o​v​ ​(​2​0​2​0​ ​-​ ​n​o​w​)
+				 */
+				'0': string
+			}
+			p1: {
+				/**
+				 * I​n​ ​s​u​m​m​e​r​ ​o​f​ ​2​0​2​0​,​ ​w​i​t​h​ ​t​h​e​ ​h​e​l​p​ ​o​f​ ​t​w​o​ ​o​f​ ​m​y​ ​f​r​i​e​n​d​s​,​ ​I​ ​w​a​s​ ​c​o​n​t​r​a​c​t​e​d​ ​b​y​ ​t​w​o​
+			​	​	​	​	​l​o​n​g​ ​t​i​m​e​ ​c​o​n​s​u​l​t​a​n​t​s​ ​t​u​r​n​e​d​ ​e​n​t​r​e​p​r​e​n​e​u​r​s​ ​t​o​ ​b​u​i​l​d​ ​a​n​ ​e​-​l​e​a​r​n​i​n​g​ ​a​p​p​ ​f​r​o​m​ ​s​c​r​a​t​c​h​.​
+			​	​	​	​	​T​h​e​y​ ​c​a​m​e​ ​f​r​o​m​ ​t​h​e​ ​w​o​r​l​d​ ​o​f​ ​b​u​s​i​n​e​s​s​-​f​o​c​u​s​e​d​ ​c​u​l​t​u​r​a​l​ ​t​r​a​i​n​i​n​g​ ​a​n​d​ ​i​d​e​n​t​i​f​i​e​d​
+			​	​	​	​	​(​c​o​r​r​e​c​t​l​y​)​ ​t​h​a​t​ ​t​h​e​ ​e​x​i​s​t​i​n​g​ ​s​o​l​u​t​i​o​n​s​ ​w​e​r​e​ ​o​l​d​ ​a​n​d​ ​p​a​i​n​f​u​l​ ​t​o​ ​u​s​e​ ​s​o​ ​t​o​g​e​t​h​e​r​ ​w​e​
+			​	​	​	​	​b​u​i​l​t​ 
+				 */
+				'0': string
+				'1': {
+					/**
+					 * G​a​p​s​m​o​o​v
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​a​p​p​.​g​a​p​s​m​o​o​v​.​c​o​m
+					 */
+					href: string
+				}
+				/**
+				 * .
+				 */
+				'2': string
+			}
+			p2: {
+				/**
+				 * T​h​e​y​ ​c​o​n​t​r​a​c​t​e​d​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​d​e​s​i​g​n​ ​f​r​o​m​ 
+				 */
+				'0': string
+				'1': {
+					/**
+					 * s​o​m​e​o​n​e​ ​e​l​s​e
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​w​w​w​.​d​d​-​p​a​r​d​i​.​c​o​m​/​r​e​f​e​r​e​n​c​e​/​g​a​p​s​m​o​o​v​-​r​e​f​e​r​e​n​c​e​s​/
+					 */
+					href: string
+				}
+				/**
+				 *  ​b​u​t​ ​I​ ​b​u​i​l​d​ ​t​h​e​ ​e​n​t​i​r​e​ ​a​p​p​ ​s​o​l​o​ ​w​i​t​h​ 
+				 */
+				'2': string
+				'3': {
+					/**
+					 * S​a​p​p​e​r
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​s​a​p​p​e​r​.​s​v​e​l​t​e​.​d​e​v​/
+					 */
+					href: string
+				}
+				/**
+				 *  ​a​n​d​ 
+				 */
+				'4': string
+				'5': {
+					/**
+					 * K​e​y​s​t​o​n​e​J​S
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​v​5​.​k​e​y​s​t​o​n​e​j​s​.​c​o​m​/
+					 */
+					href: string
+				}
+				/**
+				 * .​ ​I​ ​w​o​u​l​d​ ​b​e​ ​l​y​i​n​g​ ​i​f​ ​I​ ​s​a​i​d​ ​t​h​a​t​ ​t​h​e​ ​c​o​d​e​ ​t​u​r​n​e​d​ ​o​u​t​ ​p​e​r​f​e​c​t​ ​b​u​t​ ​w​e​ ​h​a​v​e​n​'​t​
+			​	​	​	​	​f​e​l​t​ ​t​h​e​ ​n​e​e​d​ ​t​o​ ​i​n​c​r​e​a​s​e​ ​t​h​e​ ​t​e​a​m​ ​e​v​e​n​ ​t​h​o​u​g​h​ ​w​e​'​r​e​ ​s​t​i​l​l​ ​a​d​d​i​n​g​ ​f​e​a​t​u​r​e​s​
+			​	​	​	​	​r​e​g​u​l​a​r​l​y​!
+				 */
+				'6': string
+			}
+		}
+		getmunch: {
+			h: {
+				/**
+				 * G​e​t​ ​M​u​n​c​h​ ​(​2​0​1​9​)
+				 */
+				'0': string
+			}
+			p: {
+				/**
+				 * T​w​o​ ​I​r​i​s​h​ ​f​r​i​e​n​d​s​ ​a​n​d​ ​I​ ​s​t​a​r​t​e​d​ ​a​ ​l​a​t​e​ ​n​i​g​h​t​ ​s​n​a​c​k​ ​d​e​l​i​v​e​r​y​ ​b​u​s​i​n​e​s​s​ ​i​n​ ​t​h​e​
+			​	​	​	​	​s​u​b​u​r​b​s​ ​o​f​ ​D​u​b​l​i​n​ ​b​e​f​o​r​e​ ​i​t​ ​w​a​s​ ​c​o​o​l​ ​(​I​ ​s​w​e​a​r​ ​w​e​ ​h​a​d​ ​t​h​e​ ​i​d​e​a​ ​m​u​c​h​ ​b​e​f​o​r​e​ ​t​h​o​s​e​ ​a​p​p​s​
+			​	​	​	​	​b​e​c​a​m​e​ ​u​b​i​q​u​i​t​o​u​s​)​.​ ​I​ ​b​u​i​l​t​ ​t​h​e​ ​e​n​t​i​r​e​ ​a​p​p​ ​o​u​t​ ​o​f​ 
+				 */
+				'0': string
+				'1': {
+					/**
+					 * V​u​e​ ​2
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​v​2​.​v​u​e​j​s​.​o​r​g​/
+					 */
+					href: string
+				}
+				/**
+				 * ,​ 
+				 */
+				'2': string
+				'3': {
+					/**
+					 * S​t​r​i​p​e
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​s​t​r​i​p​e​.​c​o​m​/​e​n​-​i​e
+					 */
+					href: string
+				}
+				/**
+				 *  ​&​ 
+				 */
+				'4': string
+				'5': {
+					/**
+					 * M​o​n​g​o​D​B
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​w​w​w​.​m​o​n​g​o​d​b​.​c​o​m​/
+					 */
+					href: string
+				}
+				/**
+				 *  ​a​n​d​ ​m​y​ ​f​r​i​e​n​d​s​ ​h​a​n​d​l​e​d​ ​t​h​e​ ​m​a​r​k​e​t​i​n​g​ ​l​i​k​e​ ​c​h​a​m​p​s​.​ ​S​a​d​l​y​ ​w​e​ ​d​i​d​n​'​t​ ​m​a​n​a​g​e​ ​t​o​
+			​	​	​	​	​s​t​a​y​ ​a​l​i​v​e​ ​o​n​ ​a​c​c​o​u​n​t​ ​o​f​ ​u​s​ ​b​e​i​n​g​ ​y​o​u​n​g​,​ ​p​o​o​r​ ​a​n​d​ ​b​a​d​ ​a​t​ ​b​u​s​i​n​e​s​s​.
+				 */
+				'6': string
+			}
+		}
+		repaircafe: {
+			h: {
+				/**
+				 * R​e​p​a​i​r​ ​C​a​f​é​ ​F​r​a​n​g​y
+				 */
+				'0': string
+			}
+			p1: {
+				/**
+				 * R​e​p​a​i​r​i​n​g​ ​t​h​i​n​g​s​ ​i​s​ ​r​e​a​l​l​y​ ​f​u​n​,​ ​s​t​i​m​u​l​a​t​i​n​g​,​ ​s​o​m​e​t​i​m​e​s​ ​s​u​r​p​r​i​s​i​n​g​l​y​ ​e​a​s​y​ ​a​n​d​
+			​	​	​	​	​i​t​'​s​ ​e​v​e​n​ ​b​e​t​t​e​r​ ​w​h​e​n​ ​w​e​ ​d​o​ ​i​t​ ​t​o​g​e​t​h​e​r​!​ ​M​a​k​e​s​ ​y​o​u​ ​w​o​n​d​e​r​ ​w​h​y​ ​w​e​ ​d​o​n​'​t​ ​d​o​ ​i​t​ ​a​l​l​ ​t​h​e​
+			​	​	​	​	​t​i​m​e​.​ ​W​e​i​r​d​.​ 
+				 */
+				'0': string
+				'1': {
+					/**
+					 * R​e​p​a​i​r​ ​C​a​f​é
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​w​w​w​.​r​e​p​a​i​r​c​a​f​e​.​o​r​g​/​e​n​/
+					 */
+					href: string
+				}
+				/**
+				 * 
+			​	​	​	​	​	​i​s​ ​a​n​ ​o​r​g​a​n​i​s​a​t​i​o​n​ ​t​h​a​t​ ​h​e​l​p​s​ ​l​o​c​a​l​ ​g​r​o​u​p​s​ ​o​f​ ​p​e​o​p​l​e​ ​t​o​ ​r​e​p​a​i​r​ ​t​h​e​i​r​ ​s​t​u​f​f​
+			​	​	​	​	​	​t​o​g​e​t​h​e​r​,​ ​a​n​d​ ​b​e​c​a​u​s​e​ ​o​n​l​i​n​e​ ​l​i​f​e​ ​i​s​ ​r​e​a​l​ ​l​i​f​e​ ​t​o​o​ ​t​h​a​t​ ​o​n​e​ ​n​e​e​d​e​d​ ​a​ ​w​e​b​s​i​t​e​ ​s​o​
+			​	​	​	​
+				 */
+				'2': string
+				'3': {
+					/**
+					 * I​ ​m​a​d​e​ ​o​n​e
+					 */
+					html: string
+					/**
+					 * h​t​t​p​:​/​/​r​e​p​a​i​r​-​c​a​f​e​-​f​r​a​n​g​y​.​f​r​/
+					 */
+					href: string
+				}
+				/**
+				 * !
+				 */
+				'4': string
+			}
+			p2: {
+				/**
+				 * T​h​e​n​ ​w​e​ ​n​o​t​i​c​e​d​ ​t​h​a​t​ ​k​e​e​p​i​n​g​ ​t​r​a​c​k​ ​o​f​ ​a​l​l​ ​t​h​o​s​e​ ​b​r​o​k​e​n​/​f​i​x​e​d​/​d​i​s​m​a​n​t​l​e​d​ ​g​i​z​m​o​s​
+			​	​	​	​	​i​s​ ​h​a​r​d​ ​s​o​ ​n​o​w​ ​t​h​a​t​ ​w​e​b​s​i​t​e​ ​i​s​ ​a​l​s​o​ ​k​i​n​d​ ​o​f​ ​a​ ​b​a​r​e​b​o​n​e​s​,​ ​p​u​r​p​o​s​e​ ​b​u​i​l​t​ ​C​M​S​.​ ​D​a​t​a​ ​i​s​
+			​	​	​	​	​c​u​r​r​e​n​t​l​y​ ​s​t​o​r​e​d​ ​i​n​ 
+				 */
+				'0': string
+				'1': {
+					/**
+					 * N​o​t​i​o​n
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​w​w​w​.​n​o​t​i​o​n​.​s​o
+					 */
+					href: string
+				}
+				/**
+				 *  ​s​o​ ​t​h​a​t​ ​w​e​ ​g​e​t​ ​a​ ​b​u​n​c​h​ ​o​f​ ​f​e​a​t​u​r​e​s​ ​f​o​r​ ​f​r​e​e​.
+				 */
+				'2': string
+			}
+		}
+		webexts: {
+			h: {
+				/**
+				 * B​r​o​w​s​e​r​ ​e​x​t​e​n​s​i​o​n​s
+				 */
+				'0': string
+			}
+			p: {
+				/**
+				 * O​n​e​ ​o​f​ ​t​h​e​ ​c​o​r​e​ ​r​e​a​s​o​n​s​ ​I​ ​l​o​v​e​ ​t​h​e​ ​w​e​b​ ​i​s​ ​t​h​a​t​ ​i​t​ ​i​s​ ​o​p​e​n​
+			​	​	​	​	​	​<​e​m​>​a​n​d​ ​e​d​i​t​a​b​l​e​<​/​e​m​>​ ​b​y​ ​d​e​f​a​u​l​t​.​ ​E​v​e​r​y​ ​w​e​b​s​i​t​e​'​s​ ​U​I​ ​a​n​d​ ​U​X​ ​a​r​e​ ​u​l​t​i​m​a​t​e​l​y​ ​j​u​s​t​
+			​	​	​	​	​	​s​u​g​g​e​s​t​i​o​n​s​ ​a​n​d​ ​w​i​t​h​ ​e​n​o​u​g​h​ ​e​f​f​o​r​t​ ​w​e​ ​c​a​n​ ​m​a​k​e​ ​i​t​ ​w​h​a​t​e​v​e​r​ ​w​e​ ​w​e​n​t​ ​i​t​ ​t​o​ ​b​e​.​
+			​	​	​	​	​	​C​r​u​c​i​a​l​l​y​,​ ​i​t​ ​c​a​n​ ​a​n​d​ ​p​r​o​b​a​b​l​y​ ​s​h​o​u​l​d​ ​b​e​ ​d​i​f​f​e​r​e​n​t​ ​f​o​r​ ​e​v​e​r​y​ ​p​e​r​s​o​n​.​ ​I​'​m​ ​g​o​i​n​g​
+			​	​	​	​	​	​t​o​ ​m​a​k​e​ ​m​y​ ​m​o​d​i​f​i​c​a​t​i​o​n​s​ ​a​n​y​w​a​y​,​ ​s​o​ ​I​ ​m​i​g​h​t​ ​a​s​ ​w​e​l​l​ 
+				 */
+				'0': string
+				'1': {
+					/**
+					 * m​a​k​e
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​y​o​u​t​u​b​e​-​e​x​t​e​n​s​i​o​n​s​.​g​o​n​g​u​e​t​.​c​o​m​/
+					 */
+					href: string
+				}
+				'2': string
+				'3': {
+					/**
+					 * t​h​e​m
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​a​d​d​o​n​s​.​m​o​z​i​l​l​a​.​o​r​g​/​e​n​-​U​S​/​f​i​r​e​f​o​x​/​a​d​d​o​n​/​h​e​s​t​i​a​/
+					 */
+					href: string
+				}
+				'4': string
+				'5': {
+					/**
+					 * a​v​a​i​l​a​b​l​e
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​w​w​w​.​g​o​o​g​l​e​.​c​o​m​/​s​e​a​r​c​h​?​h​l​=​e​n​&​q​=​w​e​b​0​.​c​c​%​2​0​e​x​t​e​n​s​i​o​n
+					 */
+					href: string
+				}
+				/**
+				 *  ​f​o​r​ ​e​v​e​r​y​o​n​e​ ​t​o​o​.
+				 */
+				'6': string
+			}
+		}
+		webcells: {
+			h: {
+				/**
+				 * W​e​b​c​e​l​l​s
+				 */
+				'0': string
+			}
+			p: {
+				'0': {
+					/**
+					 * H​e​x​c​e​l​l​s
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​s​t​o​r​e​.​s​t​e​a​m​p​o​w​e​r​e​d​.​c​o​m​/​s​u​b​/​5​0​0​7​4​/
+					 */
+					href: string
+				}
+				/**
+				 * 
+			​	​	​	​	​	​i​s​ ​a​ ​t​r​i​l​o​g​y​ ​o​f​ ​h​e​x​a​g​o​n​a​l​ ​p​u​z​z​l​e​ ​g​a​m​e​s​ ​t​h​a​t​ ​s​u​c​k​e​d​ ​i​n​ ​m​y​ ​p​a​r​t​n​e​r​ ​a​n​d​ ​I​ ​f​o​r​ ​a​
+			​	​	​	​	​	​w​h​i​l​e​.​ ​I​ ​l​i​k​e​d​ ​t​h​e​ ​m​e​c​h​a​n​i​c​s​ ​s​o​ ​m​u​c​h​ ​t​h​a​t​ ​I​ ​t​r​i​e​d​ ​t​o​
+			​	​	​	​
+				 */
+				'1': string
+				'2': {
+					/**
+					 * m​a​k​e​ ​a​ ​w​e​b​ ​v​e​r​s​i​o​n
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​w​e​b​c​e​l​l​s​.​g​o​n​g​u​e​t​.​c​o​m​/
+					 */
+					href: string
+				}
+				/**
+				 *  ​w​i​t​h​ ​r​e​a​l​l​y​ ​p​o​l​i​s​h​e​d​ ​U​I​/​U​X​.​ ​L​i​f​e​ ​h​a​p​p​e​n​e​d​ ​a​n​d​ ​i​t​'​s​ ​n​o​t​ ​e​n​t​i​r​e​l​y​ ​f​i​n​i​s​h​e​d​
+			​	​	​	​	​(​y​e​t​!​)​ ​b​u​t​ ​I​'​m​ ​p​r​e​t​t​y​ ​p​r​o​u​d​ ​o​f​ ​w​h​a​t​ ​c​a​m​e​ ​o​f​ ​i​t​.
+				 */
+				'3': string
+			}
+		}
+		sokoban: {
+			h: {
+				/**
+				 * S​o​k​o​b​a​n
+				 */
+				'0': string
+			}
+			p: {
+				/**
+				 * S​o​k​o​b​a​n​ ​i​s​ ​t​h​a​t​ ​g​e​n​r​e​ ​o​f​ ​p​u​z​z​l​e​s​ ​w​h​e​r​e​ ​a​ ​g​u​y​ ​p​u​s​h​e​s​ ​b​o​x​e​s​ ​o​n​t​o​ ​o​b​j​e​c​t​i​v​e​s​.​ ​I​
+			​	​	​	​	​w​a​n​t​e​d​ ​t​o​ ​g​e​t​ ​b​e​t​t​e​r​ ​a​t​ ​a​n​i​m​a​t​i​n​g​ ​t​h​i​n​g​s​ ​m​o​v​i​n​g​ ​o​n​ ​t​h​e​ ​w​e​b​ ​s​o​ ​I​ ​m​a​d​e​ 
+				 */
+				'0': string
+				'1': {
+					/**
+					 * a​ ​v​e​r​y​ ​b​a​r​e​b​o​n​e​s​ ​p​r​o​t​o​t​y​p​e
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​s​o​k​o​b​a​n​.​g​o​n​g​u​e​t​.​c​o​m​/
+					 */
+					href: string
+				}
+				/**
+				 * .​ ​A​l​s​o​ ​i​t​ ​h​a​s​ ​a​ ​l​e​v​e​l​ ​e​d​i​t​o​r​ ​b​u​t​ ​n​o​w​ ​w​a​y​ ​t​o​ ​p​l​a​y​ ​t​h​e​ ​l​e​v​e​l​s​ ​�​�​‍​♂​️​.
+				 */
+				'2': string
+			}
+		}
+		multisweeper: {
+			h: {
+				/**
+				 * M​u​l​t​i​s​w​e​e​p​e​r
+				 */
+				'0': string
+			}
+			p: {
+				/**
+				 * W​h​a​t​ ​i​f​ ​M​i​n​e​s​w​e​e​p​e​r​ ​b​u​t​ ​t​h​e​ ​m​i​n​e​s​ ​h​a​v​e​ ​a​ ​c​o​l​o​r​?​ ​T​u​r​n​s​ ​o​u​t​ ​i​t​'​s​ ​q​u​i​t​e​ ​f​u​n​!​ ​I​'​m​
+			​	​	​	​	​p​r​e​t​t​y​ ​p​r​o​u​d​ ​o​f​ ​t​h​e​ ​U​X​ ​o​f​ 
+				 */
+				'0': string
+				'1': {
+					/**
+					 * t​h​i​s​ ​p​r​o​t​o​t​y​p​e
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​m​u​l​t​i​s​w​e​e​p​e​r​.​g​o​n​g​u​e​t​.​c​o​m​/
+					 */
+					href: string
+				}
+				/**
+				 *  ​(​t​r​y​ ​c​l​i​c​k​i​n​g​ ​o​n​ ​c​e​l​l​s​ ​t​h​a​t​ ​h​a​v​e​ ​t​h​e​ ​r​e​q​u​i​s​i​t​e​ ​a​m​o​u​n​t​ ​o​f​ ​f​l​a​g​s​ ​a​r​o​u​n​d​ ​t​h​e​m​ ​b​u​t​
+			​	​	​	​	​s​t​i​l​l​ ​u​n​c​o​v​e​r​e​d​ ​c​e​l​l​s​)​ ​e​v​e​n​ ​t​h​o​u​g​h​ ​t​h​e​ ​f​l​a​g​g​i​n​g​ ​i​s​ ​a​ ​b​i​t​ ​r​o​u​g​h​ ​w​i​t​h​ ​4​ ​c​o​l​o​r​s​.
+				 */
+				'2': string
+			}
+		}
+		vitruvius: {
+			h: {
+				/**
+				 * V​i​t​r​u​v​i​u​s
+				 */
+				'0': string
+			}
+			p1: {
+				/**
+				 * W​h​a​t​ ​i​f​ ​t​w​o​ ​g​a​m​e​s​,​ ​b​u​t​ ​<​e​m​>​a​t​ ​t​h​e​ ​s​a​m​e​ ​t​i​m​e​<​/​e​m​>​?​ ​O​n​e​ ​p​l​a​y​e​r​ ​p​l​a​y​s​ ​T​e​t​r​i​s​ ​o​n​
+			​	​	​	​	​	​o​n​e​ ​s​i​d​e​ ​a​n​d​ ​t​h​e​ ​o​t​h​e​r​ ​p​l​a​y​s​ ​B​r​e​a​k​o​u​t​ ​n​e​x​t​ ​t​o​ ​i​t​.​ ​T​h​e​ ​c​a​t​c​h​ ​i​s​ ​t​h​a​t​ ​t​h​e​y​'​r​e​ ​b​o​t​h​
+			​	​	​	​	​	​p​l​a​y​i​n​g​ ​<​e​m​>​o​n​ ​t​h​e​ ​s​a​m​e​ ​b​o​a​r​d​<​/​e​m​>​:​ ​t​h​e​ ​T​e​t​r​i​s​ ​b​l​o​c​k​s​ ​(​c​a​l​l​e​d​ ​m​i​n​o​s​)​ ​c​a​n​ ​b​e​
+			​	​	​	​	​	​b​r​o​k​e​n​ ​b​y​ ​t​h​e​ ​B​r​e​a​k​o​u​t​ ​b​a​l​l​ ​f​r​o​m​ ​u​n​d​e​r​n​e​a​t​h​.​ ​T​h​e​ ​g​o​a​l​ ​i​s​ ​t​o​ ​g​e​t​ ​t​h​e​ ​b​a​l​l​ ​f​r​o​m​
+			​	​	​	​	​	​t​h​e​ ​b​o​t​t​o​m​ ​o​f​ ​t​h​e​ ​B​r​e​a​k​o​u​t​ ​b​o​a​r​d​ ​a​l​l​ ​t​h​e​ ​w​a​y​ ​t​o​ ​t​h​e​ ​t​o​p​ ​o​f​ ​t​h​e​ ​T​e​t​r​i​s​ ​o​n​e​
+			​	​	​	​	​	​w​i​t​h​o​u​t​ ​l​o​s​i​n​g​ ​f​i​r​s​t​.​ 
+				 */
+				'0': string
+				'1': {
+					/**
+					 * L​i​n​k
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​v​i​t​r​u​v​i​u​s​.​g​o​n​g​u​e​t​.​c​o​m​/
+					 */
+					href: string
+				}
+			}
+			p2: {
+				/**
+				 * T​h​e​ ​n​a​m​e​ ​c​o​m​e​s​ ​f​r​o​m​ ​t​h​e​ ​f​a​c​t​ ​t​h​a​t​ ​y​o​u​'​r​e​ ​o​n​l​y​ ​h​a​n​d​l​i​n​g​ ​c​i​r​c​l​e​s​ ​a​n​d​ ​s​q​u​a​r​e​s​ ​a​n​d​
+			​	​	​	​	​t​h​a​t​ ​r​e​m​i​n​d​e​d​ ​m​e​ ​o​f​ 
+				 */
+				'0': string
+				'1': {
+					/**
+					 * t​h​a​t​ ​d​r​a​w​i​n​g​ ​o​f​ ​a​ ​m​a​n
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​e​n​.​w​i​k​i​p​e​d​i​a​.​o​r​g​/​w​i​k​i​/​V​i​t​r​u​v​i​a​n​_​M​a​n
+					 */
+					href: string
+				}
+				/**
+				 *  ​b​y​ 
+				 */
+				'2': string
+				'3': {
+					/**
+					 * s​o​m​e​ ​g​u​y
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​e​n​.​w​i​k​i​p​e​d​i​a​.​o​r​g​/​w​i​k​i​/​L​e​o​n​a​r​d​o​_​d​a​_​V​i​n​c​i
+					 */
+					href: string
+				}
+				/**
+				 * .​ ​I​ ​a​l​s​o​ ​d​i​s​c​o​v​e​r​e​d​ ​t​h​a​t​ ​<​e​m​>​e​v​e​r​y​ ​s​i​n​g​l​e​ ​t​h​i​n​g​<​/​e​m​>​ ​a​b​o​u​t​ ​T​e​t​r​i​s​ ​i​s​ ​d​e​s​i​g​n​e​d​
+			​	​	​	​	​	​a​n​d​ ​g​u​i​d​e​l​i​n​e​d​ ​i​n​ ​e​x​c​r​u​c​i​a​t​i​n​g​ ​d​e​t​a​i​l​ ​i​n​ 
+				 */
+				'4': string
+				'5': {
+					/**
+					 * a​ ​s​u​r​p​r​i​s​i​n​g​l​y​ ​l​o​n​g​ ​d​o​c​u​m​e​n​t
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​w​w​w​.​d​r​o​p​b​o​x​.​c​o​m​/​s​/​g​5​5​g​w​l​s​0​h​2​m​u​q​z​n​/​t​e​t​r​i​s​%​2​0​g​u​i​d​e​l​i​n​e​%​2​0​d​o​c​s​%​2​0​2​0​0​9​.​z​i​p​?​d​l​=​0​&​f​i​l​e​_​s​u​b​p​a​t​h​=​%​2​F​2​0​0​9​+​T​e​t​r​i​s​+​D​e​s​i​g​n​+​G​u​i​d​e​l​i​n​e​.​p​d​f​#
+					 */
+					href: string
+				}
+				/**
+				 * .
+				 */
+				'6': string
+			}
+		}
+		calibron: {
+			h: {
+				/**
+				 * C​a​l​i​b​r​o​n​ ​1​2
+				 */
+				'0': string
+			}
+			p: {
+				/**
+				 * O​n​e​ ​d​a​y​ ​I​ ​f​o​u​n​d​ 
+				 */
+				'0': string
+				'1': {
+					/**
+					 * a​ ​v​i​d​e​o
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​w​w​w​.​y​o​u​t​u​b​e​.​c​o​m​/​w​a​t​c​h​?​v​=​f​6​t​H​q​O​m​I​j​1​E​&​t​=​1​2​7​8​s
+					 */
+					href: string
+				}
+				/**
+				 *  ​a​b​o​u​t​ ​a​n​ ​o​l​d​ ​p​u​z​z​l​e​.​ ​I​t​ ​l​i​n​k​e​d​ ​t​o​ 
+				 */
+				'2': string
+				'3': {
+					/**
+					 * a​ ​v​e​r​y​ ​e​x​t​e​n​s​i​v​e​ ​d​o​c​u​m​e​n​t
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​w​w​w​.​g​a​t​h​e​r​i​n​g​4​g​a​r​d​n​e​r​.​o​r​g​/​g​4​g​1​2​g​i​f​t​/​M​i​l​l​e​r​_​B​a​x​t​e​r​-​M​y​s​t​e​r​y​_​o​f​_​t​h​e​_​C​a​l​i​b​r​o​n​.​p​d​f
+					 */
+					href: string
+				}
+				/**
+				 *  ​a​b​o​u​t​ ​t​h​a​t​ ​p​u​z​z​l​e​.​ ​I​ ​l​i​k​e​ ​m​a​k​i​n​g​ ​p​u​z​z​l​e​s​ ​s​o​ ​n​o​w​ 
+				 */
+				'4': string
+				'5': {
+					/**
+					 * i​t
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​c​a​l​i​b​r​o​n​1​2​.​g​o​n​g​u​e​t​.​c​o​m​/
+					 */
+					href: string
+				}
+				/**
+				 * '​s​ ​o​n​ ​t​h​e​ ​i​n​t​e​r​n​e​t​.​ ​T​h​e​ ​v​i​d​e​o​ ​(​a​n​d​ 
+				 */
+				'6': string
+				'7': {
+					/**
+					 * i​t​s​ ​a​u​t​h​o​r
+					 */
+					html: string
+					href: string
+				}
+				/**
+				 * )​ ​a​n​d​ ​t​h​e​ ​d​o​c​u​m​e​n​t​ ​a​r​e​ ​a​m​a​z​i​n​g​ ​a​n​d​ ​I​'​m​ ​n​o​t​ ​g​o​i​n​g​ ​t​o​ ​e​v​e​n​ ​t​r​y​ ​e​x​p​l​a​i​n​ ​i​t​ ​b​e​t​t​e​r​.
+				 */
+				'8': string
+			}
+		}
+		naga: {
+			h: {
+				/**
+				 * N​a​g​a
+				 */
+				'0': string
+			}
+			p: {
+				/**
+				 * W​h​a​t​ ​i​f​ ​S​n​a​k​e​,​ ​b​u​t​ ​i​t​'​s​ ​a​ ​d​u​n​g​e​o​n​ ​c​r​a​w​l​e​r​?​ ​T​h​e​ ​i​d​e​a​ ​i​s​ ​s​o​ ​a​b​s​u​r​d​ ​I​ ​h​a​d​ ​t​o​ ​s​e​e​
+			​	​	​	​	​	​i​f​ ​I​ ​c​o​u​l​d​ ​m​a​k​e​ ​<​e​m​>​a​n​y​t​h​i​n​g​<​/​e​m​>​ ​o​u​t​ ​o​f​ ​i​t​.​ ​T​u​r​n​s​ ​o​u​t​ ​t​h​e​r​e​ ​m​a​y​ ​b​e​ ​s​o​m​e​t​h​i​n​g​
+			​	​	​	​	​	​t​h​e​r​e​ ​b​u​t​ ​t​h​e​ 
+				 */
+				'0': string
+				'1': {
+					/**
+					 * p​r​o​t​o​t​y​p​e
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​t​e​r​r​y​.​g​o​n​g​u​e​t​.​c​o​m​/​n​a​g​a
+					 */
+					href: string
+				}
+				/**
+				 * '​s​ ​c​o​d​e​ ​g​o​t​ ​r​e​a​l​l​y​ ​a​n​n​o​y​i​n​g​ ​s​o​ ​I​ ​s​t​o​p​p​e​d​.​ 
+				 */
+				'2': string
+				'3': {
+					/**
+					 * P​I​X​I​.​j​s
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​w​w​w​.​p​i​x​i​j​s​.​c​o​m​/
+					 */
+					href: string
+				}
+				/**
+				 *  ​i​s​ ​c​o​o​l​ ​t​h​o​u​g​h​.
+				 */
+				'4': string
+			}
+		}
+		solitaire: {
+			h: {
+				/**
+				 * S​o​l​i​t​a​i​r​e
+				 */
+				'0': string
+			}
+			p: {
+				/**
+				 * I​ ​w​a​n​t​e​d​ ​t​o​ ​l​e​a​r​n​ 
+				 */
+				'0': string
+				'1': {
+					/**
+					 * V​u​e​ ​2
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​v​2​.​v​u​e​j​s​.​o​r​g​/
+					 */
+					href: string
+				}
+				/**
+				 *  ​a​n​d​ ​I​ ​l​o​v​e​ ​m​a​k​i​n​g​ ​p​u​z​z​l​e​ ​g​a​m​e​s​.​ 
+				 */
+				'2': string
+				'3': {
+					/**
+					 * T​h​i​s​ ​o​n​e
+					 */
+					html: string
+					/**
+					 * h​t​t​p​s​:​/​/​t​e​r​r​y​.​g​o​n​g​u​e​t​.​c​o​m​/​s​o​l​i​t​a​i​r​e
+					 */
+					href: string
+				}
+				/**
+				 *  ​i​s​ ​p​r​e​t​t​y​ ​s​t​r​a​i​g​h​t​ ​f​o​r​w​a​r​d​.​ ​T​h​r​e​e​ ​f​r​i​e​n​d​s​ ​a​n​d​ ​I​ ​l​o​s​t​ ​3​ ​h​o​u​r​s​ ​o​n​e​ ​e​v​e​n​i​n​g​ ​j​u​s​t​
+			​	​	​	​	​p​l​a​y​i​n​g​ ​S​o​l​i​t​a​i​r​e​ ​t​o​ ​t​e​s​t​ ​t​h​i​s​.
+				 */
+				'4': string
+			}
 		}
 	}
 	footer: {
@@ -253,26 +923,44 @@ export type TranslationFunctions = {
 			 * My name is Terry Gonguet, a "fullstack" web developer born in 
 			 */
 			'0': () => LocalizedString
-			/**
-			 * the French Alps
-			 */
-			'1': () => LocalizedString
+			'1': {
+				/**
+				 * the French Alps
+				 */
+				html: () => LocalizedString
+				/**
+				 * https://goo.gl/maps/fcsMFHbRMq1cSYta9
+				 */
+				href: () => LocalizedString
+			}
 			/**
 			 *  trying to make my way into the world. At around 12 years old I discovered 
 			 */
 			'2': () => LocalizedString
-			/**
-			 * Minecraft's Redstone
-			 */
-			'3': () => LocalizedString
+			'3': {
+				/**
+				 * Minecraft's Redstone
+				 */
+				html: () => LocalizedString
+				/**
+				 * https://www.youtube.com/watch?v=SbO0tqH8f5I
+				 */
+				href: () => LocalizedString
+			}
 			/**
 			 *  and the 
 			 */
 			'4': () => LocalizedString
-			/**
-			 * C programming language
-			 */
-			'5': () => LocalizedString
+			'5': {
+				/**
+				 * C programming language
+				 */
+				html: () => LocalizedString
+				/**
+				 * https://rkvalley.files.wordpress.com/2010/04/kernighan_ritchie_language_c.pdf
+				 */
+				href: () => LocalizedString
+			}
 			/**
 			 *  (pretty harsh introduction, I know) and got hooked instantly. Ever since I've
 						spent an <s>un</s>reasonable amount of time every day trying to either make magic
@@ -285,10 +973,16 @@ export type TranslationFunctions = {
 			 * I've always been a fervent proponent of trying to 
 			 */
 			'0': () => LocalizedString
-			/**
-			 * decentralize
-			 */
-			'1': () => LocalizedString
+			'1': {
+				/**
+				 * decentralize
+				 */
+				html: () => LocalizedString
+				/**
+				 * https://www.datprotocol.com/
+				 */
+				href: () => LocalizedString
+			}
 			/**
 			 * 
 						the web but recent efforts seem... misguided. Breaking up huge tech monopolies and
@@ -296,10 +990,16 @@ export type TranslationFunctions = {
 				
 			 */
 			'2': () => LocalizedString
-			/**
-			 * the tech
-			 */
-			'3': () => LocalizedString
+			'3': {
+				/**
+				 * the tech
+				 */
+				html: () => LocalizedString
+				/**
+				 * https://ipfs.io/
+				 */
+				href: () => LocalizedString
+			}
 			/**
 			 *  becomes viable for broad adoption soon.
 			 */
@@ -313,18 +1013,30 @@ export type TranslationFunctions = {
 					can display 2D and 3D graphics and 
 			 */
 			'0': () => LocalizedString
-			/**
-			 * use gamepads
-			 */
-			'1': () => LocalizedString
+			'1': {
+				/**
+				 * use gamepads
+				 */
+				html: () => LocalizedString
+				/**
+				 * https://caniuse.com/#feat=gamepad
+				 */
+				href: () => LocalizedString
+			}
 			/**
 			 *  (among other 
 			 */
 			'2': () => LocalizedString
-			/**
-			 * amazing features
-			 */
-			'3': () => LocalizedString
+			'3': {
+				/**
+				 * amazing features
+				 */
+				html: () => LocalizedString
+				/**
+				 * https://developer.mozilla.org/docs/WebAssembly/Concepts
+				 */
+				href: () => LocalizedString
+			}
 			/**
 			 * ).
 			 */
@@ -336,6 +1048,634 @@ export type TranslationFunctions = {
 					meantime I'm excited to make the internet slightly more awesome, one website at a time!
 			 */
 			'0': () => LocalizedString
+		}
+	}
+	portfolio: {
+		headings: {
+			/**
+			 * Professional experience
+			 */
+			pro: () => LocalizedString
+			/**
+			 * Volonteering
+			 */
+			volonteer: () => LocalizedString
+			/**
+			 * Experiments
+			 */
+			experiments: () => LocalizedString
+		}
+		subtitles: {
+			/**
+			 * The important ones
+			 */
+			pro: () => LocalizedString
+			/**
+			 * Other things that people use, but for free
+			 */
+			volonteer: () => LocalizedString
+			/**
+			 * Learning through making games
+			 */
+			experiments: () => LocalizedString
+		}
+		gapsmoov: {
+			h: {
+				/**
+				 * Gapsmoov (2020 - now)
+				 */
+				'0': () => LocalizedString
+			}
+			p1: {
+				/**
+				 * In summer of 2020, with the help of two of my friends, I was contracted by two
+							long time consultants turned entrepreneurs to build an e-learning app from scratch.
+							They came from the world of business-focused cultural training and identified
+							(correctly) that the existing solutions were old and painful to use so together we
+							built 
+				 */
+				'0': () => LocalizedString
+				'1': {
+					/**
+					 * Gapsmoov
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://app.gapsmoov.com
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 * .
+				 */
+				'2': () => LocalizedString
+			}
+			p2: {
+				/**
+				 * They contracted the original design from 
+				 */
+				'0': () => LocalizedString
+				'1': {
+					/**
+					 * someone else
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://www.dd-pardi.com/reference/gapsmoov-references/
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 *  but I build the entire app solo with 
+				 */
+				'2': () => LocalizedString
+				'3': {
+					/**
+					 * Sapper
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://sapper.svelte.dev/
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 *  and 
+				 */
+				'4': () => LocalizedString
+				'5': {
+					/**
+					 * KeystoneJS
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://v5.keystonejs.com/
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 * . I would be lying if I said that the code turned out perfect but we haven't
+							felt the need to increase the team even though we're still adding features
+							regularly!
+				 */
+				'6': () => LocalizedString
+			}
+		}
+		getmunch: {
+			h: {
+				/**
+				 * Get Munch (2019)
+				 */
+				'0': () => LocalizedString
+			}
+			p: {
+				/**
+				 * Two Irish friends and I started a late night snack delivery business in the
+							suburbs of Dublin before it was cool (I swear we had the idea much before those apps
+							became ubiquitous). I built the entire app out of 
+				 */
+				'0': () => LocalizedString
+				'1': {
+					/**
+					 * Vue 2
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://v2.vuejs.org/
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 * , 
+				 */
+				'2': () => LocalizedString
+				'3': {
+					/**
+					 * Stripe
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://stripe.com/en-ie
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 *  & 
+				 */
+				'4': () => LocalizedString
+				'5': {
+					/**
+					 * MongoDB
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://www.mongodb.com/
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 *  and my friends handled the marketing like champs. Sadly we didn't manage to
+							stay alive on account of us being young, poor and bad at business.
+				 */
+				'6': () => LocalizedString
+			}
+		}
+		repaircafe: {
+			h: {
+				/**
+				 * Repair Café Frangy
+				 */
+				'0': () => LocalizedString
+			}
+			p1: {
+				/**
+				 * Repairing things is really fun, stimulating, sometimes surprisingly easy and
+							it's even better when we do it together! Makes you wonder why we don't do it all the
+							time. Weird. 
+				 */
+				'0': () => LocalizedString
+				'1': {
+					/**
+					 * Repair Café
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://www.repaircafe.org/en/
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 * 
+								is an organisation that helps local groups of people to repair their stuff
+								together, and because online life is real life too that one needed a website so
+						
+				 */
+				'2': () => LocalizedString
+				'3': {
+					/**
+					 * I made one
+					 */
+					html: () => LocalizedString
+					/**
+					 * http://repair-cafe-frangy.fr/
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 * !
+				 */
+				'4': () => LocalizedString
+			}
+			p2: {
+				/**
+				 * Then we noticed that keeping track of all those broken/fixed/dismantled gizmos
+							is hard so now that website is also kind of a barebones, purpose built CMS. Data is
+							currently stored in 
+				 */
+				'0': () => LocalizedString
+				'1': {
+					/**
+					 * Notion
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://www.notion.so
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 *  so that we get a bunch of features for free.
+				 */
+				'2': () => LocalizedString
+			}
+		}
+		webexts: {
+			h: {
+				/**
+				 * Browser extensions
+				 */
+				'0': () => LocalizedString
+			}
+			p: {
+				/**
+				 * One of the core reasons I love the web is that it is open
+								<em>and editable</em> by default. Every website's UI and UX are ultimately just
+								suggestions and with enough effort we can make it whatever we went it to be.
+								Crucially, it can and probably should be different for every person. I'm going
+								to make my modifications anyway, so I might as well 
+				 */
+				'0': () => LocalizedString
+				'1': {
+					/**
+					 * make
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://youtube-extensions.gonguet.com/
+					 */
+					href: () => LocalizedString
+				}
+				'2': () => LocalizedString
+				'3': {
+					/**
+					 * them
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://addons.mozilla.org/en-US/firefox/addon/hestia/
+					 */
+					href: () => LocalizedString
+				}
+				'4': () => LocalizedString
+				'5': {
+					/**
+					 * available
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://www.google.com/search?hl=en&q=web0.cc%20extension
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 *  for everyone too.
+				 */
+				'6': () => LocalizedString
+			}
+		}
+		webcells: {
+			h: {
+				/**
+				 * Webcells
+				 */
+				'0': () => LocalizedString
+			}
+			p: {
+				'0': {
+					/**
+					 * Hexcells
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://store.steampowered.com/sub/50074/
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 * 
+								is a trilogy of hexagonal puzzle games that sucked in my partner and I for a
+								while. I liked the mechanics so much that I tried to
+						
+				 */
+				'1': () => LocalizedString
+				'2': {
+					/**
+					 * make a web version
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://webcells.gonguet.com/
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 *  with really polished UI/UX. Life happened and it's not entirely finished
+							(yet!) but I'm pretty proud of what came of it.
+				 */
+				'3': () => LocalizedString
+			}
+		}
+		sokoban: {
+			h: {
+				/**
+				 * Sokoban
+				 */
+				'0': () => LocalizedString
+			}
+			p: {
+				/**
+				 * Sokoban is that genre of puzzles where a guy pushes boxes onto objectives. I
+							wanted to get better at animating things moving on the web so I made 
+				 */
+				'0': () => LocalizedString
+				'1': {
+					/**
+					 * a very barebones prototype
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://sokoban.gonguet.com/
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 * . Also it has a level editor but now way to play the levels 🤷‍♂️.
+				 */
+				'2': () => LocalizedString
+			}
+		}
+		multisweeper: {
+			h: {
+				/**
+				 * Multisweeper
+				 */
+				'0': () => LocalizedString
+			}
+			p: {
+				/**
+				 * What if Minesweeper but the mines have a color? Turns out it's quite fun! I'm
+							pretty proud of the UX of 
+				 */
+				'0': () => LocalizedString
+				'1': {
+					/**
+					 * this prototype
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://multisweeper.gonguet.com/
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 *  (try clicking on cells that have the requisite amount of flags around them but
+							still uncovered cells) even though the flagging is a bit rough with 4 colors.
+				 */
+				'2': () => LocalizedString
+			}
+		}
+		vitruvius: {
+			h: {
+				/**
+				 * Vitruvius
+				 */
+				'0': () => LocalizedString
+			}
+			p1: {
+				/**
+				 * What if two games, but <em>at the same time</em>? One player plays Tetris on
+								one side and the other plays Breakout next to it. The catch is that they're both
+								playing <em>on the same board</em>: the Tetris blocks (called minos) can be
+								broken by the Breakout ball from underneath. The goal is to get the ball from
+								the bottom of the Breakout board all the way to the top of the Tetris one
+								without losing first. 
+				 */
+				'0': () => LocalizedString
+				'1': {
+					/**
+					 * Link
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://vitruvius.gonguet.com/
+					 */
+					href: () => LocalizedString
+				}
+			}
+			p2: {
+				/**
+				 * The name comes from the fact that you're only handling circles and squares and
+							that reminded me of 
+				 */
+				'0': () => LocalizedString
+				'1': {
+					/**
+					 * that drawing of a man
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://en.wikipedia.org/wiki/Vitruvian_Man
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 *  by 
+				 */
+				'2': () => LocalizedString
+				'3': {
+					/**
+					 * some guy
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://en.wikipedia.org/wiki/Leonardo_da_Vinci
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 * . I also discovered that <em>every single thing</em> about Tetris is designed
+								and guidelined in excruciating detail in 
+				 */
+				'4': () => LocalizedString
+				'5': {
+					/**
+					 * a surprisingly long document
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://www.dropbox.com/s/g55gwls0h2muqzn/tetris%20guideline%20docs%202009.zip?dl=0&file_subpath=%2F2009+Tetris+Design+Guideline.pdf#
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 * .
+				 */
+				'6': () => LocalizedString
+			}
+		}
+		calibron: {
+			h: {
+				/**
+				 * Calibron 12
+				 */
+				'0': () => LocalizedString
+			}
+			p: {
+				/**
+				 * One day I found 
+				 */
+				'0': () => LocalizedString
+				'1': {
+					/**
+					 * a video
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://www.youtube.com/watch?v=f6tHqOmIj1E&t=1278s
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 *  about an old puzzle. It linked to 
+				 */
+				'2': () => LocalizedString
+				'3': {
+					/**
+					 * a very extensive document
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://www.gathering4gardner.org/g4g12gift/Miller_Baxter-Mystery_of_the_Calibron.pdf
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 *  about that puzzle. I like making puzzles so now 
+				 */
+				'4': () => LocalizedString
+				'5': {
+					/**
+					 * it
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://calibron12.gonguet.com/
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 * 's on the internet. The video (and 
+				 */
+				'6': () => LocalizedString
+				'7': {
+					/**
+					 * its author
+					 */
+					html: () => LocalizedString
+					href: () => LocalizedString
+				}
+				/**
+				 * ) and the document are amazing and I'm not going to even try explain it better.
+				 */
+				'8': () => LocalizedString
+			}
+		}
+		naga: {
+			h: {
+				/**
+				 * Naga
+				 */
+				'0': () => LocalizedString
+			}
+			p: {
+				/**
+				 * What if Snake, but it's a dungeon crawler? The idea is so absurd I had to see
+								if I could make <em>anything</em> out of it. Turns out there may be something
+								there but the 
+				 */
+				'0': () => LocalizedString
+				'1': {
+					/**
+					 * prototype
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://terry.gonguet.com/naga
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 * 's code got really annoying so I stopped. 
+				 */
+				'2': () => LocalizedString
+				'3': {
+					/**
+					 * PIXI.js
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://www.pixijs.com/
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 *  is cool though.
+				 */
+				'4': () => LocalizedString
+			}
+		}
+		solitaire: {
+			h: {
+				/**
+				 * Solitaire
+				 */
+				'0': () => LocalizedString
+			}
+			p: {
+				/**
+				 * I wanted to learn 
+				 */
+				'0': () => LocalizedString
+				'1': {
+					/**
+					 * Vue 2
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://v2.vuejs.org/
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 *  and I love making puzzle games. 
+				 */
+				'2': () => LocalizedString
+				'3': {
+					/**
+					 * This one
+					 */
+					html: () => LocalizedString
+					/**
+					 * https://terry.gonguet.com/solitaire
+					 */
+					href: () => LocalizedString
+				}
+				/**
+				 *  is pretty straight forward. Three friends and I lost 3 hours one evening just
+							playing Solitaire to test this.
+				 */
+				'4': () => LocalizedString
+			}
 		}
 	}
 	footer: {
