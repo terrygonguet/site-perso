@@ -14,7 +14,6 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
-		"@iconify-json/gg": "^1.1.4",
 		"@iconify-json/ri": "^1.1.7",
 		"@sveltejs/adapter-auto": "^1.0.0-next.90",
 		"@sveltejs/adapter-static": "^2.0.1",
