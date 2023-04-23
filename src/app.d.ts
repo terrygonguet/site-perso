@@ -1,7 +1,9 @@
 /// <reference types="unplugin-icons/types/svelte" />
 
-declare const onMount: typeof import("svelte")["onMount"]
-declare const createEventDispatcher: typeof import("svelte")["createEventDispatcher"]
+declare module "*&imgtools" {
+	const out
+	export default out
+}
 
 declare namespace App {
 	// interface Error {}
