@@ -4,7 +4,7 @@
 	import ArrowRight from "~icons/ri/arrow-right-s-line"
 	import ArrowLeft from "~icons/ri/arrow-left-s-line"
 
-	export let images: { src: string; alt: string }[] = []
+	export let images: { srcset: string; fallback: string; alt: string }[] = []
 
 	let open = false
 	let dialog: HTMLDialogElement
@@ -104,7 +104,10 @@
 </script>
 
 <button class="{$$props.class} relative" on:click={show}>
-	<img bind:this={miniature} src={first.src} alt={first.alt} />
+	<picture>
+		<source srcset={first.srcset} type="image/webp" />
+		<img bind:this={miniature} src={first.fallback} alt={first.alt} />
+	</picture>
 </button>
 
 <dialog bind:this={dialog} on:close={onClose} class:!bg-opacity-75={open} on:keydown={onKeydown}>
@@ -118,17 +121,20 @@
 		style:grid-area="image"
 		bind:this={gallery}
 	>
-		{#each images as { src, alt }, i (src)}
+		{#each images as { srcset, fallback, alt }, i (srcset)}
 			<div class="relative snap-center">
-				<img
-					loading={i == 0 ? "eager" : "lazy"}
-					style:--tw-scale-x={$scale.x}
-					style:--tw-scale-y={$scale.y}
-					style:--tw-translate-x="calc({$translate.x}px - 50%)"
-					style:--tw-translate-y="calc({$translate.y}px - 50%)"
-					{src}
-					{alt}
-				/>
+				<picture>
+					<source {srcset} type="image/webp" />
+					<img
+						loading={i == 0 ? "eager" : "lazy"}
+						style:--tw-scale-x={$scale.x}
+						style:--tw-scale-y={$scale.y}
+						style:--tw-translate-x="calc({$translate.x}px - 50%)"
+						style:--tw-translate-y="calc({$translate.y}px - 50%)"
+						src={fallback}
+						{alt}
+					/>
+				</picture>
 			</div>
 		{/each}
 	</div>

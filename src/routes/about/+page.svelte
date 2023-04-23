@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { LL } from "$i18n"
-	import Footer from "$lib/comp/Footer.svelte"
+	import Footer from "$lib/components/Footer.svelte"
 	import { fade } from "svelte/transition"
 </script>
 

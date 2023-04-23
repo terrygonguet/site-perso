@@ -1,8 +1,8 @@
 <script lang="ts">
-	import ToggleMode from "$lib/comp/ToggleMode.svelte"
-	import ToggleLocale from "$lib/comp/ToggleLocale.svelte"
+	import ToggleMode from "$lib/components/ToggleMode.svelte"
+	import ToggleLocale from "$lib/components/ToggleLocale.svelte"
 	import { LL } from "$i18n"
-	import Copyright from "$lib/comp/Copyright.svelte"
+	import Copyright from "$lib/components/Copyright.svelte"
 	import { fly } from "svelte/transition"
 </script>
 

@@ -1,7 +1,18 @@
 <script lang="ts">
-	import { LL } from "$i18n"
-	import Footer from "$lib/comp/Footer.svelte"
 	import { fade } from "svelte/transition"
+	import { LL } from "$i18n"
+	import Calibron from "./Calibron.svelte"
+	import Gapsmoov from "./Gapsmoov.svelte"
+	import GetMunch from "./GetMunch.svelte"
+	import Multisweeper from "./Multisweeper.svelte"
+	import Naga from "./Naga.svelte"
+	import RepairCafe from "./RepairCafe.svelte"
+	import Sokoban from "./Sokoban.svelte"
+	import Solitaire from "./Solitaire.svelte"
+	import Vitruvius from "./Vitruvius.svelte"
+	import Webcells from "./Webcells.svelte"
+	import WebExts from "./WebExts.svelte"
+	import Footer from "$lib/components/Footer.svelte"
 </script>
 
 <svelte:head>
@@ -15,154 +26,29 @@
 			<h3>{$LL.portfolio.subtitles.pro()}</h3>
 		</div>
 
-		<section>
-			<LightBox
-				class="left"
-				images={[
-					{ src: "/gapsmoov-explore.png", alt: "Placeholder" },
-					{ src: "/gapsmoov-compare.png", alt: "Placeholder" },
-					{ src: "/gapsmoov-evaluate.png", alt: "Placeholder" },
-				]}
-			/>
-			<LocalizedParagraph fragments={$LL.portfolio.gapsmoov.h} as="h3" />
-			<LocalizedParagraph fragments={$LL.portfolio.gapsmoov.p1} />
-			<LocalizedParagraph fragments={$LL.portfolio.gapsmoov.p2} />
-		</section>
-
-		<section>
-			<LightBox
-				class="right bordered"
-				images={[
-					{ src: "/munch-home.png", alt: "Placeholder" },
-					{ src: "/munch-menu.png", alt: "Placeholder" },
-					{ src: "/munch-checkout.png", alt: "Placeholder" },
-				]}
-				alt="placeholder"
-			/>
-			<LocalizedParagraph fragments={$LL.portfolio.getmunch.h} as="h3" />
-			<LocalizedParagraph fragments={$LL.portfolio.getmunch.p} />
-		</section>
+		<Gapsmoov />
+		<GetMunch />
 
 		<div class="heading">
 			<h2>{$LL.portfolio.headings.volonteer()}</h2>
 			<h3>{$LL.portfolio.subtitles.volonteer()}</h3>
 		</div>
 
-		<section>
-			<LightBox
-				class="left"
-				images={[
-					{ src: "/repaircafe-home.png", alt: "Placeholder" },
-					{ src: "/repaircafe-list.png", alt: "Placeholder" },
-					{ src: "/repaircafe-form.png", alt: "Placeholder" },
-				]}
-				alt="placeholder"
-			/>
-			<LocalizedParagraph fragments={$LL.portfolio.repaircafe.h} as="h3" />
-			<LocalizedParagraph fragments={$LL.portfolio.repaircafe.p1} />
-			<LocalizedParagraph fragments={$LL.portfolio.repaircafe.p2} />
-		</section>
-
-		<section>
-			<LightBox
-				class="right"
-				images={[
-					{ src: "/webext-home.png", alt: "Placeholder" },
-					{ src: "/webext-playlist.png", alt: "Placeholder" },
-					{ src: "/webext-interact.png", alt: "Placeholder" },
-					{ src: "/webext-web0cc.png", alt: "Placeholder" },
-				]}
-				alt="placeholder"
-			/>
-			<LocalizedParagraph fragments={$LL.portfolio.webexts.h} as="h3" />
-			<LocalizedParagraph fragments={$LL.portfolio.webexts.p} />
-		</section>
+		<RepairCafe />
+		<WebExts />
 
 		<div class="heading">
 			<h2>{$LL.portfolio.headings.experiments()}</h2>
 			<h3>{$LL.portfolio.subtitles.experiments()}</h3>
 		</div>
 
-		<section>
-			<LightBox
-				class="left"
-				images={[
-					{ src: "/webcells-home.png", alt: "Placeholder" },
-					{ src: "/webcells-butterfly.png", alt: "Placeholder" },
-					{ src: "/webcells-hex.png", alt: "Placeholder" },
-				]}
-				alt="placeholder"
-			/>
-			<LocalizedParagraph fragments={$LL.portfolio.webcells.h} as="h3" />
-			<LocalizedParagraph fragments={$LL.portfolio.webcells.p} />
-		</section>
-
-		<section>
-			<LightBox
-				class="right"
-				images={[
-					{ src: "/sokoban-game.png", alt: "Placeholder" },
-					{ src: "/sokoban-edit.png", alt: "Placeholder" },
-				]}
-				alt="placeholder"
-			/>
-			<LocalizedParagraph fragments={$LL.portfolio.sokoban.h} as="h3" />
-			<LocalizedParagraph fragments={$LL.portfolio.sokoban.p} />
-		</section>
-
-		<section>
-			<LightBox
-				class="left bordered"
-				images={[{ src: "/multisweeper.png", alt: "Placeholder" }]}
-				alt="placeholder"
-			/>
-			<LocalizedParagraph fragments={$LL.portfolio.multisweeper.h} as="h3" />
-			<LocalizedParagraph fragments={$LL.portfolio.multisweeper.p} />
-		</section>
-
-		<section>
-			<LightBox
-				class="right"
-				images={[{ src: "/vitruvius.png", alt: "Placeholder" }]}
-				alt="placeholder"
-			/>
-			<LocalizedParagraph fragments={$LL.portfolio.vitruvius.h} as="h3" />
-			<LocalizedParagraph fragments={$LL.portfolio.vitruvius.p1} />
-			<LocalizedParagraph fragments={$LL.portfolio.vitruvius.p2} />
-		</section>
-
-		<section>
-			<LightBox
-				class="left bordered"
-				images={[
-					{ src: "/calibron-start.png", alt: "Placeholder" },
-					{ src: "/calibron-end.png", alt: "Placeholder" },
-				]}
-				alt="placeholder"
-			/>
-			<LocalizedParagraph fragments={$LL.portfolio.calibron.h} as="h3" />
-			<LocalizedParagraph fragments={$LL.portfolio.calibron.p} />
-		</section>
-
-		<section>
-			<LightBox
-				class="right"
-				images={[{ src: "/naga.webp", alt: "Placeholder" }]}
-				alt="placeholder"
-			/>
-			<LocalizedParagraph fragments={$LL.portfolio.naga.h} as="h3" />
-			<LocalizedParagraph fragments={$LL.portfolio.naga.p} />
-		</section>
-
-		<section>
-			<LightBox
-				class="left"
-				images={[{ src: "/solitaire.png", alt: "Placeholder" }]}
-				alt="placeholder"
-			/>
-			<LocalizedParagraph fragments={$LL.portfolio.solitaire.h} as="h3" />
-			<LocalizedParagraph fragments={$LL.portfolio.solitaire.p} />
-		</section>
+		<Webcells />
+		<Sokoban />
+		<Multisweeper />
+		<Vitruvius />
+		<Calibron />
+		<Naga />
+		<Solitaire />
 	</div>
 	<Footer />
 </main>
@@ -178,24 +64,24 @@
 		@apply text-xl text-center text-stone-500;
 	}
 
-	section :global(h3) {
+	main :global(section h3) {
 		@apply text-xl font-bold;
 	}
-	section :global(.bordered) {
+	main :global(section .bordered) {
 		@apply border border-stone-500;
 	}
-	:global(.dark) section :global(.bordered) {
+	:global(.dark) main :global(section .bordered) {
 		@apply border-none;
 	}
-	section :global(p) {
+	main :global(section p) {
 		@apply my-3;
 	}
 
 	@screen lg {
-		section :global(.left) {
+		main :global(section .left) {
 			@apply w-1/3 float-left mt-2 mr-4;
 		}
-		section :global(.right) {
+		main :global(section .right) {
 			@apply w-1/3 float-right mt-2 ml-4;
 		}
 	}
