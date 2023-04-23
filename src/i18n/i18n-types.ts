@@ -16,7 +16,7 @@ export type Translations = RootTranslation
 type RootTranslation = {
 	title: {
 		/**
-		 * T​e​r​r​y​ ​G​o​n​g​u​e​t​ ​-​ ​{​0​}
+		 * {​0​}​ ​-​ ​T​e​r​r​y​ ​G​o​n​g​u​e​t
 		 * @param {unknown} 0
 		 */
 		base: RequiredParams<'0'>
@@ -29,7 +29,7 @@ type RootTranslation = {
 		 */
 		about: string
 		/**
-		 * C​u​r​i​c​u​l​u​m​ ​V​i​t​a​e
+		 * C​V
 		 */
 		cv: string
 		/**
@@ -868,7 +868,7 @@ type RootTranslation = {
 export type TranslationFunctions = {
 	title: {
 		/**
-		 * Terry Gonguet - {0}
+		 * {0} - Terry Gonguet
 		 */
 		base: (arg0: unknown) => LocalizedString
 		/**
@@ -880,7 +880,7 @@ export type TranslationFunctions = {
 		 */
 		about: () => LocalizedString
 		/**
-		 * Curiculum Vitae
+		 * CV
 		 */
 		cv: () => LocalizedString
 		/**

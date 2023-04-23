@@ -4,10 +4,10 @@ const html = String.raw
 
 const en = {
 	title: {
-		base: "Terry Gonguet - {0}",
+		base: "{0} - Terry Gonguet",
 		home: "Home",
 		about: "About me",
-		cv: "Curiculum Vitae",
+		cv: "CV",
 		portfolio: "Portfolio",
 	},
 	home: {
