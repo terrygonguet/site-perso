@@ -49,4 +49,10 @@
 	:is(.dark svg) {
 		fill: white;
 	}
+
+	@media print {
+		a {
+			@apply !text-stone-700 underline;
+		}
+	}
 </style>
