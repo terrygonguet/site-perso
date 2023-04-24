@@ -14,7 +14,7 @@ const config = {
 		}),
 		sveltekit(),
 		imagetools(),
-		Icons({ compiler: "svelte" }),
+		Icons({ compiler: "svelte", defaultStyle: "display:inline" }),
 	],
 }
 
