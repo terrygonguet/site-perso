@@ -6,7 +6,7 @@
 	import Home from "~icons/ri/home-2-fill"
 </script>
 
-<footer class="p-4 flex flex-col items-center gap-4">
+<footer class="flex flex-col items-center gap-4">
 	<A href="/" class="flex items-center gap-2 text-lg"
 		><Home aria-label={$LL.footer.altHome()} />{$LL.footer.home()}</A
 	>
