@@ -16,7 +16,7 @@
 >
 	<div class="flex flex-col gap-4 items-center">
 		<h1 class="text-4xl md:text-6xl font-bold">Terry Gonguet</h1>
-		<h2 class="text-xl md:text-2xl text-amber-600 dark:text-amber-700">
+		<h2 class="text-xl md:text-2xl text-orange-500 dark:text-amber-600">
 			{$LL.home.jobTitle()}
 		</h2>
 	</div>
