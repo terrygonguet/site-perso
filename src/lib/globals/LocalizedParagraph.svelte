@@ -24,7 +24,6 @@
 			return [{ type: "link", html: fragment.html(), href: fragment.href() }]
 		if ("button" in fragment) {
 			const button = fragment.button()
-			console.log(button)
 			switch (button) {
 				case "print":
 					return [{ type: "print", html: fragment.html() }]
