@@ -65,6 +65,29 @@ const fr = {
 			attendant, je suis ravi de rendre l'internet encore plus génial, un site à la fois !`,
 		],
 	},
+	cv: {
+		print: [
+			html`Cette page peut être `,
+			{ html: "imprimée", button: "print" },
+			html` si vous avez besoin d'une version papier ou PDF.`,
+		],
+		p1: [
+			html`Je suis développeur web "fullstack", compétent avec la majorité des technologies
+			front et back end même si je préfère Svelte & SvelteKit. Je me spécialise dans l'aspect
+			technique des projets: faire en sorte que le système fonctionne quel que soit les
+			besoins. Cette approche vient de ma passion pour apprendre et m'améliorer.`,
+		],
+		p2: [
+			html`Mon expérience professionnelle se trouve dans `,
+			{ html: "mon portfolio", href: "/portfolio" },
+			html`. J'ai un Bachelor of Science (Honours) in Computing de l'Institute of Technology
+			Tallaght.`,
+		],
+		p3: [
+			html`En dehors du travail, mes intérêts incluent la création de jeux vidéo, la natation
+			et la communication efficace.`,
+		],
+	},
 	portfolio: {
 		headings: {
 			pro: "Expérience professionnelle",

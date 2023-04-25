@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { LL } from "$i18n"
-	import Printer from "~icons/ri/printer-line"
 </script>
 
 <svelte:head>
@@ -16,21 +15,9 @@
 			>
 			- <A href="mailto:terry@gonguet.com" class="text-center">terry@gonguet.com</A>
 		</h2>
-		<p class="print:hidden">
-			This page can also be <Button appearance="anchor" on:click={() => window.print()}
-				><Printer /> printed</Button
-			> if you need a paper or PDF version.
-		</p>
+		<LocalizedParagraph fragments={$LL.cv.print} class="print:hidden" />
 	</div>
-	<p>
-		I am a fullstack web developer from France. I'm competent with most front and back end web
-		technologies though I prefer (and have the most experience with) Svelte and SvelteKit. I
-		specialize in the technical aspect of development; I will make it work, whatever "it" may
-		be. This is helped by my lifelong passion for learning and continually improving my skills.
-	</p>
-	<p>
-		You can find my professional experience in <A href="/portfolio">my portfolio</A>. I have a
-		Bachelor of Science (Honours) in Computing from the Institute of Technology Tallaght.
-	</p>
-	<p>Outside of work, my interest include making and playing videogames, swimming and brevity.</p>
+	<LocalizedParagraph fragments={$LL.cv.p1} />
+	<LocalizedParagraph fragments={$LL.cv.p2} />
+	<LocalizedParagraph fragments={$LL.cv.p3} />
 </div>

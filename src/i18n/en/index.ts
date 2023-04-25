@@ -62,10 +62,34 @@ const en = {
 			meantime I'm excited to make the internet slightly more awesome, one website at a time!`,
 		],
 	},
+	cv: {
+		print: [
+			html`This page can also be `,
+			{ html: "printed", button: "print" },
+			html` if you need a paper or PDF version.`,
+		],
+		p1: [
+			html`I am a fullstack web developer from France. I'm competent with most front and back
+			end web technologies though I prefer (and have the most experience with) Svelte and
+			SvelteKit. I specialize in the technical aspect of development; I will make it work,
+			whatever "it" may be. This is helped by my lifelong passion for learning and continually
+			improving my skills.`,
+		],
+		p2: [
+			html`You can find my professional experience in `,
+			{ html: "my portfolio", href: "/portfolio" },
+			html`. I have a Bachelor of Science (Honours) in Computing from the Institute of
+			Technology Tallaght.`,
+		],
+		p3: [
+			html`Outside of work, my interest include making and playing videogames, swimming and
+			brevity.`,
+		],
+	},
 	portfolio: {
 		headings: {
 			pro: "Professional experience",
-			volonteer: "Volonteering",
+			volonteer: "Volunteering",
 			experiments: "Experiments",
 		},
 		subtitles: {

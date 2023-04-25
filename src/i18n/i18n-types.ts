@@ -202,6 +202,66 @@ type RootTranslation = {
 			'0': string
 		}
 	}
+	cv: {
+		print: {
+			/**
+			 * T​h​i​s​ ​p​a​g​e​ ​c​a​n​ ​a​l​s​o​ ​b​e​ 
+			 */
+			'0': string
+			'1': {
+				/**
+				 * p​r​i​n​t​e​d
+				 */
+				html: string
+				/**
+				 * p​r​i​n​t
+				 */
+				button: string
+			}
+			/**
+			 *  ​i​f​ ​y​o​u​ ​n​e​e​d​ ​a​ ​p​a​p​e​r​ ​o​r​ ​P​D​F​ ​v​e​r​s​i​o​n​.
+			 */
+			'2': string
+		}
+		p1: {
+			/**
+			 * I​ ​a​m​ ​a​ ​f​u​l​l​s​t​a​c​k​ ​w​e​b​ ​d​e​v​e​l​o​p​e​r​ ​f​r​o​m​ ​F​r​a​n​c​e​.​ ​I​'​m​ ​c​o​m​p​e​t​e​n​t​ ​w​i​t​h​ ​m​o​s​t​ ​f​r​o​n​t​ ​a​n​d​ ​b​a​c​k​
+		​	​	​	​e​n​d​ ​w​e​b​ ​t​e​c​h​n​o​l​o​g​i​e​s​ ​t​h​o​u​g​h​ ​I​ ​p​r​e​f​e​r​ ​(​a​n​d​ ​h​a​v​e​ ​t​h​e​ ​m​o​s​t​ ​e​x​p​e​r​i​e​n​c​e​ ​w​i​t​h​)​ ​S​v​e​l​t​e​ ​a​n​d​
+		​	​	​	​S​v​e​l​t​e​K​i​t​.​ ​I​ ​s​p​e​c​i​a​l​i​z​e​ ​i​n​ ​t​h​e​ ​t​e​c​h​n​i​c​a​l​ ​a​s​p​e​c​t​ ​o​f​ ​d​e​v​e​l​o​p​m​e​n​t​;​ ​I​ ​w​i​l​l​ ​m​a​k​e​ ​i​t​ ​w​o​r​k​,​
+		​	​	​	​w​h​a​t​e​v​e​r​ ​"​i​t​"​ ​m​a​y​ ​b​e​.​ ​T​h​i​s​ ​i​s​ ​h​e​l​p​e​d​ ​b​y​ ​m​y​ ​l​i​f​e​l​o​n​g​ ​p​a​s​s​i​o​n​ ​f​o​r​ ​l​e​a​r​n​i​n​g​ ​a​n​d​ ​c​o​n​t​i​n​u​a​l​l​y​
+		​	​	​	​i​m​p​r​o​v​i​n​g​ ​m​y​ ​s​k​i​l​l​s​.
+			 */
+			'0': string
+		}
+		p2: {
+			/**
+			 * Y​o​u​ ​c​a​n​ ​f​i​n​d​ ​m​y​ ​p​r​o​f​e​s​s​i​o​n​a​l​ ​e​x​p​e​r​i​e​n​c​e​ ​i​n​ 
+			 */
+			'0': string
+			'1': {
+				/**
+				 * m​y​ ​p​o​r​t​f​o​l​i​o
+				 */
+				html: string
+				/**
+				 * /​p​o​r​t​f​o​l​i​o
+				 */
+				href: string
+			}
+			/**
+			 * .​ ​I​ ​h​a​v​e​ ​a​ ​B​a​c​h​e​l​o​r​ ​o​f​ ​S​c​i​e​n​c​e​ ​(​H​o​n​o​u​r​s​)​ ​i​n​ ​C​o​m​p​u​t​i​n​g​ ​f​r​o​m​ ​t​h​e​ ​I​n​s​t​i​t​u​t​e​ ​o​f​
+		​	​	​	​T​e​c​h​n​o​l​o​g​y​ ​T​a​l​l​a​g​h​t​.
+			 */
+			'2': string
+		}
+		p3: {
+			/**
+			 * O​u​t​s​i​d​e​ ​o​f​ ​w​o​r​k​,​ ​m​y​ ​i​n​t​e​r​e​s​t​ ​i​n​c​l​u​d​e​ ​m​a​k​i​n​g​ ​a​n​d​ ​p​l​a​y​i​n​g​ ​v​i​d​e​o​g​a​m​e​s​,​ ​s​w​i​m​m​i​n​g​ ​a​n​d​
+		​	​	​	​b​r​e​v​i​t​y​.
+			 */
+			'0': string
+		}
+	}
 	portfolio: {
 		headings: {
 			/**
@@ -209,7 +269,7 @@ type RootTranslation = {
 			 */
 			pro: string
 			/**
-			 * V​o​l​o​n​t​e​e​r​i​n​g
+			 * V​o​l​u​n​t​e​e​r​i​n​g
 			 */
 			volonteer: string
 			/**
@@ -1053,6 +1113,66 @@ export type TranslationFunctions = {
 			'0': () => LocalizedString
 		}
 	}
+	cv: {
+		print: {
+			/**
+			 * This page can also be 
+			 */
+			'0': () => LocalizedString
+			'1': {
+				/**
+				 * printed
+				 */
+				html: () => LocalizedString
+				/**
+				 * print
+				 */
+				button: () => LocalizedString
+			}
+			/**
+			 *  if you need a paper or PDF version.
+			 */
+			'2': () => LocalizedString
+		}
+		p1: {
+			/**
+			 * I am a fullstack web developer from France. I'm competent with most front and back
+					end web technologies though I prefer (and have the most experience with) Svelte and
+					SvelteKit. I specialize in the technical aspect of development; I will make it work,
+					whatever "it" may be. This is helped by my lifelong passion for learning and continually
+					improving my skills.
+			 */
+			'0': () => LocalizedString
+		}
+		p2: {
+			/**
+			 * You can find my professional experience in 
+			 */
+			'0': () => LocalizedString
+			'1': {
+				/**
+				 * my portfolio
+				 */
+				html: () => LocalizedString
+				/**
+				 * /portfolio
+				 */
+				href: () => LocalizedString
+			}
+			/**
+			 * . I have a Bachelor of Science (Honours) in Computing from the Institute of
+					Technology Tallaght.
+			 */
+			'2': () => LocalizedString
+		}
+		p3: {
+			/**
+			 * Outside of work, my interest include making and playing videogames, swimming and
+					brevity.
+			 */
+			'0': () => LocalizedString
+		}
+	}
 	portfolio: {
 		headings: {
 			/**
@@ -1060,7 +1180,7 @@ export type TranslationFunctions = {
 			 */
 			pro: () => LocalizedString
 			/**
-			 * Volonteering
+			 * Volunteering
 			 */
 			volonteer: () => LocalizedString
 			/**
