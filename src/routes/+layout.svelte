@@ -6,7 +6,9 @@
 	import Spinner from "~icons/svg-spinners/3-dots-move"
 	import { showLoadingSpinner } from "$lib/stores"
 
-	initI18n()
+	export let data
+
+	initI18n(data.serverLocale)
 	initDarkMode()
 </script>
 

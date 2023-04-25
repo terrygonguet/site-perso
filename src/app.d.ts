@@ -7,7 +7,9 @@ declare module "*&imgtools" {
 
 declare namespace App {
 	// interface Error {}
-	// interface Locals {}
+	interface Locals {
+		locale: import("$i18n/i18n-types").Locales
+	}
 	// interface PageData {}
 	// interface Platform {}
 }
