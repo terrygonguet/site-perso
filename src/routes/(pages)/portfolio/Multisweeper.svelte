@@ -8,9 +8,12 @@
 	<LightBox
 		class="left bordered"
 		images={[
-			{ srcset: multisweeperSrcset, fallback: multisweeperFallback, alt: "Placeholder" },
+			{
+				srcset: multisweeperSrcset,
+				fallback: multisweeperFallback,
+				alt: $LL.portfolio.multisweeper.alt(),
+			},
 		]}
-		alt="placeholder"
 	/>
 	<LocalizedParagraph fragments={$LL.portfolio.multisweeper.h} as="h3" />
 	<LocalizedParagraph fragments={$LL.portfolio.multisweeper.p} />

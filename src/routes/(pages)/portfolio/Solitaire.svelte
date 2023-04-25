@@ -7,8 +7,13 @@
 <section>
 	<LightBox
 		class="left"
-		images={[{ srcset: solitaireSrcset, fallback: solitaireFallback, alt: "Placeholder" }]}
-		alt="placeholder"
+		images={[
+			{
+				srcset: solitaireSrcset,
+				fallback: solitaireFallback,
+				alt: $LL.portfolio.solitaire.alt(),
+			},
+		]}
 	/>
 	<LocalizedParagraph fragments={$LL.portfolio.solitaire.h} as="h3" />
 	<LocalizedParagraph fragments={$LL.portfolio.solitaire.p} />

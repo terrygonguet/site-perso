@@ -12,11 +12,14 @@
 	<LightBox
 		class="left"
 		images={[
-			{ srcset: homeSrcset, fallback: homeFallback, alt: "Placeholder" },
-			{ srcset: butterflySrcset, fallback: butterflyFallback, alt: "Placeholder" },
-			{ srcset: hexSrcset, fallback: hexFallback, alt: "Placeholder" },
+			{ srcset: homeSrcset, fallback: homeFallback, alt: $LL.portfolio.webcells.alt.home() },
+			{
+				srcset: butterflySrcset,
+				fallback: butterflyFallback,
+				alt: $LL.portfolio.webcells.alt.butterfly(),
+			},
+			{ srcset: hexSrcset, fallback: hexFallback, alt: $LL.portfolio.webcells.alt.hex() },
 		]}
-		alt="placeholder"
 	/>
 	<LocalizedParagraph fragments={$LL.portfolio.webcells.h} as="h3" />
 	<LocalizedParagraph fragments={$LL.portfolio.webcells.p} />

@@ -372,6 +372,20 @@ type RootTranslation = {
 				 */
 				'6': string
 			}
+			alt: {
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​G​a​p​s​m​o​o​v​'​s​ ​E​x​p​l​o​r​e​ ​p​a​g​e
+				 */
+				explore: string
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​G​a​p​s​m​o​o​v​'​s​ ​C​o​m​p​a​r​a​t​o​r​ ​p​a​g​e
+				 */
+				compare: string
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​G​a​p​s​m​o​o​v​'​s​ ​E​v​a​l​u​a​t​e​ ​p​a​g​e
+				 */
+				evaluate: string
+			}
 		}
 		getmunch: {
 			h: {
@@ -430,6 +444,20 @@ type RootTranslation = {
 			​	​	​	​	​s​t​a​y​ ​a​l​i​v​e​ ​o​n​ ​a​c​c​o​u​n​t​ ​o​f​ ​u​s​ ​b​e​i​n​g​ ​y​o​u​n​g​,​ ​p​o​o​r​ ​a​n​d​ ​b​a​d​ ​a​t​ ​b​u​s​i​n​e​s​s​.
 				 */
 				'6': string
+			}
+			alt: {
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​G​e​t​M​u​n​c​h​'​s​ ​h​o​m​e​ ​p​a​g​e
+				 */
+				home: string
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​G​e​t​M​u​n​c​h​'​s​ ​d​e​s​k​t​o​p​ ​m​e​n​u​ ​p​a​g​e
+				 */
+				menu: string
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​G​e​t​M​u​n​c​h​'​s​ ​m​o​b​i​l​e​ ​c​a​r​t​ ​p​a​g​e
+				 */
+				checkout: string
 			}
 		}
 		repaircafe: {
@@ -500,6 +528,20 @@ type RootTranslation = {
 				 */
 				'2': string
 			}
+			alt: {
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​t​h​e​ ​R​e​p​a​i​r​ ​C​a​f​e​'​s​ ​h​o​m​e​ ​p​a​g​e
+				 */
+				home: string
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​o​n​e​ ​o​f​ ​t​h​e​ ​R​e​p​a​i​r​ ​C​a​f​e​'​s​ ​b​a​c​k​e​n​d​ ​p​a​g​e​s
+				 */
+				list: string
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​t​h​e​ ​R​e​p​a​i​r​ ​C​a​f​e​'​s​ ​r​e​p​a​i​r​ ​b​a​c​k​e​n​d​ ​f​o​r​m
+				 */
+				form: string
+			}
 		}
 		webexts: {
 			h: {
@@ -554,6 +596,24 @@ type RootTranslation = {
 				 */
 				'6': string
 			}
+			alt: {
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​y​o​u​t​u​b​e​-​e​x​t​e​n​s​i​o​n​s​.​g​o​n​g​u​e​t​.​c​o​m​'​s​ ​h​o​m​e​ ​p​a​g​e
+				 */
+				home: string
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​t​h​e​ ​'​S​u​b​s​c​r​i​b​e​ ​t​o​ ​Y​o​u​t​u​b​e​ ​P​l​a​y​l​i​s​t​s​'​ ​e​x​t​e​n​s​i​o​n​'​s​ ​f​e​a​t​u​r​e​s
+				 */
+				playlist: string
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​t​h​e​ ​'​B​e​t​t​e​r​ ​Y​o​u​t​u​b​e​ ​I​n​t​e​r​a​c​t​i​o​n​s​'​ ​e​x​t​e​n​s​i​o​n​'​s​ ​f​e​a​t​u​r​e​s
+				 */
+				interact: string
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​t​h​e​ ​'​w​e​b​0​.​c​c​'​ ​e​x​t​e​n​s​i​o​n​'​s​ ​f​e​a​t​u​r​e​s
+				 */
+				web0cc: string
+			}
 		}
 		webcells: {
 			h: {
@@ -596,6 +656,20 @@ type RootTranslation = {
 				 */
 				'3': string
 			}
+			alt: {
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​W​e​b​c​e​l​l​s​'​s​ ​h​o​m​e​ ​p​a​g​e
+				 */
+				home: string
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​a​ ​W​e​b​c​e​l​l​s​ ​p​u​z​z​l​e​ ​c​a​l​l​e​d​ ​'​N​u​c​l​e​a​r​ ​B​u​t​t​e​r​f​l​y​'
+				 */
+				butterfly: string
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​a​ ​W​e​b​c​e​l​l​s​ ​p​u​z​z​l​e​ ​c​a​l​l​e​d​ ​'​H​e​x​'​,​ ​i​n​ ​t​h​e​ ​o​r​i​g​i​n​a​l​ ​H​e​x​c​e​l​l​s​ ​c​o​l​o​r​ ​s​c​h​e​m​e
+				 */
+				hex: string
+			}
 		}
 		sokoban: {
 			h: {
@@ -624,6 +698,16 @@ type RootTranslation = {
 				 * .​ ​A​l​s​o​ ​i​t​ ​h​a​s​ ​a​ ​l​e​v​e​l​ ​e​d​i​t​o​r​ ​b​u​t​ ​n​o​w​ ​w​a​y​ ​t​o​ ​p​l​a​y​ ​t​h​e​ ​l​e​v​e​l​s​ ​�​�​‍​♂​️​.
 				 */
 				'2': string
+			}
+			alt: {
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​t​h​e​ ​S​o​k​o​b​a​n​ ​g​a​m​e
+				 */
+				game: string
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​t​h​e​ ​S​o​k​o​b​a​n​ ​l​e​v​e​l​ ​e​d​i​t​o​r
+				 */
+				edit: string
 			}
 		}
 		multisweeper: {
@@ -655,6 +739,10 @@ type RootTranslation = {
 				 */
 				'2': string
 			}
+			/**
+			 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​a​ ​g​r​i​d​ ​o​f​ ​M​u​l​t​i​s​w​e​e​p​e​r
+			 */
+			alt: string
 		}
 		vitruvius: {
 			h: {
@@ -734,6 +822,10 @@ type RootTranslation = {
 				 */
 				'6': string
 			}
+			/**
+			 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​t​h​e​ ​g​a​m​e​ ​o​f​ ​V​i​t​r​u​v​i​u​s
+			 */
+			alt: string
 		}
 		calibron: {
 			h: {
@@ -804,6 +896,16 @@ type RootTranslation = {
 				 */
 				'8': string
 			}
+			alt: {
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​a​ ​c​o​m​p​l​e​t​e​l​y​ ​u​n​d​o​n​e​ ​C​a​l​i​b​r​o​n​ ​p​u​z​z​l​e
+				 */
+				start: string
+				/**
+				 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​c​o​m​p​l​e​t​e​d​ ​C​a​l​i​b​r​o​n​ ​p​u​z​z​l​e
+				 */
+				end: string
+			}
 		}
 		naga: {
 			h: {
@@ -848,6 +950,10 @@ type RootTranslation = {
 				 */
 				'4': string
 			}
+			/**
+			 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​t​h​e​ ​g​a​m​e​ ​o​f​ ​N​a​g​a
+			 */
+			alt: string
 		}
 		solitaire: {
 			h: {
@@ -891,6 +997,10 @@ type RootTranslation = {
 				 */
 				'4': string
 			}
+			/**
+			 * A​ ​s​c​r​e​e​n​s​h​o​t​ ​o​f​ ​a​ ​g​a​m​e​ ​o​f​ ​S​o​l​i​t​a​i​r​e
+			 */
+			alt: string
 		}
 	}
 	footer: {
@@ -1283,6 +1393,20 @@ export type TranslationFunctions = {
 				 */
 				'6': () => LocalizedString
 			}
+			alt: {
+				/**
+				 * A screenshot of Gapsmoov's Explore page
+				 */
+				explore: () => LocalizedString
+				/**
+				 * A screenshot of Gapsmoov's Comparator page
+				 */
+				compare: () => LocalizedString
+				/**
+				 * A screenshot of Gapsmoov's Evaluate page
+				 */
+				evaluate: () => LocalizedString
+			}
 		}
 		getmunch: {
 			h: {
@@ -1341,6 +1465,20 @@ export type TranslationFunctions = {
 							stay alive on account of us being young, poor and bad at business.
 				 */
 				'6': () => LocalizedString
+			}
+			alt: {
+				/**
+				 * A screenshot of GetMunch's home page
+				 */
+				home: () => LocalizedString
+				/**
+				 * A screenshot of GetMunch's desktop menu page
+				 */
+				menu: () => LocalizedString
+				/**
+				 * A screenshot of GetMunch's mobile cart page
+				 */
+				checkout: () => LocalizedString
 			}
 		}
 		repaircafe: {
@@ -1411,6 +1549,20 @@ export type TranslationFunctions = {
 				 */
 				'2': () => LocalizedString
 			}
+			alt: {
+				/**
+				 * A screenshot of the Repair Cafe's home page
+				 */
+				home: () => LocalizedString
+				/**
+				 * A screenshot of one of the Repair Cafe's backend pages
+				 */
+				list: () => LocalizedString
+				/**
+				 * A screenshot of the Repair Cafe's repair backend form
+				 */
+				form: () => LocalizedString
+			}
 		}
 		webexts: {
 			h: {
@@ -1465,6 +1617,24 @@ export type TranslationFunctions = {
 				 */
 				'6': () => LocalizedString
 			}
+			alt: {
+				/**
+				 * A screenshot of youtube-extensions.gonguet.com's home page
+				 */
+				home: () => LocalizedString
+				/**
+				 * A screenshot of the 'Subscribe to Youtube Playlists' extension's features
+				 */
+				playlist: () => LocalizedString
+				/**
+				 * A screenshot of the 'Better Youtube Interactions' extension's features
+				 */
+				interact: () => LocalizedString
+				/**
+				 * A screenshot of the 'web0.cc' extension's features
+				 */
+				web0cc: () => LocalizedString
+			}
 		}
 		webcells: {
 			h: {
@@ -1507,6 +1677,20 @@ export type TranslationFunctions = {
 				 */
 				'3': () => LocalizedString
 			}
+			alt: {
+				/**
+				 * A screenshot of Webcells's home page
+				 */
+				home: () => LocalizedString
+				/**
+				 * A screenshot of a Webcells puzzle called 'Nuclear Butterfly'
+				 */
+				butterfly: () => LocalizedString
+				/**
+				 * A screenshot of a Webcells puzzle called 'Hex', in the original Hexcells color scheme
+				 */
+				hex: () => LocalizedString
+			}
 		}
 		sokoban: {
 			h: {
@@ -1535,6 +1719,16 @@ export type TranslationFunctions = {
 				 * . Also it has a level editor but now way to play the levels 🤷‍♂️.
 				 */
 				'2': () => LocalizedString
+			}
+			alt: {
+				/**
+				 * A screenshot of the Sokoban game
+				 */
+				game: () => LocalizedString
+				/**
+				 * A screenshot of the Sokoban level editor
+				 */
+				edit: () => LocalizedString
 			}
 		}
 		multisweeper: {
@@ -1566,6 +1760,10 @@ export type TranslationFunctions = {
 				 */
 				'2': () => LocalizedString
 			}
+			/**
+			 * A screenshot of a grid of Multisweeper
+			 */
+			alt: () => LocalizedString
 		}
 		vitruvius: {
 			h: {
@@ -1645,6 +1843,10 @@ export type TranslationFunctions = {
 				 */
 				'6': () => LocalizedString
 			}
+			/**
+			 * A screenshot of the game of Vitruvius
+			 */
+			alt: () => LocalizedString
 		}
 		calibron: {
 			h: {
@@ -1715,6 +1917,16 @@ export type TranslationFunctions = {
 				 */
 				'8': () => LocalizedString
 			}
+			alt: {
+				/**
+				 * A screenshot of a completely undone Calibron puzzle
+				 */
+				start: () => LocalizedString
+				/**
+				 * A screenshot of completed Calibron puzzle
+				 */
+				end: () => LocalizedString
+			}
 		}
 		naga: {
 			h: {
@@ -1759,6 +1971,10 @@ export type TranslationFunctions = {
 				 */
 				'4': () => LocalizedString
 			}
+			/**
+			 * A screenshot of the game of Naga
+			 */
+			alt: () => LocalizedString
 		}
 		solitaire: {
 			h: {
@@ -1802,6 +2018,10 @@ export type TranslationFunctions = {
 				 */
 				'4': () => LocalizedString
 			}
+			/**
+			 * A screenshot of a game of Solitaire
+			 */
+			alt: () => LocalizedString
 		}
 	}
 	footer: {

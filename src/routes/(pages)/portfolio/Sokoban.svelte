@@ -10,10 +10,9 @@
 	<LightBox
 		class="right"
 		images={[
-			{ srcset: gameSrcset, fallback: gameFallback, alt: "Placeholder" },
-			{ srcset: editSrcset, fallback: editFallback, alt: "Placeholder" },
+			{ srcset: gameSrcset, fallback: gameFallback, alt: $LL.portfolio.sokoban.alt.game() },
+			{ srcset: editSrcset, fallback: editFallback, alt: $LL.portfolio.sokoban.alt.edit() },
 		]}
-		alt="placeholder"
 	/>
 	<LocalizedParagraph fragments={$LL.portfolio.sokoban.h} as="h3" />
 	<LocalizedParagraph fragments={$LL.portfolio.sokoban.p} />

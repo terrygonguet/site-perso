@@ -12,11 +12,14 @@
 	<LightBox
 		class="right bordered"
 		images={[
-			{ srcset: homeSrcset, fallback: homeFallback, alt: "Placeholder" },
-			{ srcset: menuSrcset, fallback: menuFallback, alt: "Placeholder" },
-			{ srcset: checkoutSrcset, fallback: checkoutFallback, alt: "Placeholder" },
+			{ srcset: homeSrcset, fallback: homeFallback, alt: $LL.portfolio.getmunch.alt.home() },
+			{ srcset: menuSrcset, fallback: menuFallback, alt: $LL.portfolio.getmunch.alt.menu() },
+			{
+				srcset: checkoutSrcset,
+				fallback: checkoutFallback,
+				alt: $LL.portfolio.getmunch.alt.checkout(),
+			},
 		]}
-		alt="placeholder"
 	/>
 	<LocalizedParagraph fragments={$LL.portfolio.getmunch.h} as="h3" />
 	<LocalizedParagraph fragments={$LL.portfolio.getmunch.p} />

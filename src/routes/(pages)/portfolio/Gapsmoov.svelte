@@ -12,9 +12,21 @@
 	<LightBox
 		class="left"
 		images={[
-			{ srcset: exploreSrcset, fallback: exploreFallback, alt: "Placeholder" },
-			{ srcset: compareSrcset, fallback: compareFallback, alt: "Placeholder" },
-			{ srcset: evaluateSrcset, fallback: evaluateFallback, alt: "Placeholder" },
+			{
+				srcset: exploreSrcset,
+				fallback: exploreFallback,
+				alt: $LL.portfolio.gapsmoov.alt.explore(),
+			},
+			{
+				srcset: compareSrcset,
+				fallback: compareFallback,
+				alt: $LL.portfolio.gapsmoov.alt.compare(),
+			},
+			{
+				srcset: evaluateSrcset,
+				fallback: evaluateFallback,
+				alt: $LL.portfolio.gapsmoov.alt.evaluate(),
+			},
 		]}
 	/>
 	<LocalizedParagraph fragments={$LL.portfolio.gapsmoov.h} as="h3" />

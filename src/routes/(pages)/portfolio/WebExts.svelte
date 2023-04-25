@@ -14,12 +14,23 @@
 	<LightBox
 		class="right"
 		images={[
-			{ srcset: homeSrcset, fallback: homeFallback, alt: "Placeholder" },
-			{ srcset: playlistSrcset, fallback: playlistFallback, alt: "Placeholder" },
-			{ srcset: interactSrcset, fallback: interactFallback, alt: "Placeholder" },
-			{ srcset: web0ccSrcset, fallback: web0ccFallback, alt: "Placeholder" },
+			{ srcset: homeSrcset, fallback: homeFallback, alt: $LL.portfolio.webexts.alt.home() },
+			{
+				srcset: playlistSrcset,
+				fallback: playlistFallback,
+				alt: $LL.portfolio.webexts.alt.playlist(),
+			},
+			{
+				srcset: interactSrcset,
+				fallback: interactFallback,
+				alt: $LL.portfolio.webexts.alt.interact(),
+			},
+			{
+				srcset: web0ccSrcset,
+				fallback: web0ccFallback,
+				alt: $LL.portfolio.webexts.alt.web0cc(),
+			},
 		]}
-		alt="placeholder"
 	/>
 	<LocalizedParagraph fragments={$LL.portfolio.webexts.h} as="h3" />
 	<LocalizedParagraph fragments={$LL.portfolio.webexts.p} />

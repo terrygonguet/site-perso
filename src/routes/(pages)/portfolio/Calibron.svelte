@@ -10,10 +10,13 @@
 	<LightBox
 		class="left bordered"
 		images={[
-			{ srcset: startSrcset, fallback: startFallback, alt: "Placeholder" },
-			{ srcset: endSrcset, fallback: endFallback, alt: "Placeholder" },
+			{
+				srcset: startSrcset,
+				fallback: startFallback,
+				alt: $LL.portfolio.calibron.alt.start(),
+			},
+			{ srcset: endSrcset, fallback: endFallback, alt: $LL.portfolio.calibron.alt.end() },
 		]}
-		alt="placeholder"
 	/>
 	<LocalizedParagraph fragments={$LL.portfolio.calibron.h} as="h3" />
 	<LocalizedParagraph fragments={$LL.portfolio.calibron.p} />

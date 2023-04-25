@@ -124,6 +124,11 @@ const fr = {
 				ressenti le besoin d'agrandir l'équipe alors que nous ajoutons encore régulièrement
 				des fonctionnalités !`,
 			],
+			alt: {
+				explore: "Un screenshot de la page Explore de Gapsmoov",
+				compare: "Un screenshot de la page Comparator de Gapsmoov",
+				evaluate: "Un screenshot de la page Evaluate de Gapsmoov",
+			},
 		},
 		getmunch: {
 			h: [html`Get Munch (2019)`],
@@ -141,6 +146,11 @@ const fr = {
 				n'avons pas réussi à rester en business à cause de notre jeuness, manque de fonds et
 				manque d'expérience.`,
 			],
+			alt: {
+				home: "Un screenshot de la page d'accueil de GetMunch",
+				menu: "Un screenshot du Menu de GetMunch",
+				checkout: "Un screenshot du panier de GetMunch sur mobile",
+			},
 		},
 		repaircafe: {
 			h: [html`Repair Café Frangy`],
@@ -165,6 +175,11 @@ const fr = {
 				{ html: "Notion", href: "https://www.notion.so" },
 				html` pour avoir un tas de fonctionnalités pratiques gratuitement.`,
 			],
+			alt: {
+				home: "Un screenshot de la page d'accueil du Repair Café",
+				list: "Un screenshot d'une des pages admin du Repair Café",
+				form: "Un screenshot de la page admin de réparation du Repair Café",
+			},
 		},
 		webexts: {
 			h: [html`Extensions de navigateur`],
@@ -185,6 +200,14 @@ const fr = {
 				},
 				html` pour tout le monde.`,
 			],
+			alt: {
+				home: "Un screenshot de la page d'accueil du site youtube-extensions.gonguet.com",
+				playlist:
+					"Un screenshot d'une fonctionalité de l'extension 'Subscribe to Youtube Playlists'",
+				interact:
+					"Un screenshot d'une fonctionalité de l'extension 'Better Youtube Interactions'",
+				web0cc: "Un screenshot d'une fonctionalité de l'extension 'web0.cc'",
+			},
 		},
 		webcells: {
 			h: [html`Webcells`],
@@ -199,6 +222,11 @@ const fr = {
 				forcé à laisser ce projet inachevé (pour l'instant !) mais je suis assez fier de ce
 				qui en est ressorti.`,
 			],
+			alt: {
+				home: "Un screenshot de la page d'accueil de Webcells",
+				butterfly: "Un screenshot d'un puzzle sur Webcells appelé 'Nuclear Butterfly'",
+				hex: "Un screenshot d'un puzzle sur Webcells appelé 'Hex' avec les couleurs originales de Hexcells",
+			},
 		},
 		sokoban: {
 			h: [html`Sokoban`],
@@ -210,6 +238,10 @@ const fr = {
 				html`. Il y a également un éditeur mais c'est impossible de jouer aux niveaux créés
 				🤷‍♂️.`,
 			],
+			alt: {
+				game: "Un screenshot du jeu de Sokoban",
+				edit: "Un screenshot de l'éditeur de niveaux de Sokoban",
+			},
 		},
 		multisweeper: {
 			h: [html`Multisweeper`],
@@ -221,6 +253,7 @@ const fr = {
 				autour d'elles mais qui en ont encore des couvertes autours) même si placer les
 				drapeaux est un peu agaçant avec 4 couleurs.`,
 			],
+			alt: "Un screenshot d'une grille de Multisweeper",
 		},
 		vitruvius: {
 			h: [html`Vitruvius`],
@@ -249,6 +282,7 @@ const fr = {
 				},
 				html`.`,
 			],
+			alt: "Un screenshot d'une partie de Vitruvius",
 		},
 		calibron: {
 			h: [html`Calibron 12`],
@@ -270,6 +304,10 @@ const fr = {
 				html`) et le document sont incroyables, je ne vais même pas essayer de mieux les
 				expliquer que lui.`,
 			],
+			alt: {
+				start: "Un screenshot du puzzle Calibron complètement défait",
+				end: "Un screenshot du puzzle Calibron résolu",
+			},
 		},
 		naga: {
 			h: [html`Naga`],
@@ -282,6 +320,7 @@ const fr = {
 				{ html: "PIXI.js", href: "https://www.pixijs.com/" },
 				html` est super cool par contre.`,
 			],
+			alt: "un screenshot d'une partie de Naga",
 		},
 		solitaire: {
 			h: [html`Solitaire`],
@@ -293,6 +332,7 @@ const fr = {
 				html`est assez simple. Trois amis et moi avons perdu 3 heures un soir à juste jouer
 				au Solitaire pour le tester`,
 			],
+			alt: "Un screenshot d'une partie de Solitaire",
 		},
 	},
 	footer: {

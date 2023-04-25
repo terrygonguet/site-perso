@@ -7,8 +7,13 @@
 <section>
 	<LightBox
 		class="right"
-		images={[{ srcset: vitruviusSrcset, fallback: vitruviusFallback, alt: "Placeholder" }]}
-		alt="placeholder"
+		images={[
+			{
+				srcset: vitruviusSrcset,
+				fallback: vitruviusFallback,
+				alt: $LL.portfolio.vitruvius.alt(),
+			},
+		]}
 	/>
 	<LocalizedParagraph fragments={$LL.portfolio.vitruvius.h} as="h3" />
 	<LocalizedParagraph fragments={$LL.portfolio.vitruvius.p1} />

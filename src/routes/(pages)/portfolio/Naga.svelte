@@ -7,8 +7,7 @@
 <section>
 	<LightBox
 		class="right"
-		images={[{ srcset: nagaSrcset, fallback: nagaFallback, alt: "Placeholder" }]}
-		alt="placeholder"
+		images={[{ srcset: nagaSrcset, fallback: nagaFallback, alt: $LL.portfolio.naga.alt() }]}
 	/>
 	<LocalizedParagraph fragments={$LL.portfolio.naga.h} as="h3" />
 	<LocalizedParagraph fragments={$LL.portfolio.naga.p} />

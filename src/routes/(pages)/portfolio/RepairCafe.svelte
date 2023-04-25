@@ -12,11 +12,22 @@
 	<LightBox
 		class="left"
 		images={[
-			{ srcset: homeSrcset, fallback: homeFallback, alt: "Placeholder" },
-			{ srcset: listSrcset, fallback: listFallback, alt: "Placeholder" },
-			{ srcset: formSrcset, fallback: formFallback, alt: "Placeholder" },
+			{
+				srcset: homeSrcset,
+				fallback: homeFallback,
+				alt: $LL.portfolio.repaircafe.alt.home(),
+			},
+			{
+				srcset: listSrcset,
+				fallback: listFallback,
+				alt: $LL.portfolio.repaircafe.alt.list(),
+			},
+			{
+				srcset: formSrcset,
+				fallback: formFallback,
+				alt: $LL.portfolio.repaircafe.alt.form(),
+			},
 		]}
-		alt="placeholder"
 	/>
 	<LocalizedParagraph fragments={$LL.portfolio.repaircafe.h} as="h3" />
 	<LocalizedParagraph fragments={$LL.portfolio.repaircafe.p1} />

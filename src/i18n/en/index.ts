@@ -122,6 +122,11 @@ const en = {
 				felt the need to increase the team even though we're still adding features
 				regularly!`,
 			],
+			alt: {
+				explore: "A screenshot of Gapsmoov's Explore page",
+				compare: "A screenshot of Gapsmoov's Comparator page",
+				evaluate: "A screenshot of Gapsmoov's Evaluate page",
+			},
 		},
 		getmunch: {
 			h: [html`Get Munch (2019)`],
@@ -137,6 +142,11 @@ const en = {
 				html` and my friends handled the marketing like champs. Sadly we didn't manage to
 				stay alive on account of us being young, poor and bad at business.`,
 			],
+			alt: {
+				home: "A screenshot of GetMunch's home page",
+				menu: "A screenshot of GetMunch's desktop menu page",
+				checkout: "A screenshot of GetMunch's mobile cart page",
+			},
 		},
 		repaircafe: {
 			h: [html`Repair Café Frangy`],
@@ -159,6 +169,11 @@ const en = {
 				{ html: "Notion", href: "https://www.notion.so" },
 				html` so that we get a bunch of features for free.`,
 			],
+			alt: {
+				home: "A screenshot of the Repair Cafe's home page",
+				list: "A screenshot of one of the Repair Cafe's backend pages",
+				form: "A screenshot of the Repair Cafe's repair backend form",
+			},
 		},
 		webexts: {
 			h: [html`Browser extensions`],
@@ -178,6 +193,13 @@ const en = {
 				},
 				html` for everyone too.`,
 			],
+			alt: {
+				home: "A screenshot of youtube-extensions.gonguet.com's home page",
+				playlist:
+					"A screenshot of the 'Subscribe to Youtube Playlists' extension's features",
+				interact: "A screenshot of the 'Better Youtube Interactions' extension's features",
+				web0cc: "A screenshot of the 'web0.cc' extension's features",
+			},
 		},
 		webcells: {
 			h: [html`Webcells`],
@@ -191,6 +213,11 @@ const en = {
 				html` with really polished UI/UX. Life happened and it's not entirely finished
 				(yet!) but I'm pretty proud of what came of it.`,
 			],
+			alt: {
+				home: "A screenshot of Webcells's home page",
+				butterfly: "A screenshot of a Webcells puzzle called 'Nuclear Butterfly'",
+				hex: "A screenshot of a Webcells puzzle called 'Hex', in the original Hexcells color scheme",
+			},
 		},
 		sokoban: {
 			h: [html`Sokoban`],
@@ -200,6 +227,10 @@ const en = {
 				{ html: "a very barebones prototype", href: "https://sokoban.gonguet.com/" },
 				html`. Also it has a level editor but now way to play the levels 🤷‍♂️.`,
 			],
+			alt: {
+				game: "A screenshot of the Sokoban game",
+				edit: "A screenshot of the Sokoban level editor",
+			},
 		},
 		multisweeper: {
 			h: [html`Multisweeper`],
@@ -210,6 +241,7 @@ const en = {
 				html` (try clicking on cells that have the requisite amount of flags around them but
 				still uncovered cells) even though the flagging is a bit rough with 4 colors.`,
 			],
+			alt: "A screenshot of a grid of Multisweeper",
 		},
 		vitruvius: {
 			h: [html`Vitruvius`],
@@ -239,6 +271,7 @@ const en = {
 				},
 				html`.`,
 			],
+			alt: "A screenshot of the game of Vitruvius",
 		},
 		calibron: {
 			h: [html`Calibron 12`],
@@ -256,6 +289,10 @@ const en = {
 				{ html: "its author", href: "https://www.youtube.com/user/Vsauce" },
 				html`) and the document are amazing and I'm not going to even try explain it better.`,
 			],
+			alt: {
+				start: "A screenshot of a completely undone Calibron puzzle",
+				end: "A screenshot of completed Calibron puzzle",
+			},
 		},
 		naga: {
 			h: [html`Naga`],
@@ -268,6 +305,7 @@ const en = {
 				{ html: "PIXI.js", href: "https://www.pixijs.com/" },
 				html` is cool though.`,
 			],
+			alt: "A screenshot of the game of Naga",
 		},
 		solitaire: {
 			h: [html`Solitaire`],
@@ -279,6 +317,7 @@ const en = {
 				html` is pretty straight forward. Three friends and I lost 3 hours one evening just
 				playing Solitaire to test this.`,
 			],
+			alt: "A screenshot of a game of Solitaire",
 		},
 	},
 	footer: {
