@@ -43,5 +43,9 @@
 	"type": "module",
 	"dependencies": {
 		"wait": "^0.4.2"
+	},
+	"engines": {
+		"node": "16",
+		"npm": "8.14"
 	}
 }
