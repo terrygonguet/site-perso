@@ -1,7 +1,8 @@
 import { mdsvex } from "mdsvex"
 import mdsvexConfig from "./mdsvex.config.js"
 import preprocess from "svelte-preprocess"
-import adapter from "@sveltejs/adapter-static"
+import adapterStatic from "@sveltejs/adapter-static"
+import adapterAuto from "@sveltejs/adapter-auto"
 import { vitePreprocess } from "@sveltejs/kit/vite"
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -17,7 +18,8 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter({ precompress: true }),
+		adapter:
+			process.env.ADAPTER == "static" ? adapterStatic({ precompress: true }) : adapterAuto(),
 		alias: {
 			$i18n: "src/i18n/index.ts",
 			"$i18n/*": "src/i18n/*",
