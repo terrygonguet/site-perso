@@ -33,5 +33,5 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         port: 22
         local: "./build/"
-        remote: "./terry/site"
+        remote: "/terry/site"
         scp_options: -v
