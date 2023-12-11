@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	scrollbar-width: thin;
+	scrollbar-color: theme("colors.orange.500") white;
+	scroll-behavior: smooth;
+}
+.dark * {
+	scrollbar-color: theme("colors.amber.600") theme("colors.stone.900");
+}
+
+html {
+	overflow: hidden;
+}
+
+body {
+	scrollbar-gutter: stable;
+	overflow-y: auto;
+	max-height: 100dvh;
+}
+
+#root > main {
+	grid-column: 1 / -1;
+	grid-row: 1 / -1;
+}
+
+@media print {
+	* {
+		@apply bg-white text-black;
+	}
+}
