@@ -4,7 +4,7 @@
 	import ArrowRight from "~icons/ri/arrow-right-s-line"
 	import ArrowLeft from "~icons/ri/arrow-left-s-line"
 
-	export let images: { srcset: string; fallback: string; alt: string }[] = []
+	export let images: { srcset: string[]; fallback: string; alt: string }[] = []
 
 	let open = false
 	let dialog: HTMLDialogElement
@@ -103,14 +103,18 @@
 	}
 </script>
 
+<svelte:window on:keydown={onKeydown} />
+
 <button class="{$$props.class} relative" on:click={show}>
 	<picture>
-		<source srcset={first.srcset} type="image/webp" />
+		{#each first.srcset as srcset}
+			<source {srcset} type="image/webp" />
+		{/each}
 		<img bind:this={miniature} src={first.fallback} alt={first.alt} />
 	</picture>
 </button>
 
-<dialog bind:this={dialog} on:close={onClose} class:!bg-opacity-75={open} on:keydown={onKeydown}>
+<dialog bind:this={dialog} on:close={onClose} class:!bg-opacity-75={open}>
 	<button class="flex-1" style:grid-area="space " on:click={close}><span /></button>
 	<button id="prev" style:grid-area="prev" on:click={prev}>
 		{#if hasMultiple}<ArrowLeft />{:else}<span />{/if}
@@ -121,10 +125,12 @@
 		style:grid-area="image"
 		bind:this={gallery}
 	>
-		{#each images as { srcset, fallback, alt }, i (srcset)}
+		{#each images as { srcset, fallback, alt }, i (fallback)}
 			<div class="relative snap-center">
 				<picture>
-					<source {srcset} type="image/webp" />
+					{#each srcset as src}
+						<source srcset={src} type="image/webp" />
+					{/each}
 					<img
 						loading={i == 0 ? "eager" : "lazy"}
 						style:--tw-scale-x={$scale.x}
