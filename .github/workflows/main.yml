@@ -23,6 +23,7 @@ jobs:
       run: npm run build
       env:
         NODE_ENV: production
+        ADAPTER: static
 
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
