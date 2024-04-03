@@ -37,7 +37,7 @@
 		"typesafe-i18n": "^5.26.2",
 		"typescript": "^5.3.3",
 		"unplugin-icons": "^0.18.1",
-		"vite": "^5.0.7",
+		"vite": "^5.0.13",
 		"vite-imagetools": "^6.2.7"
 	},
 	"type": "module",
