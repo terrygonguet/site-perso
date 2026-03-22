@@ -1,15 +1,13 @@
-/// <reference types="unplugin-icons/types/svelte" />
-
-declare module "*&imgtools" {
-	const out
-	export default out
-}
-
-declare namespace App {
-	// interface Error {}
-	interface Locals {
-		locale: import("$i18n/i18n-types").Locales
+// See https://svelte.dev/docs/kit/types#app.d.ts
+// for information about these interfaces
+declare global {
+	namespace App {
+		// interface Error {}
+		// interface Locals {}
+		// interface PageData {}
+		// interface PageState {}
+		// interface Platform {}
 	}
-	// interface PageData {}
-	// interface Platform {}
 }
+
+export {}
