@@ -1,9 +1,16 @@
 import { mdsvex } from "mdsvex"
-import adapter from "@sveltejs/adapter-static"
+import adapter from "@sveltejs/adapter-node"
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	kit: { adapter: adapter() },
+	kit: {
+		adapter: adapter(),
+		alias: {
+			"@appcss": "src/routes/app.css",
+			"@apptypes": "src/app.d.ts",
+			"@translations/*": "./src/translations/*",
+		},
+	},
 	vitePlugin: {
 		dynamicCompileOptions: ({ filename }) => (filename.includes("node_modules") ? undefined : { runes: true }),
 	},
