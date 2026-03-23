@@ -2,6 +2,11 @@
 	import { page } from "$app/state"
 	import Toggle from "$lib/components/Toggle.svelte"
 
+	interface Props {
+		class?: string
+	}
+
+	let { class: class_list = "" }: Props = $props()
 	let { i18n } = $derived(page.data)
 
 	function onToggle(evt: Event) {
@@ -13,6 +18,6 @@
 	}
 </script>
 
-<label class="flex cursor-pointer items-center gap-2">
-	English <Toggle checked={i18n.lang == "fr"} onclick={onToggle} /> Français
+<label class="flex cursor-pointer items-center gap-2 {class_list}" style:view-transition-name="toggle-lang">
+	English <Toggle id="lang" checked={i18n.lang == "fr"} onclick={onToggle} /> Français
 </label>

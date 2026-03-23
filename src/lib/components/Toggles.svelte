@@ -22,19 +22,23 @@
 	}
 </script>
 
-<aside class="grid grid-cols-[auto_auto_auto] gap-x-2 gap-y-4">
-	<label class="col-span-3 grid cursor-pointer grid-cols-subgrid items-center">
+<div class="grid grid-cols-[auto_auto_auto] gap-x-2 gap-y-4">
+	<label class="col-span-3 grid cursor-pointer grid-cols-subgrid items-center" style:view-transition-name="toggle-lang">
 		<span class="text-end">English</span>
-		<Toggle checked={i18n.lang == "fr"} onclick={onToggleLang} />
+		<Toggle id="lang" checked={i18n.lang == "fr"} onclick={onToggleLang} />
 		<span>Français</span>
 	</label>
 
-	<label id="theme" class="col-span-3 grid cursor-pointer grid-cols-subgrid items-center">
+	<label
+		id="theme"
+		class="col-span-3 grid cursor-pointer grid-cols-subgrid items-center"
+		style:view-transition-name="toggle-theme"
+	>
 		<span class="text-end">{@html t("general", "mode_light")}</span>
-		<Toggle checked={Theme.current == "dark"} onclick={onToggleTheme} />
+		<Toggle id="theme" checked={Theme.current == "dark"} onclick={onToggleTheme} />
 		<span>{@html t("general", "mode_dark")}</span>
 	</label>
-</aside>
+</div>
 
 <style lang="postcss">
 	@reference "@appcss";

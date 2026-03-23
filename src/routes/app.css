@@ -8,6 +8,11 @@
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
+@utility prose-default {
+	@apply prose prose-stone;
+	max-width: 80ch;
+}
+
 * {
 	scrollbar-width: thin;
 	scrollbar-color: theme("colors.orange.500") white;
@@ -42,6 +47,16 @@ main {
 
 footer {
 	grid-area: footer;
+}
+
+.prose-default a,
+.anchor {
+	@apply text-amber-600 no-underline transition-colors;
+
+	&:hover,
+	&:focus {
+		@apply text-amber-500 underline;
+	}
 }
 
 @media print {

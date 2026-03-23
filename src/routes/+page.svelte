@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Copyright from "$lib/components/Copyright.svelte"
 	import Toggles from "$lib/components/Toggles.svelte"
-	import { fly } from "svelte/transition"
 
 	let { data } = $props()
 	let { t } = $derived(data)
@@ -18,22 +17,22 @@
 	</h2>
 </header>
 
-<main class="grid grid-rows-[2fr_fr] place-items-center px-4" transition:fly={{ duration: 200, y: -innerHeight }}>
+<main class="grid grid-rows-[2fr_fr] place-items-center px-4">
 	<nav class="w-full md:w-auto">
 		<ul class="grid grid-cols-2 gap-4 text-center md:grid-cols-4">
 			<li>
 				<a id="about" class="bloc" href="/about">
-					<span>{@html t("home", "about")}</span>
+					<span style:view-transition-name="page-title-about">{@html t("home", "about")}</span>
 				</a>
 			</li>
 			<li>
 				<a id="cv" class="bloc" href="/cv">
-					<span>{@html t("home", "cv")}</span>
+					<span style:view-transition-name="page-title-cv">{@html t("home", "cv")}</span>
 				</a>
 			</li>
 			<li>
 				<a id="portfolio" class="bloc" href="/portfolio">
-					<span>{@html t("home", "portfolio")}</span>
+					<span style:view-transition-name="page-title-portfolio">{@html t("home", "portfolio")}</span>
 				</a>
 			</li>
 			<li>
@@ -47,7 +46,7 @@
 	<Toggles />
 </main>
 
-<footer class="p-4 text-center text-stone-600 dark:text-stone-400">
+<footer class="p-4 text-center">
 	<Copyright />
 </footer>
 
