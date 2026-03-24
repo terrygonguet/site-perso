@@ -51,11 +51,37 @@ footer {
 
 .prose-default a,
 .anchor {
-	@apply text-amber-600 no-underline transition-colors;
+	@apply text-amber-700 no-underline outline-offset-2 outline-amber-600 transition-colors;
+	@variant dark {
+		@apply text-amber-600 outline-stone-300;
+	}
 
 	&:hover,
 	&:focus {
-		@apply text-amber-500 underline;
+		@apply text-amber-600 underline;
+		@variant dark {
+			@apply text-amber-500;
+		}
+	}
+
+	&:focus-visible {
+		@apply outline-2;
+	}
+
+	&[target="_blank"]::after {
+		content: " ";
+		display: inline-block;
+		width: 0.7rem;
+		height: 0.7rem;
+		vertical-align: super;
+		background-image: url("/external-link.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	@variant dark {
+		&[target="_blank"]::after {
+			filter: invert(1);
+		}
 	}
 }
 
