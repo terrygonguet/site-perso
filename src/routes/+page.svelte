@@ -10,7 +10,7 @@
 	<title>{t("general", "title_home")} - Terry Gonguet</title>
 </svelte:head>
 
-<header class="flex h-[30dvh] flex-col items-center justify-center gap-4">
+<header class="flex h-[30dvh] flex-col items-center justify-center gap-4" style:view-transition-name="page-home-header">
 	<h1 class="text-4xl font-bold md:text-6xl">Terry Gonguet</h1>
 	<h2 class="text-xl text-orange-500 md:text-2xl dark:text-amber-600">
 		{@html t("home", "jobTitle")}
@@ -18,7 +18,7 @@
 </header>
 
 <main class="grid grid-rows-[2fr_fr] place-items-center px-4">
-	<nav class="w-full md:w-auto">
+	<nav class="w-full md:w-auto" style:view-transition-name="page-home-main">
 		<ul class="grid grid-cols-2 gap-4 text-center md:grid-cols-4">
 			<li>
 				<a id="about" class="bloc" href="/about">
@@ -116,5 +116,26 @@
 	}
 	#blog:hover:after {
 		transform: translate(0, -50%);
+	}
+
+	::view-transition-old(page-home-main),
+	::view-transition-old(page-home-header) {
+		animation: slide-out 0.2s ease forwards;
+	}
+
+	::view-transition-new(page-home-main),
+	::view-transition-new(page-home-header) {
+		animation: slide-out 0.2s ease reverse forwards;
+	}
+
+	@keyframes slide-out {
+		from {
+			transform: translate(0, 0);
+			opacity: 1;
+		}
+		to {
+			transform: translate(0, -20dvh);
+			opacity: 0;
+		}
 	}
 </style>
