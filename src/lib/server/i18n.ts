@@ -1,4 +1,5 @@
-import { createAutoI18NHandle } from "@terrygonguet/auto-i18n/server"
+import { FALLBACK_LANG, SUPPORTED_LANGS } from "$lib/server/env"
+import { createSvelteI18NHandle } from "@terrygonguet/svelte-i18n/server"
 
 interface Translations {
 	[lang: string]: {
@@ -25,7 +26,10 @@ for (const [path, module] of Object.entries(translation_modules)) {
 	translations[lang][category] = module.translations
 }
 
-export const i18nHandle = createAutoI18NHandle({
+export const i18nHandle = createSvelteI18NHandle({
+	supportedLangs: SUPPORTED_LANGS,
+	fallbackLang: FALLBACK_LANG,
+
 	fetchCategory({ where: { lang, category } }) {
 		return translations[lang]?.[category]
 	},
