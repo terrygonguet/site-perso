@@ -18,6 +18,17 @@
 	}
 </script>
 
-<label class="flex cursor-pointer items-center gap-2 {class_list}" style:view-transition-name="toggle-lang">
+<label class={class_list}>
 	English <Toggle id="lang" checked={i18n.lang == "fr"} onclick={onToggle} /> Français
 </label>
+
+<style lang="postcss">
+	@reference "@appcss";
+
+	label {
+		@apply flex cursor-pointer items-center gap-2;
+		@variant motion-safe {
+			view-transition-name: toggle-lang;
+		}
+	}
+</style>

@@ -19,7 +19,7 @@
 	}
 </script>
 
-<label class="flex cursor-pointer items-center gap-2 {class_list}" style:view-transition-name="toggle-theme">
+<label class={class_list}>
 	{@html t("general", "mode_light")}
 	<Toggle id="theme" checked={Theme.current == "dark"} onclick={onToggle} />
 	{@html t("general", "mode_dark")}
@@ -31,5 +31,9 @@
 	label {
 		--color-toggle-track-on: theme(--color-stone-700);
 		--color-toggle-track-off: theme(--color-stone-400);
+		@apply flex cursor-pointer items-center gap-2;
+		@variant motion-safe {
+			view-transition-name: toggle-theme;
+		}
 	}
 </style>

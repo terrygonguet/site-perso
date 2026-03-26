@@ -21,18 +21,18 @@
 	<nav class="w-full md:w-auto" style:view-transition-name="page-home-main">
 		<ul class="grid grid-cols-2 gap-4 text-center md:grid-cols-4">
 			<li>
-				<a id="about" class="bloc" href="/about">
-					<span style:view-transition-name="page-title-about">{@html t("home", "about")}</span>
+				<a id="about" href="/about">
+					<span>{@html t("home", "about")}</span>
 				</a>
 			</li>
 			<li>
-				<a id="cv" class="bloc" href="/cv">
-					<span style:view-transition-name="page-title-cv">{@html t("home", "cv")}</span>
+				<a id="cv" href="/cv">
+					<span>{@html t("home", "cv")}</span>
 				</a>
 			</li>
 			<li>
-				<a id="portfolio" class="bloc" href="/portfolio">
-					<span style:view-transition-name="page-title-portfolio">{@html t("home", "portfolio")}</span>
+				<a id="portfolio" href="/portfolio">
+					<span>{@html t("home", "portfolio")}</span>
 				</a>
 			</li>
 			<li>
@@ -53,11 +53,16 @@
 <style lang="postcss">
 	@reference "@appcss";
 
-	.bloc {
+	nav a {
 		transition-property: transform, background-color;
 		@apply grid aspect-square place-items-center bg-stone-300 p-4 text-2xl shadow shadow-stone-600/50 duration-200 hover:scale-105 hover:bg-stone-100 lg:h-52 dark:bg-stone-700 dark:hover:bg-stone-600;
 	}
 
+	#about span {
+		@variant motion-safe {
+			view-transition-name: page-title-about;
+		}
+	}
 	#about:hover {
 		color: white;
 		background-color: black;
@@ -79,6 +84,11 @@
 			70px 100px;
 	}
 
+	#cv span {
+		@variant motion-safe {
+			view-transition-name: page-title-cv;
+		}
+	}
 	#cv:hover {
 		color: black;
 		background-color: #fff;
@@ -88,6 +98,11 @@
 		background-size: 100% 1rem;
 	}
 
+	#portfolio span {
+		@variant motion-safe {
+			view-transition-name: page-title-portfolio;
+		}
+	}
 	#portfolio:hover {
 		color: white;
 		background-color: #269;
@@ -118,24 +133,39 @@
 		transform: translate(0, -50%);
 	}
 
-	::view-transition-old(page-home-main),
-	::view-transition-old(page-home-header) {
-		animation: slide-out 0.2s ease forwards;
-	}
-
 	::view-transition-new(page-home-main),
 	::view-transition-new(page-home-header) {
-		animation: slide-out 0.2s ease reverse forwards;
+		animation: slide-in 0.2s ease forwards;
+		@variant motion-reduce {
+			animation-name: fade-in;
+		}
 	}
 
-	@keyframes slide-out {
+	::view-transition-old(page-home-main),
+	::view-transition-old(page-home-header) {
+		animation: slide-in 0.2s ease reverse forwards;
+		@variant motion-reduce {
+			animation-name: fade-in;
+		}
+	}
+
+	@keyframes slide-in {
 		from {
+			transform: translate(0, -20dvh);
+			opacity: 0;
+		}
+		to {
 			transform: translate(0, 0);
 			opacity: 1;
 		}
-		to {
-			transform: translate(0, -20dvh);
+	}
+
+	@keyframes fade-in {
+		from {
 			opacity: 0;
+		}
+		to {
+			opacity: 1;
 		}
 	}
 </style>
