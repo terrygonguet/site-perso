@@ -1,3 +1,7 @@
+---
+title: About me
+---
+
 Hi!
 
 My name is Terry Gonguet, a "fullstack" web developer born in the [French Alps](https://goo.gl/maps/fcsMFHbRMq1cSYta9) trying to make my way into the world. At around 12 years old I discovered [Minecraft's Redstone](https://www.youtube.com/watch?v=SbO0tqH8f5I) and the [C programming language](https://rkvalley.files.wordpress.com/2010/04/kernighan_ritchie_language_c.pdf) (pretty harsh introduction, I know) and got hooked instantly. Ever since I've spent an ~~un~~reasonable amount of time every day trying to either make magic thinking rocks do my bidding or learn more about the discipline.

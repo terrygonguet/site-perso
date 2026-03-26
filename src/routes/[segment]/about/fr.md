@@ -1,3 +1,7 @@
+---
+title: À propos de moi
+---
+
 Salut !
 
 Je m'appelle Terry Gonguet, développeur "fullstack" né en [Haute Savoie](https://goo.gl/maps/fcsMFHbRMq1cSYta9). Vers mes 12 ans j'ai découvert [la Redstone dans Minecraft](https://www.youtube.com/watch?v=SbO0tqH8f5I) et le [langage C](https://rkvalley.files.wordpress.com/2010/04/kernighan_ritchie_language_c.pdf) (rude introduction, je sais) et ça m'a passionné instantanément. Depuis je passe un temps ~~dé~~raisonnable chaque jour soit à essayer de dompter des bouts de silicone enchantés, soit à en apprendre plus sur la discipline.
