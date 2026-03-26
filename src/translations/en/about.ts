@@ -1,9 +1,0 @@
-export type Translations = typeof translations
-
-export const translations = {
-	p1: /* html */ `Hi!`,
-	p2: /* html */ `My name is Terry Gonguet, a "fullstack" web developer born in <a href="https://goo.gl/maps/fcsMFHbRMq1cSYta9" target="_blank">the French Alps</a> trying to make my way into the world. At around 12 years old I discovered <a href="https://www.youtube.com/watch?v=SbO0tqH8f5I" target="_blank">Minecraft's Redstone</a> and the <a href= "https://rkvalley.files.wordpress.com/2010/04/kernighan_ritchie_language_c.pdf" target="_blank">C programming language</a> (pretty harsh introduction, I know) and got hooked instantly. Ever since I've spent an <s>un</s>reasonable amount of time every day trying to either make magic thinking rocks do my bidding or learn more about the discipline.`,
-	p3: /* html */ `I've always been a fervent proponent of trying to <a href="https://www.datprotocol.com/" target="_blank">decentralize</a> the web but recent efforts seem... misguided. Breaking up huge tech monopolies and letting everyone have a voice are good goals and I hope <a href="https://ipfs.io/" target="_blank">the tech</a> becomes viable for broad adoption soon.`,
-	p4: /* html */ `Most of the code I write these days is for the web because I find many of its properties valuable (like linkability, backward compatibility etc). I am especially interested in making games explicitely designed for the web now that almost all browsers can display 2D and 3D graphics and <a href="https://caniuse.com/#feat=gamepad" target="_blank">use gamepads</a> (among other <a href="https://developer.mozilla.org/docs/WebAssembly/Concepts" target="_blank">amazing features</a>).`,
-	p5: /* html */ `One day I hope to be able to live from making interesting and fun games but in the meantime I'm excited to make the internet slightly more awesome, one website at a time!`,
-}

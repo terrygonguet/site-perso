@@ -1,9 +1,0 @@
-import type { Translations } from "@translations/en/about"
-
-export const translations: Translations = {
-	p1: /* html */ `Salut !`,
-	p2: /* html */ `Je m'appelle Terry Gonguet, développeur "fullstack" né en <a href="https://goo.gl/maps/fcsMFHbRMq1cSYta9" targte="_blank">Haute Savoie</a>. Vers mes 12 ans j'ai découvert <a href="https://www.youtube.com/watch?v=SbO0tqH8f5I" targte="_blank">la Redstone dans Minecraft</a> et le <a href= "https://rkvalley.files.wordpress.com/2010/04/kernighan_ritchie_language_c.pdf" targte="_blank">langage C</a> (rude introduction, je sais) et ça m'a passionné instantanément. Depuis je passe un temps <s>dé</s>raisonnable chaque jour soit à essayer de dompter des bouts de silicone enchantés, soit à en apprendre plus sur la discipline.`,
-	p3: /* html */ `J'ai toujours pensé qu'il serait une bonne idée de <a href="https://www.datprotocol.com/" targte="_blank">décentraliser</a> le web mais les récents efforts me semblent... égarés. Séparer les monopoles de la tech et donner une voix à tout le monde sont des fins nobles et j'espère que <a href="https://ipfs.io/" targte="_blank">la technologie</a> devienne utilisable pour être adoptée à grande échelle.`,
-	p4: /* html */ `La plupart du code que j'écrit ces temps ci est pour le web car je trouve beaucoup de ses propriétés importantes (comme les liens, la rétro compatibilité etc). Je suis surtout intéressé par la création de jeux directement faits pour le web, maintenant que la majorité des navigateurs peuvent gérer des graphismes 2D, 3D et <a href="https://caniuse.com/#feat=gamepad" targte="_blank">utiliser des manettes</a> (entre autres <a href="https://developer.mozilla.org/docs/WebAssembly/Concepts" targte="_blank">capacités exitantes</a>).`,
-	p5: /* html */ `J'espère un jour pouvoir vivre de la création de jeux fun et intéressants, mais en attendant, je suis ravi de rendre l'internet encore plus génial, un site à la fois !`,
-}

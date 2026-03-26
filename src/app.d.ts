@@ -1,11 +1,9 @@
 import "unplugin-icons/types/svelte"
 import type { SvelteI18N } from "@terrygonguet/svelte-i18n"
-import type { Translations as AboutTranslations } from "@translations/en/about"
 import type { Translations as GeneralTranslations } from "@translations/en/general"
 import type { Translations as HomeTranslations } from "@translations/en/home"
 
 export type I18NAutocomplete = {
-	about: keyof AboutTranslations
 	general: keyof GeneralTranslations
 	home: keyof HomeTranslations
 }

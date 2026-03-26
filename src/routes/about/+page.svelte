@@ -1,8 +1,14 @@
 <script lang="ts">
+	import { invalidate } from "$app/navigation"
 	import { page } from "$app/state"
 	import Footer from "$lib/components/Footer.svelte"
 
-	let { t } = $derived(page.data)
+	let { i18n, t, c, content } = $derived(page.data)
+
+	$effect(() => {
+		i18n.lang
+		invalidate("content:about")
+	})
 </script>
 
 <svelte:head>
@@ -17,11 +23,7 @@
 
 <main class="grid place-items-center p-4" style:view-transition-name="page-about-main">
 	<div class="prose-default dark:prose-invert">
-		<p>{@html t("about", "p1")}</p>
-		<p>{@html t("about", "p2")}</p>
-		<p>{@html t("about", "p3")}</p>
-		<p>{@html t("about", "p4")}</p>
-		<p>{@html t("about", "p5")}</p>
+		{@html c(content, { editor: false })}
 	</div>
 </main>
 
