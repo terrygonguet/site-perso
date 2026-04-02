@@ -1,6 +1,5 @@
 <script lang="ts">
 	import "@appcss"
-	import "@fontsource-variable/open-sans"
 	import { onNavigate } from "$app/navigation"
 
 	let { children } = $props()

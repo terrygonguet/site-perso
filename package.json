@@ -9,6 +9,8 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
+		"@fontsource-variable/noto-sans-mono": "^5.2.10",
+		"@fontsource-variable/open-sans": "^5.2.7",
 		"@iconify-json/ri": "^1.2.10",
 		"@sveltejs/adapter-node": "^5.5.4",
 		"@sveltejs/adapter-static": "^3.0.10",
@@ -31,7 +33,6 @@
 		"vite-plugin-markdown": "^2.2.0"
 	},
 	"dependencies": {
-		"@fontsource-variable/open-sans": "^5.2.7",
 		"@terrygonguet/svelte-i18n": "^0.2.0-beta.2",
 		"@terrygonguet/utils": "^0.11.0",
 		"nanoid": "^5.1.7"
