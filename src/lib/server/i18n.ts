@@ -1,5 +1,5 @@
 import { FALLBACK_LANG, SUPPORTED_LANGS } from "$lib/server/env"
-import { createSvelteI18NHandle } from "@terrygonguet/svelte-i18n/server"
+import { createSvelteI18NServerBundle } from "@terrygonguet/svelte-i18n/server"
 
 interface Translations {
 	[lang: string]: {
@@ -26,7 +26,7 @@ for (const [path, module] of Object.entries(translation_modules)) {
 	translations[lang][category] = module.translations
 }
 
-export const i18nHandle = createSvelteI18NHandle({
+const { handle: i18nHandle, setSSRLang } = createSvelteI18NServerBundle({
 	supportedLangs: SUPPORTED_LANGS,
 	fallbackLang: FALLBACK_LANG,
 
@@ -50,3 +50,5 @@ export const i18nHandle = createSvelteI18NHandle({
 		return false
 	},
 })
+
+export { i18nHandle, setSSRLang }
