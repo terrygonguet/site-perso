@@ -11,9 +11,7 @@ export type I18NAutocomplete = {
 declare global {
 	namespace App {
 		// interface Error {}
-		interface Locals {
-			lang: string
-		}
+		// interface Locals {}
 		interface PageData {
 			i18n: SvelteI18N<I18NAutocomplete>
 			t: SvelteI18N<I18NAutocomplete>["translate"]

@@ -5,7 +5,7 @@ export const handle = sequence(i18nHandle, ({ event, resolve }) => {
 	const theme = event.cookies.get("override-theme") ?? "dark"
 	return resolve(event, {
 		transformPageChunk({ html }) {
-			return html.replace("%lang%", event.locals.lang).replace("%theme%", theme)
+			return html.replace("%theme%", theme)
 		},
 	})
 })
