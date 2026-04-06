@@ -1,4 +1,3 @@
-import { FALLBACK_LANG, SUPPORTED_LANGS } from "$lib/server/env"
 import { createSvelteI18NServerBundle } from "@terrygonguet/svelte-i18n/server"
 
 interface Translations {
@@ -26,29 +25,22 @@ for (const [path, module] of Object.entries(translation_modules)) {
 	translations[lang][category] = module.translations
 }
 
-const { handle: i18nHandle, setSSRLang } = createSvelteI18NServerBundle({
-	supportedLangs: SUPPORTED_LANGS,
-	fallbackLang: FALLBACK_LANG,
-
-	fetchCategory({ where: { lang, category } }) {
-		return translations[lang]?.[category]
-	},
-	fetchAll({ where }) {
+const { handle, fetchAll, fetchCategory } = createSvelteI18NServerBundle({
+	fetchData({ where }) {
 		const value: Translations = {}
 		for (const [lang, categories] of Object.entries(translations)) {
-			if (where.langs && !where.langs.includes(lang)) continue
-			value[lang] ??= {}
-			for (const [category, pairs] of Object.entries(categories)) {
-				if (where.categories && !where.categories.includes(category)) continue
-				value[lang][category] = pairs
+			if (where.langs == "all" || where.langs.includes(lang)) {
+				value[lang] ??= {}
+				for (const [category, pairs] of Object.entries(categories)) {
+					if (where.categories == "all" || where.categories.includes(category)) value[lang][category] = pairs
+				}
 			}
 		}
 		return value
 	},
-	update() {},
-	canUpdate() {
-		return false
+	getLang(event) {
+		return event.locals.lang ?? "en"
 	},
 })
 
-export { i18nHandle, setSSRLang }
+export { handle as i18nHandle, fetchAll as i18nFetchAll, fetchCategory as i18nFetchCategory }

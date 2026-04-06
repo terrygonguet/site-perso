@@ -18,7 +18,7 @@
 
 <header class="grid place-items-center px-4 pt-8">
 	<h1 class="text-4xl font-bold md:text-6xl" style:view-transition-name="page-title-{segment}">
-		{@html title}
+		{@html await title}
 	</h1>
 </header>
 

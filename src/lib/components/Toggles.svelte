@@ -34,9 +34,9 @@
 		class="col-span-3 grid cursor-pointer grid-cols-subgrid items-center"
 		style:view-transition-name="toggle-theme"
 	>
-		<span class="text-end">{@html t("general", "mode_light")}</span>
+		<span class="text-end">{@html await t("general", "mode_light")}</span>
 		<Toggle id="theme" checked={Theme.current == "dark"} onclick={onToggleTheme} />
-		<span>{@html t("general", "mode_dark")}</span>
+		<span>{@html await t("general", "mode_dark")}</span>
 	</label>
 </div>
 

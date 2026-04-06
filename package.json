@@ -19,7 +19,7 @@
 		"@tailwindcss/typography": "^0.5.19",
 		"@tailwindcss/vite": "^4.2.2",
 		"@types/markdown-it": "^14.1.2",
-		"@types/node": "^25.5.0",
+		"@types/node": "^25.5.2",
 		"markdown-it": "^14.1.1",
 		"prettier": "^3.8.1",
 		"prettier-plugin-svelte": "^3.5.1",
@@ -33,7 +33,7 @@
 		"vite-plugin-markdown": "^2.2.0"
 	},
 	"dependencies": {
-		"@terrygonguet/svelte-i18n": "^0.2.0-beta.2",
+		"@terrygonguet/svelte-i18n": "^1.0.0-gamma.2",
 		"@terrygonguet/utils": "^0.11.0",
 		"nanoid": "^5.1.7"
 	}

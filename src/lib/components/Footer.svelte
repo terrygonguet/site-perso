@@ -12,7 +12,7 @@
 	<div class="flex flex-col items-center justify-evenly gap-4 self-stretch md:flex-row">
 		<a href="/" class="anchor flex items-center gap-2 text-lg md:order-2">
 			<Home aria-hidden />
-			{@html t("general", "footer_home")}
+			{@html await t("general", "footer_home")}
 		</a>
 		<ToggleLang class="md:order-1" />
 		<ToggleMode class="md:order-3" />

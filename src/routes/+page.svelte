@@ -1,19 +1,19 @@
 <script lang="ts">
+	import { page } from "$app/state"
 	import Copyright from "$lib/components/Copyright.svelte"
 	import Toggles from "$lib/components/Toggles.svelte"
 
-	let { data } = $props()
-	let { t } = $derived(data)
+	let { t } = $derived(page.data)
 </script>
 
 <svelte:head>
-	<title>{t("general", "title_home")} - Terry Gonguet</title>
+	<title>{await t("general", "title_home")} - Terry Gonguet</title>
 </svelte:head>
 
 <header class="flex h-[30dvh] flex-col items-center justify-center gap-4" style:view-transition-name="page-home-header">
 	<h1 class="text-4xl font-bold md:text-6xl">Terry Gonguet</h1>
 	<h2 class="text-xl text-orange-500 md:text-2xl dark:text-amber-600">
-		{@html t("home", "jobTitle")}
+		{@html await t("home", "jobTitle")}
 	</h2>
 </header>
 
@@ -22,22 +22,22 @@
 		<ul class="grid grid-cols-2 gap-4 text-center md:grid-cols-4">
 			<li>
 				<a id="about" href="/about">
-					<span>{@html t("home", "about")}</span>
+					<span>{@html await t("home", "about")}</span>
 				</a>
 			</li>
 			<li>
 				<a id="cv" href="/cv">
-					<span>{@html t("home", "cv")}</span>
+					<span>{@html await t("home", "cv")}</span>
 				</a>
 			</li>
 			<li>
 				<a id="portfolio" href="/portfolio">
-					<span>{@html t("home", "portfolio")}</span>
+					<span>{@html await t("home", "portfolio")}</span>
 				</a>
 			</li>
 			<li>
 				<div id="blog">
-					<span>{@html t("home", "blog")}</span>
+					<span>{@html await t("home", "blog")}</span>
 				</div>
 			</li>
 		</ul>

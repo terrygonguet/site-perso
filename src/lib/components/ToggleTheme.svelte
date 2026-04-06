@@ -20,9 +20,9 @@
 </script>
 
 <label class={class_list}>
-	{@html t("general", "mode_light")}
+	{@html await t("general", "mode_light")}
 	<Toggle id="theme" checked={Theme.current == "dark"} onclick={onToggle} />
-	{@html t("general", "mode_dark")}
+	{@html await t("general", "mode_dark")}
 </label>
 
 <style lang="postcss">
