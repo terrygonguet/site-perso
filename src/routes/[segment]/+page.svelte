@@ -34,14 +34,14 @@
 	@reference "@appcss";
 
 	::view-transition-new(page-main) {
-		animation: slide-in 0.2s ease forwards;
+		animation: slide-in 0.2s ease 0.2s both;
 		@variant motion-reduce {
 			animation-name: fade-in;
 		}
 	}
 
 	::view-transition-old(page-main) {
-		animation: slide-in 0.2s ease reverse forwards;
+		animation: slide-in 0.2s ease reverse both;
 		@variant motion-reduce {
 			animation-name: fade-in;
 		}

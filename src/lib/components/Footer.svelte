@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { page } from "$app/state"
 	import Copyright from "$lib/components/Copyright.svelte"
-	import ToggleLang from "$lib/components/ToggleLang.svelte"
-	import ToggleMode from "$lib/components/ToggleTheme.svelte"
+	import LangChanger from "$lib/components/LangChanger.svelte"
+	import ToggleTheme from "$lib/components/ToggleTheme.svelte"
 	import Home from "virtual:icons/ri/home-2-fill"
 
 	let { t } = $derived(page.data)
@@ -14,8 +14,8 @@
 			<Home aria-hidden />
 			{@html await t("general", "footer_home")}
 		</a>
-		<ToggleLang class="md:order-1" />
-		<ToggleMode class="md:order-3" />
+		<LangChanger class="md:order-1" />
+		<ToggleTheme class="md:order-3" />
 	</div>
 	<Copyright />
 </footer>

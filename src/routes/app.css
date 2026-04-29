@@ -16,6 +16,62 @@
 	max-width: 80ch;
 }
 
+@utility outlined {
+	@apply outline-2 outline-offset-2 outline-amber-600 dark:outline-stone-300;
+}
+
+/* ===== Components ===== */
+.anchor,
+.prose-default a {
+	@apply text-amber-700 no-underline transition-[color] dark:text-amber-600;
+
+	&:hover,
+	&:focus {
+		@apply text-amber-600 underline dark:text-amber-500;
+	}
+
+	&:focus-visible {
+		@apply outlined;
+	}
+
+	&[target="_blank"]::after {
+		content: " ";
+		display: inline-block;
+		width: 0.7rem;
+		height: 0.7rem;
+		vertical-align: super;
+		background-image: url("/external-link.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	@variant dark {
+		&[target="_blank"]::after {
+			filter: invert(1);
+		}
+	}
+}
+
+.toggle {
+	background-color: var(--color-toggle-track-off, theme(--color-stone-400));
+	@apply flex h-4 w-9 justify-end rounded-full;
+
+	input:checked ~ & {
+		background-color: var(--color-toggle-track-on, theme(--color-amber-500));
+		@apply justify-start;
+	}
+
+	&::after {
+		content: " ";
+		box-shadow: 0 0 0.25rem var(--color-toggle-thumb, theme(--color-stone-600));
+		@apply -m-0.5 h-5 w-5 rounded-full bg-stone-300;
+		@variant motion-safe {
+			view-transition-name: var(--view-transition-name, match-element);
+		}
+	}
+}
+
+/* ===== Global styles ===== */
+
 * {
 	scrollbar-width: thin;
 	scrollbar-color: theme("colors.orange.500") white;
@@ -50,42 +106,6 @@ main {
 
 footer {
 	grid-area: footer;
-}
-
-.prose-default a,
-.anchor {
-	@apply text-amber-700 no-underline outline-offset-2 outline-amber-600 transition-colors;
-	@variant dark {
-		@apply text-amber-600 outline-stone-300;
-	}
-
-	&:hover,
-	&:focus {
-		@apply text-amber-600 underline;
-		@variant dark {
-			@apply text-amber-500;
-		}
-	}
-
-	&:focus-visible {
-		@apply outline-2;
-	}
-
-	&[target="_blank"]::after {
-		content: " ";
-		display: inline-block;
-		width: 0.7rem;
-		height: 0.7rem;
-		vertical-align: super;
-		background-image: url("/external-link.svg");
-		background-size: contain;
-		background-repeat: no-repeat;
-	}
-	@variant dark {
-		&[target="_blank"]::after {
-			filter: invert(1);
-		}
-	}
 }
 
 @media print {

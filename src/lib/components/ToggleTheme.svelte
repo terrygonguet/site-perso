@@ -1,39 +1,65 @@
 <script lang="ts">
 	import { page } from "$app/state"
 	import { Theme } from "$lib/theme"
-	import Toggle from "$lib/components/Toggle.svelte"
 
 	interface Props {
 		class?: string
 	}
 
-	let { class: class_list = "" }: Props = $props()
+	let { class: wrapper_classes = "" }: Props = $props()
 	let { t } = $derived(page.data)
 
-	function onToggle(evt: Event) {
-		evt.preventDefault()
+	function set_theme(theme: (typeof Theme)["current"]) {
 		document.startViewTransition(async () => {
-			Theme.toggle()
+			Theme.current = theme
 			await cookieStore.set("override-theme", Theme.current)
 		})
 	}
 </script>
 
-<label class={class_list}>
-	{@html await t("general", "mode_light")}
-	<Toggle id="theme" checked={Theme.current == "dark"} onclick={onToggle} />
-	{@html await t("general", "mode_dark")}
-</label>
+<div id="theme-changer" class={wrapper_classes}>
+	<input
+		type="radio"
+		id="theme-changer-light"
+		name="theme"
+		value="light"
+		checked={Theme.current == "light"}
+		onchange={() => set_theme("light")}
+	/>
+	<label for="theme-changer-light">{@html await t("general", "mode_light")}</label>
+	<input
+		type="radio"
+		id="theme-changer-dark"
+		name="theme"
+		value="dark"
+		checked={Theme.current == "dark"}
+		onchange={() => set_theme("dark")}
+	/>
+	<label for="theme-changer-dark">{@html await t("general", "mode_dark")}</label>
+</div>
 
 <style lang="postcss">
 	@reference "@appcss";
 
-	label {
-		--color-toggle-track-on: theme(--color-stone-700);
-		--color-toggle-track-off: theme(--color-stone-400);
-		@apply flex cursor-pointer items-center gap-2;
-		@variant motion-safe {
-			view-transition-name: toggle-theme;
+	:where(#theme-changer) {
+		@apply flex border-2 border-stone-700 dark:border-stone-400;
+		view-transition-name: theme-changer;
+
+		&:has(input:focus-visible) {
+			@apply outlined;
 		}
+	}
+
+	label {
+		@apply flex-1 cursor-pointer px-2 py-1 text-center transition-colors;
+
+		input:checked + & {
+			@apply bg-stone-700 text-white dark:bg-stone-400 dark:text-black;
+		}
+	}
+
+	input {
+		position: absolute;
+		clip-path: circle(0);
 	}
 </style>

@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { page } from "$app/state"
 	import Copyright from "$lib/components/Copyright.svelte"
-	import Toggles from "$lib/components/Toggles.svelte"
+	import LangChanger from "$lib/components/LangChanger.svelte"
+	import ToggleTheme from "$lib/components/ToggleTheme.svelte"
 
 	let { t } = $derived(page.data)
 </script>
@@ -43,7 +44,10 @@
 		</ul>
 	</nav>
 
-	<Toggles />
+	<div class="flex flex-col gap-4 self-center">
+		<LangChanger />
+		<ToggleTheme />
+	</div>
 </main>
 
 <footer class="p-4 text-center">
@@ -58,11 +62,6 @@
 		@apply grid aspect-square place-items-center bg-stone-300 p-4 text-2xl shadow shadow-stone-600/50 duration-200 hover:scale-105 hover:bg-stone-100 lg:h-52 dark:bg-stone-700 dark:hover:bg-stone-600;
 	}
 
-	#about span {
-		@variant motion-safe {
-			view-transition-name: page-title-about;
-		}
-	}
 	#about:hover {
 		color: white;
 		background-color: black;
@@ -84,11 +83,6 @@
 			70px 100px;
 	}
 
-	#cv span {
-		@variant motion-safe {
-			view-transition-name: page-title-cv;
-		}
-	}
 	#cv:hover {
 		color: black;
 		background-color: #fff;
@@ -98,11 +92,6 @@
 		background-size: 100% 1rem;
 	}
 
-	#portfolio span {
-		@variant motion-safe {
-			view-transition-name: page-title-portfolio;
-		}
-	}
 	#portfolio:hover {
 		color: white;
 		background-color: #269;
@@ -133,9 +122,24 @@
 		transform: translate(0, -50%);
 	}
 
+	@variant motion-safe {
+		#about {
+			view-transition-name: page-title-about;
+		}
+		#cv {
+			view-transition-name: page-title-cv;
+		}
+		#portfolio {
+			view-transition-name: page-title-portfolio;
+		}
+		#blog {
+			view-transition-name: page-title-blog;
+		}
+	}
+
 	::view-transition-new(page-home-main),
 	::view-transition-new(page-home-header) {
-		animation: slide-in 0.2s ease forwards;
+		animation: slide-in 0.2s ease 0.2s both;
 		@variant motion-reduce {
 			animation-name: fade-in;
 		}
@@ -143,7 +147,7 @@
 
 	::view-transition-old(page-home-main),
 	::view-transition-old(page-home-header) {
-		animation: slide-in 0.2s ease reverse forwards;
+		animation: slide-in 0.2s ease reverse both;
 		@variant motion-reduce {
 			animation-name: fade-in;
 		}
