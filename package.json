@@ -14,27 +14,27 @@
 		"@iconify-json/ri": "^1.2.10",
 		"@sveltejs/adapter-node": "^5.5.4",
 		"@sveltejs/adapter-static": "^3.0.10",
-		"@sveltejs/kit": "^2.58.0",
-		"@sveltejs/vite-plugin-svelte": "^7.0.0",
+		"@sveltejs/kit": "^2.59.1",
+		"@sveltejs/vite-plugin-svelte": "^7.1.2",
 		"@tailwindcss/typography": "^0.5.19",
-		"@tailwindcss/vite": "^4.2.4",
+		"@tailwindcss/vite": "^4.3.0",
 		"@types/markdown-it": "^14.1.2",
-		"@types/node": "^25.6.0",
+		"@types/node": "^25.6.2",
 		"markdown-it": "^14.1.1",
 		"prettier": "^3.8.3",
 		"prettier-plugin-svelte": "^3.5.1",
 		"prettier-plugin-tailwindcss": "^0.8.0",
 		"svelte": "^5.55.5",
-		"svelte-check": "^4.4.6",
-		"tailwindcss": "^4.2.4",
+		"svelte-check": "^4.4.8",
+		"tailwindcss": "^4.3.0",
 		"typescript": "^6.0.3",
 		"unplugin-icons": "^23.0.1",
-		"vite": "^8.0.10",
+		"vite": "^8.0.11",
 		"vite-plugin-markdown": "^2.2.0"
 	},
 	"dependencies": {
 		"@terrygonguet/svelte-i18n": "^1.0.0-gamma.3",
 		"@terrygonguet/utils": "^0.11.0",
-		"nanoid": "^5.1.9"
+		"nanoid": "^5.1.11"
 	}
 }
