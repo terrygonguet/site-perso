@@ -3,11 +3,13 @@ import type { SvelteI18N } from "@terrygonguet/svelte-i18n"
 import type { Translations as ErrorsTranslations } from "@translations/en/errors"
 import type { Translations as GeneralTranslations } from "@translations/en/general"
 import type { Translations as HomeTranslations } from "@translations/en/home"
+import type { Translations as PortfolioTranslations } from "@translations/en/portfolio"
 
 export type I18NAutocomplete = {
 	errors: keyof ErrorsTranslations
 	general: keyof GeneralTranslations
 	home: keyof HomeTranslations
+	portfolio: keyof PortfolioTranslations
 }
 
 declare global {
