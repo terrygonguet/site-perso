@@ -9,6 +9,7 @@ const config = {
 			"@apptypes": "./src/app.d.ts",
 			"@routes/*": "./src/routes/*",
 			"@translations/*": "./src/translations/*",
+			"@assets/*": "./src/assets/*",
 		},
 		experimental: {
 			remoteFunctions: true,
