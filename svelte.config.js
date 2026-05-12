@@ -5,7 +5,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			"@appcss": "./src/routes/app.css",
+			"@appcss": "./src/app.css",
 			"@apptypes": "./src/app.d.ts",
 			"@routes/*": "./src/routes/*",
 			"@translations/*": "./src/translations/*",

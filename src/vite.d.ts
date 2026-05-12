@@ -4,3 +4,5 @@ declare module "*.md" {
 
 	export { attributes, html }
 }
+
+declare module "@appcss" {}
