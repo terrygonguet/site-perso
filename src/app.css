@@ -13,7 +13,18 @@
 
 @utility prose-default {
 	@apply prose prose-stone;
-	max-width: 80ch;
+	@variant dark {
+		@apply prose-invert;
+	}
+	@variant lg {
+		@apply prose-lg;
+	}
+	@variant xl {
+		@apply prose-xl;
+	}
+	@variant 2xl {
+		@apply prose-2xl;
+	}
 }
 
 @utility outlined {
@@ -76,6 +87,7 @@
 	scrollbar-width: thin;
 	scrollbar-color: theme("colors.orange.500") white;
 	scroll-behavior: smooth;
+	transition-behavior: allow-discrete;
 
 	@variant dark {
 		scrollbar-color: theme("colors.amber.600") theme("colors.stone.900");

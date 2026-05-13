@@ -25,7 +25,7 @@
 	{#if page.error?.cause}
 		<pre class="whitespace-pre-wrap">{@html c(page.error?.cause, { editor: false })}</pre>
 	{:else}
-		<p class="prose dark:prose-invert">{@html await t("errors", "explanation")}</p>
+		<p class="prose-default">{@html await t("errors", "explanation")}</p>
 	{/if}
 </main>
 

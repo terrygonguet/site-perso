@@ -23,7 +23,7 @@
 </header>
 
 <main class="grid place-items-center p-4" style:view-transition-name="page-main">
-	<div class="prose-default dark:prose-invert">
+	<div class="prose-default">
 		{@html c(content, { editor: false })}
 	</div>
 </main>
