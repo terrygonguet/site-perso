@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/state"
 	import Carousel from "$lib/components/Carousel.svelte"
+	import Header from "$lib/components/Header.svelte"
 	import Footer from "$lib/components/Footer.svelte"
 
 	import gapsmoov_home from "@assets/portfolio/gapsmoov_home.png"
@@ -26,13 +27,9 @@
 	<title>{await t("portfolio", "title", { editor: false })} - Terry Gonguet</title>
 </svelte:head>
 
-<header class="grid place-items-center px-4 pt-8 pb-16">
-	<h1 class="text-4xl font-bold md:text-6xl" style:view-transition-name="page-title-portfolio">
-		{@html await t("portfolio", "title")}
-	</h1>
-</header>
+<Header title={await t("portfolio", "title")} viewTransitionName="page-title-portfolio"></Header>
 
-<main class="grid place-items-center gap-8 p-4" style:view-transition-name="page-main-portfolio">
+<main class="my-16 grid place-items-center gap-8 p-4" style:view-transition-name="page-main-portfolio">
 	<section class="prose-default">
 		<h1>{@html await t("portfolio", "section_title_pro")}</h1>
 		<hr />

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { invalidate } from "$app/navigation"
 	import { page } from "$app/state"
+	import Header from "$lib/components/Header.svelte"
 	import Footer from "$lib/components/Footer.svelte"
 
 	let { segment = "unknown" } = $derived(page.params)
@@ -16,11 +17,7 @@
 	<title>{title} - Terry Gonguet</title>
 </svelte:head>
 
-<header class="grid place-items-center px-4 pt-8">
-	<h1 class="text-4xl font-bold md:text-6xl" style:view-transition-name="page-title-{segment}">
-		{@html await title}
-	</h1>
-</header>
+<Header {title} viewTransitionName="page-title-{segment}"></Header>
 
 <main
 	class="grid place-items-center p-4"
