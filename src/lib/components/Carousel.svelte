@@ -43,7 +43,7 @@
 
 	function on_dialog_scroll() {
 		const { scrollLeft: scroll_left = 0, offsetWidth: offset_width = 0 } = dialog_el ?? {}
-		last_focused_idx = Math.floor(scroll_left / offset_width)
+		last_focused_idx = Math.round(scroll_left / offset_width)
 	}
 
 	function on_arrow_click(this: HTMLButtonElement, evt: Event) {
@@ -66,6 +66,8 @@
 </script>
 
 <button
+	data-component="carousel"
+	data-role="thumbnail"
 	{id}
 	type="button"
 	class={btn_classes}
@@ -84,6 +86,8 @@
 </button>
 
 <dialog
+	data-component="carousel"
+	data-role="dialog"
 	bind:this={dialog_el}
 	id={dialog_id}
 	class={dialog_classes}
@@ -93,7 +97,7 @@
 	autofocus
 >
 	{#each images as { src, alt }, i}
-		<div class="grid min-h-0 snap-center snap-always place-items-center">
+		<div data-component="carousel" data-role="image" class="grid min-h-0 snap-center snap-always place-items-center">
 			<enhanced:img
 				{src}
 				{alt}
@@ -104,18 +108,34 @@
 		</div>
 	{/each}
 	{#if show_arrow.left}
-		<button type="button" data-direction="left" tabindex="-1" onclick={on_arrow_click}>
+		<button
+			data-component="carousel"
+			data-role="arrow"
+			data-direction="left"
+			type="button"
+			tabindex="-1"
+			onclick={on_arrow_click}
+		>
 			<ArrowLeft class="h-24 w-24" />
 		</button>
 	{/if}
 	{#if show_arrow.right}
-		<button type="button" data-direction="right" tabindex="-1" onclick={on_arrow_click}>
+		<button
+			data-component="carousel"
+			data-role="arrow"
+			data-direction="right"
+			type="button"
+			tabindex="-1"
+			onclick={on_arrow_click}
+		>
 			<ArrowRight class="h-24 w-24" />
 		</button>
 	{/if}
 	<button
+		data-component="carousel"
+		data-role="close"
 		type="button"
-		class="fixed top-0 right-0 grid aspect-square w-1/12 place-items-center"
+		class="fixed top-0 right-0 grid aspect-square w-1/12 cursor-pointer place-items-center focus-visible:outlined"
 		command="request-close"
 		commandfor={dialog_id}
 		onclick={evt => evt.stopPropagation()}
@@ -127,10 +147,10 @@
 <style lang="postcss">
 	@reference "@appcss";
 
-	button {
+	[data-role="thumbnail"] {
 		@apply cursor-pointer;
 
-		&:focus-within {
+		&:focus-visible {
 			@apply outlined outline-offset-4;
 		}
 
@@ -145,7 +165,7 @@
 		}
 	}
 
-	dialog {
+	[data-role="dialog"] {
 		all: unset;
 		view-transition-name: match-element;
 		@apply fixed inset-0 hidden scrollbar-thin overflow-x-auto scroll-smooth text-stone-300;
@@ -171,8 +191,8 @@
 			@apply -z-10 bg-stone-950/70;
 		}
 
-		button[data-direction] {
-			@apply fixed top-1/2 grid h-1/2 w-1/12 -translate-y-1/2 place-items-center;
+		[data-role="arrow"] {
+			@apply fixed top-1/2 grid h-1/2 w-1/12 -translate-y-1/2 cursor-pointer place-items-center;
 
 			&[data-direction="left"] {
 				@apply left-0;
