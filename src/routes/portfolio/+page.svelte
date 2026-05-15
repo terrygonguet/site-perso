@@ -32,7 +32,7 @@
 	</h1>
 </header>
 
-<main class="grid place-items-center gap-8 p-4" style:view-transition-name="page-main">
+<main class="grid place-items-center gap-8 p-4" style:view-transition-name="page-main-portfolio">
 	<section class="prose-default">
 		<h1>{@html await t("portfolio", "section_title_pro")}</h1>
 		<hr />
@@ -160,12 +160,32 @@
 		@variant lg {
 			max-width: 40%;
 		}
+
+		:global(img) {
+			view-transition-class: portfolio-carousel;
+		}
 	}
 
 	article:nth-child(2n + 1) :global(.carousel) {
 		@variant md {
 			float: right;
 			margin: 0 0 0.5rem 1rem;
+		}
+	}
+
+	::view-transition-new(page-main-portfolio):only-child,
+	::view-transition-new(.portfolio-carousel):only-child {
+		animation: slide-in 0.2s ease 0.2s both;
+		@variant motion-reduce {
+			animation-name: fade-in;
+		}
+	}
+
+	::view-transition-old(page-main-portfolio):only-child,
+	::view-transition-old(.portfolio-carousel):only-child {
+		animation: slide-in 0.2s ease reverse both;
+		@variant motion-reduce {
+			animation-name: fade-in;
 		}
 	}
 </style>
