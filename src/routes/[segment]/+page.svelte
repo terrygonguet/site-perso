@@ -46,24 +46,4 @@
 			animation-name: fade-in;
 		}
 	}
-
-	@keyframes slide-in {
-		from {
-			transform: translate(0, 20dvh);
-			opacity: 0;
-		}
-		to {
-			transform: translate(0, 0);
-			opacity: 1;
-		}
-	}
-
-	@keyframes fade-in {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
-	}
 </style>
