@@ -22,7 +22,11 @@
 	</h1>
 </header>
 
-<main class="grid place-items-center p-4" style:view-transition-name="page-main">
+<main
+	class="grid place-items-center p-4"
+	style:view-transition-name="page-main-{segment}"
+	style:view-transition-class="segment-main"
+>
 	<div class="prose-default">
 		{@html c(content, { editor: false })}
 	</div>
@@ -33,14 +37,14 @@
 <style lang="postcss">
 	@reference "@appcss";
 
-	::view-transition-new(page-main) {
+	::view-transition-new(.segment-main):only-child {
 		animation: slide-in 0.2s ease 0.2s both;
 		@variant motion-reduce {
 			animation-name: fade-in;
 		}
 	}
 
-	::view-transition-old(page-main) {
+	::view-transition-old(.segment-main):only-child {
 		animation: slide-in 0.2s ease reverse both;
 		@variant motion-reduce {
 			animation-name: fade-in;
