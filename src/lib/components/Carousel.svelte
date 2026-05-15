@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ArrowLeft from "virtual:icons/ri/arrow-left-s-line"
 	import ArrowRight from "virtual:icons/ri/arrow-right-s-line"
+	import Close from "virtual:icons/ri/close-line"
 
 	interface Props {
 		id?: string
@@ -15,20 +16,19 @@
 	let default_id = $props.id()
 	let { id = default_id, class: btn_classes, dialogClass: dialog_classes, thumbnail, alt, images }: Props = $props()
 
-	let command = $state<string | undefined>("show-modal")
+	let js_enabled = $state(false)
 	let dialog_el = $state<HTMLDialogElement>()
 	let last_focused_idx = $state(0)
 
 	let dialog_id = $derived(id + "-carousel-img")
 	let img_id = $derived(id + "-carousel-thumbnail")
 	let show_arrow = $derived({
-		left: last_focused_idx != 0,
-		right: !command && last_focused_idx < images.length - 1,
+		left: last_focused_idx > 0,
+		right: js_enabled && last_focused_idx < images.length - 1,
 	})
 
 	function on_thumb_click() {
 		document.startViewTransition(() => {
-			dialog_el?.scrollTo({ left: 0, behavior: "instant" })
 			dialog_el?.showModal()
 			dialog_el?.focus()
 		})
@@ -61,7 +61,7 @@
 
 	// disable the command if JS is enabled so we can trigger view transitions
 	$effect(() => {
-		command = undefined
+		js_enabled = true
 	})
 </script>
 
@@ -70,7 +70,7 @@
 	type="button"
 	class={btn_classes}
 	aria-labelledby={img_id}
-	{command}
+	command={js_enabled ? undefined : "show-modal"}
 	commandfor={dialog_id}
 	onclick={on_thumb_click}
 >
@@ -113,6 +113,15 @@
 			<ArrowRight class="h-24 w-24" />
 		</button>
 	{/if}
+	<button
+		type="button"
+		class="fixed top-0 right-0 grid aspect-square w-1/12 place-items-center"
+		command="request-close"
+		commandfor={dialog_id}
+		onclick={evt => evt.stopPropagation()}
+	>
+		<Close class="h-24 w-24" />
+	</button>
 </dialog>
 
 <style lang="postcss">
@@ -154,7 +163,7 @@
 		enhanced\:img {
 			view-transition-class: carousel-img;
 			view-transition-name: var(--view-transition-name);
-			@apply max-h-4/5 min-h-0 max-w-4/5 min-w-0;
+			@apply max-h-4/5 min-h-0 max-w-4/5 min-w-0 object-contain;
 		}
 
 		&::backdrop {
@@ -162,7 +171,7 @@
 			@apply -z-10 bg-stone-950/70;
 		}
 
-		button {
+		button[data-direction] {
 			@apply fixed top-1/2 grid h-1/2 w-1/12 -translate-y-1/2 place-items-center;
 
 			&[data-direction="left"] {
