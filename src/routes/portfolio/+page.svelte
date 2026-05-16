@@ -20,6 +20,24 @@
 
 	import webext_home from "@assets/portfolio/webext_home.png"
 
+	import webcells_home from "@assets/portfolio/webcells-home.png"
+	import webcells_butterfly from "@assets/portfolio/webcells-butterfly.png"
+	import webcells_hex from "@assets/portfolio/webcells-hex.png"
+
+	import sokoban_game from "@assets/portfolio/sokoban-game.png"
+	import sokoban_edit from "@assets/portfolio/sokoban-edit.png"
+
+	import multisweeper from "@assets/portfolio/multisweeper.png"
+
+	import vitruvius from "@assets/portfolio/vitruvius.png"
+
+	import calibron_start from "@assets/portfolio/calibron-start.png"
+	import calibron_end from "@assets/portfolio/calibron-end.png"
+
+	import naga from "@assets/portfolio/naga.webp"
+
+	import solitaire from "@assets/portfolio/solitaire.png"
+
 	let { t } = $derived(page.data)
 </script>
 
@@ -103,6 +121,107 @@
 			/>
 			<h1>{@html await t("portfolio", "vol_2_title")}</h1>
 			<p>{@html await t("portfolio", "vol_2_p1")}</p>
+		</article>
+	</section>
+
+	<section class="prose-default">
+		<h1>{@html await t("portfolio", "section_title_experimental")}</h1>
+		<hr />
+		<h2>{@html await t("portfolio", "section_subtitle_experimental")}</h2>
+
+		<article>
+			<Carousel
+				class="carousel not-prose"
+				dialogClass="not-prose"
+				thumbnail={webcells_home}
+				alt={await t("portfolio", "expe_1_alt1", { editor: false })}
+				images={[
+					{ src: webcells_home, alt: await t("portfolio", "expe_1_alt1", { editor: false }) },
+					{ src: webcells_butterfly, alt: await t("portfolio", "expe_1_alt2", { editor: false }) },
+					{ src: webcells_hex, alt: await t("portfolio", "expe_1_alt3", { editor: false }) },
+				]}
+			/>
+			<h1>{@html await t("portfolio", "expe_1_title")}</h1>
+			<p>{@html await t("portfolio", "expe_1_p1")}</p>
+		</article>
+
+		<article>
+			<Carousel
+				class="carousel not-prose"
+				dialogClass="not-prose"
+				thumbnail={multisweeper}
+				alt={await t("portfolio", "expe_2_alt", { editor: false })}
+				images={[{ src: multisweeper, alt: await t("portfolio", "expe_2_alt") }]}
+			/>
+			<h1>{@html await t("portfolio", "expe_2_title")}</h1>
+			<p>{@html await t("portfolio", "expe_2_p1")}</p>
+		</article>
+
+		<article>
+			<Carousel
+				class="carousel not-prose"
+				dialogClass="not-prose"
+				thumbnail={naga}
+				alt={await t("portfolio", "expe_3_alt", { editor: false })}
+				images={[{ src: naga, alt: await t("portfolio", "expe_3_alt") }]}
+			/>
+			<h1>{@html await t("portfolio", "expe_3_title")}</h1>
+			<p>{@html await t("portfolio", "expe_3_p1")}</p>
+		</article>
+
+		<article>
+			<Carousel
+				class="carousel not-prose"
+				dialogClass="not-prose"
+				thumbnail={sokoban_game}
+				alt={await t("portfolio", "expe_4_alt1", { editor: false })}
+				images={[
+					{ src: sokoban_game, alt: await t("portfolio", "expe_4_alt1", { editor: false }) },
+					{ src: sokoban_edit, alt: await t("portfolio", "expe_4_alt2", { editor: false }) },
+				]}
+			/>
+			<h1>{@html await t("portfolio", "expe_4_title")}</h1>
+			<p>{@html await t("portfolio", "expe_4_p1")}</p>
+		</article>
+
+		<article>
+			<Carousel
+				class="carousel not-prose"
+				dialogClass="not-prose"
+				thumbnail={vitruvius}
+				alt={await t("portfolio", "expe_5_alt", { editor: false })}
+				images={[{ src: vitruvius, alt: await t("portfolio", "expe_5_alt", { editor: false }) }]}
+			/>
+			<h1>{@html await t("portfolio", "expe_5_title")}</h1>
+			<p>{@html await t("portfolio", "expe_5_p1")}</p>
+			<p>{@html await t("portfolio", "expe_5_p2")}</p>
+		</article>
+
+		<article>
+			<Carousel
+				class="carousel not-prose"
+				dialogClass="not-prose"
+				thumbnail={calibron_start}
+				alt={await t("portfolio", "expe_6_alt1", { editor: false })}
+				images={[
+					{ src: calibron_start, alt: await t("portfolio", "expe_6_alt1", { editor: false }) },
+					{ src: calibron_end, alt: await t("portfolio", "expe_6_alt2", { editor: false }) },
+				]}
+			/>
+			<h1>{@html await t("portfolio", "expe_6_title")}</h1>
+			<p>{@html await t("portfolio", "expe_6_p1")}</p>
+		</article>
+
+		<article>
+			<Carousel
+				class="carousel not-prose"
+				dialogClass="not-prose"
+				thumbnail={solitaire}
+				alt={await t("portfolio", "expe_7_alt", { editor: false })}
+				images={[{ src: solitaire, alt: await t("portfolio", "expe_7_alt") }]}
+			/>
+			<h1>{@html await t("portfolio", "expe_7_title")}</h1>
+			<p>{@html await t("portfolio", "expe_7_p1")}</p>
 		</article>
 	</section>
 </main>

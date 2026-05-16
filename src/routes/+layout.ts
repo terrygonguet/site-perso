@@ -11,6 +11,12 @@ export const load = async ({ data }) => {
 			link(content, args) {
 				return `<a href="${args}" ${args?.startsWith("https:") ? 'target="_blank"' : ""} class="anchor">${content}</a>`
 			},
+			em(content) {
+				return `<em>${content}</em>`
+			},
+			strong(content) {
+				return `<strong>${content}</strong>`
+			},
 		},
 	})
 	return { i18n, t: i18n.t.bind(i18n), c: i18n.c.bind(i18n) }
