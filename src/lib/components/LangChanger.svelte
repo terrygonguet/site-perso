@@ -11,7 +11,7 @@
 
 	function set_lang(new_lang: string) {
 		document.startViewTransition(async () => {
-			await i18n.setLang(new_lang)
+			i18n.lang = new_lang
 			await cookieStore.set("override-lang", new_lang)
 		})
 	}
