@@ -135,7 +135,7 @@
 		data-component="carousel"
 		data-role="close"
 		type="button"
-		class="fixed top-0 right-0 grid aspect-square w-1/12 cursor-pointer place-items-center focus-visible:outlined"
+		class="fixed right-0 bottom-0 grid aspect-square w-1/4 cursor-pointer place-items-center focus-visible:outlined md:top-0 md:bottom-auto md:w-1/12"
 		command="request-close"
 		commandfor={dialog_id}
 		onclick={evt => evt.stopPropagation()}

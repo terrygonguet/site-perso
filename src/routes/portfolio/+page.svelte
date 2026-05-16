@@ -256,7 +256,7 @@
 		}
 
 		& > article {
-			@apply my-8;
+			@apply my-10 lg:my-16;
 
 			& > h1 {
 				@apply text-2xl font-semibold;
