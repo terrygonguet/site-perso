@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { untrack } from "svelte"
 	import { invalidate } from "$app/navigation"
 	import { page } from "$app/state"
 	import Header from "$lib/components/Header.svelte"
@@ -7,9 +8,12 @@
 	let { segment = "unknown" } = $derived(page.params)
 	let { i18n, c, content, title = "🤷‍♂️" } = $derived(page.data)
 
+	let current_lang = untrack(() => i18n.lang)
 	$effect(() => {
-		i18n.lang
-		invalidate(`content:${segment}`)
+		if (i18n.lang != current_lang) {
+			invalidate(`content:${segment}`)
+			current_lang = i18n.lang
+		}
 	})
 </script>
 
