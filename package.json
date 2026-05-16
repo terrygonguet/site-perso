@@ -34,7 +34,7 @@
 		"vite-plugin-markdown": "^2.2.0"
 	},
 	"dependencies": {
-		"@terrygonguet/svelte-i18n": "^1.0.0-gamma.6",
+		"@terrygonguet/svelte-i18n": "^1.0.0-gamma.7",
 		"@terrygonguet/utils": "^0.11.0",
 		"nanoid": "^5.1.11"
 	}
