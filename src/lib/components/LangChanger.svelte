@@ -43,10 +43,13 @@
 
 	:where(#lang-changer) {
 		@apply flex border-2 border-amber-600;
-		view-transition-name: lang-changer;
 
 		&:has(input:focus-visible) {
 			@apply outlined;
+		}
+
+		@variant motion-safe {
+			view-transition-name: lang-changer;
 		}
 	}
 

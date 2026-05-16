@@ -2,7 +2,7 @@
 	import { page } from "$app/state"
 	import Copyright from "$lib/components/Copyright.svelte"
 	import LangChanger from "$lib/components/LangChanger.svelte"
-	import ToggleTheme from "$lib/components/ToggleTheme.svelte"
+	import ThemeChanger from "$lib/components/ThemeChanger.svelte"
 	import Home from "virtual:icons/ri/home-2-fill"
 
 	let { t } = $derived(page.data)
@@ -15,7 +15,7 @@
 			{@html await t("general", "footer_home")}
 		</a>
 		<LangChanger class="md:order-1" />
-		<ToggleTheme class="md:order-3" />
+		<ThemeChanger class="md:order-3" />
 	</div>
 	<Copyright />
 </footer>

@@ -43,10 +43,13 @@
 
 	:where(#theme-changer) {
 		@apply flex border-2 border-stone-700 dark:border-stone-400;
-		view-transition-name: theme-changer;
 
 		&:has(input:focus-visible) {
 			@apply outlined;
+		}
+
+		@variant motion-safe {
+			view-transition-name: theme-changer;
 		}
 	}
 

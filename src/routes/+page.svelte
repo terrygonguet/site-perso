@@ -2,7 +2,7 @@
 	import { page } from "$app/state"
 	import Copyright from "$lib/components/Copyright.svelte"
 	import LangChanger from "$lib/components/LangChanger.svelte"
-	import ToggleTheme from "$lib/components/ToggleTheme.svelte"
+	import ToggleTheme from "$lib/components/ThemeChanger.svelte"
 
 	let { t } = $derived(page.data)
 </script>
