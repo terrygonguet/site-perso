@@ -40,13 +40,13 @@
 				class="carousel not-prose"
 				dialogClass="not-prose"
 				thumbnail={gapsmoov_home}
-				alt={await t("portfolio", "pro_1_alt", { editor: false })}
+				alt={await t("portfolio", "pro_1_alt1", { editor: false })}
 				images={[
-					{ src: gapsmoov_home, alt: "" },
-					{ src: gapsmoov_compare, alt: "" },
-					{ src: gapsmoov_cvc, alt: "" },
-					{ src: gapsmoov_video, alt: "" },
-					{ src: gapsmoov_culturosity, alt: "" },
+					{ src: gapsmoov_home, alt: await t("portfolio", "pro_1_alt1", { editor: false }) },
+					{ src: gapsmoov_compare, alt: await t("portfolio", "pro_1_alt2", { editor: false }) },
+					{ src: gapsmoov_cvc, alt: await t("portfolio", "pro_1_alt3", { editor: false }) },
+					{ src: gapsmoov_video, alt: await t("portfolio", "pro_1_alt4", { editor: false }) },
+					{ src: gapsmoov_culturosity, alt: await t("portfolio", "pro_1_alt5", { editor: false }) },
 				]}
 			/>
 			<h1 id="pro_1_title">{@html await t("portfolio", "pro_1_title")}</h1>
@@ -59,11 +59,11 @@
 				class="carousel not-prose"
 				dialogClass="not-prose"
 				thumbnail={munch_home}
-				alt={await t("portfolio", "pro_2_alt", { editor: false })}
+				alt={await t("portfolio", "pro_2_alt1", { editor: false })}
 				images={[
-					{ src: munch_home, alt: "" },
-					{ src: munch_menu, alt: "" },
-					{ src: munch_checkout, alt: "" },
+					{ src: munch_home, alt: await t("portfolio", "pro_2_alt1", { editor: false }) },
+					{ src: munch_menu, alt: await t("portfolio", "pro_2_alt2", { editor: false }) },
+					{ src: munch_checkout, alt: await t("portfolio", "pro_2_alt3", { editor: false }) },
 				]}
 			/>
 			<h1>{@html await t("portfolio", "pro_2_title")}</h1>
@@ -81,11 +81,11 @@
 				class="carousel not-prose"
 				dialogClass="not-prose"
 				thumbnail={repaircafe_home}
-				alt={await t("portfolio", "vol_1_alt", { editor: false })}
+				alt={await t("portfolio", "vol_1_alt1", { editor: false })}
 				images={[
-					{ src: repaircafe_home, alt: "" },
-					{ src: repaircafe_list, alt: "" },
-					{ src: repaircafe_form, alt: "" },
+					{ src: repaircafe_home, alt: await t("portfolio", "vol_1_alt1", { editor: false }) },
+					{ src: repaircafe_list, alt: await t("portfolio", "vol_1_alt2", { editor: false }) },
+					{ src: repaircafe_form, alt: await t("portfolio", "vol_1_alt3", { editor: false }) },
 				]}
 			/>
 			<h1>{@html await t("portfolio", "vol_1_title")}</h1>

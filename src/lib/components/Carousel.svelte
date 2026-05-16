@@ -140,7 +140,7 @@
 		commandfor={dialog_id}
 		onclick={evt => evt.stopPropagation()}
 	>
-		<Close class="h-24 w-24" />
+		<Close class="h-20 w-20" />
 	</button>
 </dialog>
 
